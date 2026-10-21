@@ -78,7 +78,7 @@
         padding-top: 12px; padding-bottom: 12px;
       }
       .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); min-width: 0; }
-      .crest { flex: 0 0 auto; width: 52px; height: 60px; }
+      .crest { flex: 0 0 auto; width: 47px; height: 58px; object-fit: contain; }
       .brand-text .name {
         font-family: "Spectral", Georgia, serif;
         font-weight: 700; font-size: 1.32rem; line-height: 1.1; letter-spacing: 0.01em;
@@ -408,6 +408,7 @@
         display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between;
       }
       .credits { font-size: 0.8rem; color: #bfa87f; }
+      .signature { font-family: "Spectral", Georgia, serif; font-style: italic; font-weight: 700; font-size: 1.05rem; color: #8a6508; }
 
       /* reveal — content rests visible; the animation only plays as it enters view */
       .reveal.in { animation: rise 0.55s ease both; }
@@ -474,13 +475,7 @@
     <header class="site">
       <div class="wrap header-row">
         <a class="brand" href="#top" aria-label="Magadh University home">
-          <svg class="crest" viewBox="0 0 52 60" role="img" aria-label="University crest">
-            <path d="M26 2 L48 9 V30 C48 44 38 53 26 58 C14 53 4 44 4 30 V9 Z" fill="#ffffff" stroke="#b8860b" stroke-width="2"/>
-            <path d="M14 22 C18 19.5 22 19.5 25 21.5 V38 C22 36.2 18 36.2 14 38 Z" fill="#d9a514"/>
-            <path d="M38 22 C34 19.5 30 19.5 27 21.5 V38 C30 36.2 34 36.2 38 38 Z" fill="#d9a514"/>
-            <path d="M26 44 C24 40 26 37 26 35 C26 37 28 40 26 44 Z" fill="#d9a514"/>
-            <path d="M20 47 C23 45.6 29 45.6 32 47" stroke="#d9a514" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-          </svg>
+          <img class="crest" src="logo.png" alt="Magadh University logo" />
           <span class="brand-text">
             <span class="name">Magadh University</span>
             <span class="sub" style="display:block">Bodh Gaya · Bihar · Est. 1962</span>
@@ -1042,6 +1037,7 @@
         <div class="footer-base">
           <span>Magadh University · Bodh Gaya, Bihar 824234</span>
           <span class="credits">Photos: University main gate (university website) · Social Sciences block (Wikimedia Commons) · Mahabodhi Temple, Bodh Gaya</span>
+          <span class="signature">— Rajan Kumar</span>
         </div>
       </div>
     </footer>
