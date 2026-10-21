@@ -265,6 +265,9 @@
       .college .cdist { margin-left: auto; font-size: 0.8rem; font-weight: 700; color: #8a6508; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
       .college[hidden] { display: none; }
       .college-count { color: var(--muted); font-size: 0.92rem; margin-top: 16px; }
+      .college-photo { margin: 28px 0 0; }
+      .college-photo img { width: 100%; display: block; border-radius: 12px; border: 1px solid var(--line); }
+      .college-photo figcaption { margin-top: 10px; color: var(--muted); font-size: 0.92rem; }
 
       /* services / quick links */
       .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
@@ -752,8 +755,8 @@
         <div class="head-row">
           <div>
             <div class="kicker">Our Network</div>
-            <h2 class="title">Constituent colleges</h2>
-            <p class="section-lede">Since the 2018 bifurcation of the university, its jurisdiction covers the five districts of Arwal, Aurangabad, Gaya, Jehanabad and Nawada, with 19 constituent colleges and 39 affiliated colleges. A selection of its constituent colleges:</p>
+            <h2 class="title">Colleges under the university</h2>
+            <p class="section-lede">Since the 2018 bifurcation of the university, its jurisdiction covers the five districts of Arwal, Aurangabad, Gaya, Jehanabad and Nawada, with 19 constituent colleges and 39 affiliated colleges. A selection of its constituent and affiliated colleges:</p>
           </div>
         </div>
         <div class="district-row" role="group" aria-label="Filter colleges by district">
@@ -775,12 +778,17 @@
           <div class="college" data-district="Aurangabad"><span class="cname">RLSY College</span><span class="cdist">Aurangabad</span></div>
           <div class="college" data-district="Aurangabad"><span class="cname">A.N.S. College, Nabinagar</span><span class="cdist">Aurangabad</span></div>
           <div class="college" data-district="Aurangabad"><span class="cname">Daudnagar College, Daudnagar</span><span class="cdist">Aurangabad</span></div>
+          <div class="college" data-district="Aurangabad"><span class="cname">Janta Inter Mahavidyalaya, Amba</span><span class="cdist">Aurangabad</span></div>
           <div class="college" data-district="Jehanabad"><span class="cname">S. N. Sinha College, Jehanabad</span><span class="cdist">Jehanabad</span></div>
           <div class="college" data-district="Nawada"><span class="cname">K.L.S. College, Nawada</span><span class="cdist">Nawada</span></div>
           <div class="college" data-district="Nawada"><span class="cname">S.N.S. College, Warisaliganj</span><span class="cdist">Nawada</span></div>
           <div class="college" data-district="Arwal"><span class="cname">Fatehpur Sanda College, Fatehpur Sanda</span><span class="cdist">Arwal</span></div>
         </div>
         <p class="college-count" id="collegeCount"></p>
+        <figure class="college-photo">
+          <img src="janta-inter-college.jpg" alt="Entrance gate of Janta Inter Mahavidyalaya, Amba, Aurangabad" loading="lazy" />
+          <figcaption>Janta Inter Mahavidyalaya, Lamari–Parsawan, Amba (Aurangabad, Bihar) — established 1983.</figcaption>
+        </figure>
       </div>
     </section>
 
