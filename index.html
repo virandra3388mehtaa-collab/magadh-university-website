@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="light" />
     <meta name="description" content="Magadh University, Bodh Gaya, Bihar — a public state university established in 1962. Programmes, faculties, constituent colleges, campus life and admissions." />
     <link rel="icon" href="data:," />
     <title>Magadh University — Bodh Gaya, Bihar</title>
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
-        color-scheme: light dark;
+        color-scheme: light;
         --bg: #ffffff;
         --bg-soft: #f8f6f2;
         --surface: #ffffff;
@@ -33,25 +33,7 @@
         --shadow: 0 18px 40px rgba(64, 34, 8, 0.14);
         --radius: 14px;
       }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #171310;
-          --bg-soft: #1e1815;
-          --surface: #221c17;
-          --surface-2: #2a221b;
-          --ink: #f2e9dc;
-          --ink-soft: #d8cbb6;
-          --muted: #a3937f;
-          --line: #3d332a;
-          --maroon: #d6c9ae;
-          --maroon-deep: #241d16;
-          --maroon-ink: #fdf3e7;
-          --gold: #d9a514;
-          --gold-bright: #eec25a;
-          --gold-soft: #3a2f16;
-          --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
-        }
-      }
+      /* White theme is forced for every visitor (owner's choice) — no dark-mode variant. */
 
       html { scroll-behavior: smooth; }
       body {
@@ -80,7 +62,7 @@
         align-items: center; justify-content: space-between;
         padding-top: 7px; padding-bottom: 7px;
       }
-      .topstrip a { color: var(--gold); text-decoration: none; font-weight: 600; }
+      .topstrip a { color: #8a6508; text-decoration: none; font-weight: 600; }
       .topstrip a:hover { text-decoration: underline; }
       .topstrip .sep { opacity: 0.55; margin: 0 8px; }
 
@@ -139,7 +121,7 @@
         padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
       }
       .hero h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 700; letter-spacing: 0.005em; }
-      .hero h1 .hindi { display: block; font-size: 0.52em; font-weight: 500; color: var(--gold-bright); margin-top: 10px; letter-spacing: 0.02em; }
+      .hero h1 .hindi { display: block; font-size: 0.52em; font-weight: 500; color: #a87e0a; margin-top: 10px; letter-spacing: 0.02em; }
       .hero .motto {
         font-family: "Spectral", Georgia, serif; font-style: italic;
         font-size: clamp(1.15rem, 2.4vw, 1.45rem); color: #ffe9bd; margin-top: 20px;
@@ -164,16 +146,16 @@
       .results-band { background: var(--maroon-deep); color: var(--ink); padding: 64px 0; }
       .scholarship-band { background: #FBF6E9; }
       .results-inner { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 48px; align-items: center; }
-      .results-band .kicker { color: var(--gold); }
+      .results-band .kicker { color: #8a6508; }
       .results-band h2 { font-size: clamp(1.7rem, 3.4vw, 2.35rem); font-weight: 700; color: var(--ink); }
       .results-band .results-copy > p { color: var(--ink-soft); margin-top: 12px; max-width: 640px; }
       .results-latest {
         display: inline-block; margin-top: 18px;
         background: rgba(217, 165, 20, 0.16); border: 1px solid rgba(238, 194, 90, 0.5);
-        border-radius: 10px; padding: 8px 14px; font-weight: 600; color: var(--gold); font-size: 0.95rem;
+        border-radius: 10px; padding: 8px 14px; font-weight: 600; color: #7a5a08; font-size: 0.95rem;
       }
       .results-steps { margin: 22px 0 0; padding-left: 22px; color: var(--ink-soft); display: grid; gap: 7px; font-size: 0.98rem; }
-      .results-steps li::marker { color: var(--gold); font-weight: 700; }
+      .results-steps li::marker { color: #8a6508; font-weight: 700; }
       .results-action { display: flex; flex-direction: column; gap: 12px; }
       .results-action .btn { text-align: center; }
       .results-btn { font-size: 1.1rem; padding: 17px 28px; }
@@ -191,15 +173,15 @@
       }
       .stat { padding: 26px 14px; text-align: center; border-left: 1px solid var(--line); }
       .stat:first-child { border-left: none; }
-      .stat .num { font-family: "Spectral", Georgia, serif; font-size: 1.9rem; font-weight: 700; color: var(--gold-bright); line-height: 1; }
-      .stat .lbl { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 7px; color: #ecd9b8; }
+      .stat .num { font-family: "Spectral", Georgia, serif; font-size: 1.9rem; font-weight: 700; color: #a87e0a; line-height: 1; }
+      .stat .lbl { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 7px; color: var(--muted); }
 
       /* ---------- sections ---------- */
       section.block { padding: 76px 0; }
       section.block.alt { background: var(--bg-soft); }
       .kicker {
         font-size: 0.78rem; font-weight: 700; letter-spacing: 0.24em;
-        text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+        text-transform: uppercase; color: #8a6508; margin-bottom: 12px;
       }
       h2.title { font-size: clamp(1.7rem, 3.4vw, 2.35rem); font-weight: 700; }
       .section-lede { color: var(--ink-soft); max-width: 680px; margin-top: 12px; font-size: 1.03rem; }
@@ -227,7 +209,7 @@
         background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
         padding: 22px; border-top: 4px solid var(--gold);
       }
-      .leader .role { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+      .leader .role { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6508; }
       .leader .who { font-family: "Spectral", Georgia, serif; font-size: 1.18rem; font-weight: 600; margin-top: 8px; }
       .leader .note { color: var(--muted); font-size: 0.9rem; margin-top: 6px; }
 
@@ -245,7 +227,7 @@
         display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto;
       }
       .faculty .depts { color: var(--ink-soft); }
-      .faculty .depts span + span::before { content: "·"; margin: 0 8px; color: var(--gold); font-weight: 700; }
+      .faculty .depts span + span::before { content: "·"; margin: 0 8px; color: #8a6508; font-weight: 700; }
 
       /* programmes */
       .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
@@ -261,7 +243,7 @@
         background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
         padding: 24px; display: flex; flex-direction: column; gap: 10px;
       }
-      .prog .level { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+      .prog .level { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8a6508; }
       .prog h3 { font-size: 1.22rem; font-weight: 600; }
       .prog p { color: var(--ink-soft); font-size: 0.95rem; }
       .prog .tags { margin-top: auto; padding-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
@@ -280,7 +262,7 @@
         background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px;
       }
       .college .cname { font-weight: 600; }
-      .college .cdist { margin-left: auto; font-size: 0.8rem; font-weight: 700; color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+      .college .cdist { margin-left: auto; font-size: 0.8rem; font-weight: 700; color: #8a6508; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
       .college[hidden] { display: none; }
       .college-count { color: var(--muted); font-size: 0.92rem; margin-top: 16px; }
 
@@ -330,7 +312,7 @@
         background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 18px;
       }
       .step .n {
-        font-family: "Spectral", Georgia, serif; font-size: 1.7rem; font-weight: 700; color: var(--gold); line-height: 1;
+        font-family: "Spectral", Georgia, serif; font-size: 1.7rem; font-weight: 700; color: #8a6508; line-height: 1;
       }
       .step h3 { font-size: 1.05rem; font-weight: 600; margin: 10px 0 6px; }
       .step p { font-size: 0.9rem; color: var(--ink-soft); }
@@ -349,7 +331,7 @@
       .contact-card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
       .contact-card a { font-weight: 600; }
       .email-block { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
-      .email-block .lbl { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+      .email-block .lbl { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6508; margin-bottom: 8px; }
       .email-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
       .email-addr {
         font-weight: 700; font-size: 1.02rem; color: var(--maroon); text-decoration: none;
@@ -392,7 +374,7 @@
         display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
         color: var(--muted); text-align: center; padding: 18px 16px; box-sizing: border-box;
       }
-      .ad-slot .ad-lbl { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); }
+      .ad-slot .ad-lbl { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #8a6508; }
       .ad-slot .ad-note { font-size: 0.85rem; }
       .ad-band { padding: 6px 0 2px; }
 
@@ -418,7 +400,7 @@
       footer.site h3 { color: var(--ink); font-size: 1.15rem; margin-bottom: 14px; }
       footer.site p { font-size: 0.93rem; color: var(--ink-soft); }
       footer.site ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.94rem; }
-      footer.site a { color: var(--gold); text-decoration: none; }
+      footer.site a { color: #8a6508; text-decoration: none; }
       footer.site a:hover { color: var(--maroon); text-decoration: underline; }
       .footer-base {
         border-top: 1px solid var(--line);
