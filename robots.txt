@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://virandra3388mehtaa-collab.github.io/magadh-university-website/sitemap.xml
