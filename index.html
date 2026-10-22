@@ -268,6 +268,15 @@
       .college-photo { margin: 28px 0 0; }
       .college-photo img { width: 100%; display: block; border-radius: 12px; border: 1px solid var(--line); }
       .college-photo figcaption { margin-top: 10px; color: var(--muted); font-size: 0.92rem; }
+      /* latest updates */
+      .updates-list { list-style: none; margin: 26px 0 0; padding: 0; }
+      .update { display: flex; gap: 18px; padding: 16px 2px; border-top: 1px solid var(--line); }
+      .update:last-child { border-bottom: 1px solid var(--line); }
+      .update-date { flex: 0 0 92px; font-size: 0.8rem; font-weight: 700; color: #8a6508; letter-spacing: 0.05em; text-transform: uppercase; padding-top: 3px; }
+      .update-body strong { display: block; font-size: 1.02rem; margin-bottom: 3px; }
+      .update-body span { color: var(--muted); font-size: 0.95rem; }
+      .update-body a { color: #8a6508; font-weight: 600; }
+      @media (max-width: 640px) { .update { flex-direction: column; gap: 4px; } .update-date { flex: none; padding-top: 0; } }
 
       /* services / quick links */
       .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
@@ -495,6 +504,7 @@
             <li><a href="#admissions">Admissions</a></li>
             <li><a href="#results">Results</a></li>
             <li><a href="#scholarship">Scholarship</a></li>
+            <li><a href="#updates">Updates</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -582,6 +592,42 @@
           <a class="btn btn-ghost" href="https://scstpmsonline.bihar.gov.in" target="_blank" rel="noopener">SC / ST — PMS Portal ↗</a>
           <p class="hint">Opens the Bihar Government&rsquo;s official scholarship portals in a new tab.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- ======= latest updates ======= -->
+    <section class="block" id="updates" style="padding-top:52px">
+      <div class="wrap">
+        <div class="head-row">
+          <div>
+            <div class="kicker">Notice Board</div>
+            <h2 class="title">Latest updates</h2>
+            <p class="section-lede">Fresh notices for Magadh University students — results, scholarships and exam news, updated here as new announcements come in.</p>
+          </div>
+        </div>
+        <ul class="updates-list">
+          <li class="update">
+            <span class="update-date">7 Oct 2026</span>
+            <div class="update-body">
+              <strong>UG Semester-II result declared — Session 2025–29</strong>
+              <span>Check your result on the official portal with your registration number and roll number. <a href="https://www.magadhonline.in" target="_blank" rel="noopener">magadhonline.in ↗</a></span>
+            </div>
+          </li>
+          <li class="update">
+            <span class="update-date">Scholarship</span>
+            <div class="update-body">
+              <strong>Bihar Post Matric Scholarship (PMS) — check your status</strong>
+              <span>BC/EBC and SC/ST students can track their application and payment status on the official state portals. <a href="#scholarship">See the Scholarship section ↓</a></span>
+            </div>
+          </li>
+          <li class="update">
+            <span class="update-date">Sep 2025</span>
+            <div class="update-body">
+              <strong>UG Semester-IV result declared — Session 2023–27</strong>
+              <span>Results are available on the official portal. <a href="https://www.magadhonline.in" target="_blank" rel="noopener">magadhonline.in ↗</a></span>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
