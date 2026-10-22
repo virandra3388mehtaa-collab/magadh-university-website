@@ -322,6 +322,9 @@
       .faq summary { font-weight: 600; font-size: 1.02rem; cursor: pointer; }
       .faq p { color: var(--muted); margin: 9px 0 2px; font-size: 0.96rem; }
       .faq a { color: #8a6508; font-weight: 600; }
+      /* floating WhatsApp follow button */
+      .wa-follow { position: fixed; right: 16px; bottom: 16px; z-index: 80; display: inline-flex; align-items: center; gap: 8px; background: #25d366; color: #ffffff; font-weight: 700; font-size: 0.95rem; padding: 12px 20px; border-radius: 999px; box-shadow: 0 8px 24px rgba(18, 90, 44, 0.35); text-decoration: none; }
+      .wa-follow:hover { background: #1eb857; }
 
       /* services / quick links */
       .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
@@ -674,7 +677,7 @@
             </div>
           </li>
         </ul>
-        <p style="margin-top:24px"><a class="btn btn-gold" href="https://whatsapp.com/channel/0029VbCkTnO5q08eAwl72j3l" target="_blank" rel="noopener">Join WhatsApp Channel ↗</a></p>
+        <p style="margin-top:24px"><a class="btn btn-gold" href="https://whatsapp.com/channel/0029VbCkTnO5q08eAwl72j3l" target="_blank" rel="noopener">Follow on WhatsApp ↗</a></p>
         <p class="hint">Get every new notice on WhatsApp — results, exam and scholarship updates as they come in.</p>
       </div>
     </section>
@@ -1318,5 +1321,6 @@
         els.forEach(function (el) { io.observe(el); });
       })();
     </script>
+    <a class="wa-follow" href="https://whatsapp.com/channel/0029VbCkTnO5q08eAwl72j3l" target="_blank" rel="noopener" aria-label="Follow Magadh University updates on WhatsApp">Follow on WhatsApp</a>
   </body>
 </html>
