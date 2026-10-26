@@ -231,6 +231,95 @@
     .box.classic ul li a{font-size:13.5px}
     .tiles a{font-size:13.5px;padding:12px 6px;min-height:50px}
   }
+
+  /* ── Deadline alert banner ─────────────── */
+  .alertbanner{display:none;background:#fdf0f0;border:1.5px solid var(--new);border-radius:8px;padding:12px 14px;margin-top:12px;box-shadow:var(--shadow)}
+  .alertbanner.show{display:block}
+  .alertbanner h2{margin:0 0 4px;font-size:16px;color:var(--new)}
+  .alertbanner p{margin:0;font-size:14px}
+  .alertbanner b{color:var(--brand)}
+  .newbanner{display:none;background:var(--surface);border:1.5px solid var(--green);border-radius:8px;padding:12px 14px;margin-top:12px;box-shadow:var(--shadow)}
+  .newbanner.show{display:block}
+  .newbanner h2{margin:0 0 4px;font-size:16px;color:var(--green)}
+  .newbanner p{margin:0;font-size:14px}
+  .newbanner b{color:var(--brand)}
+
+  /* ── Type filter + empty state ─────────── */
+  .typefilter{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center}
+  .typefilter .tf-label{font-weight:700;font-size:14px}
+  .typefilter button{
+    border:1px solid var(--line);background:var(--surface);color:var(--ink);
+    padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:var(--shadow);min-height:44px;
+  }
+  .typefilter button[aria-pressed="true"]{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .noresults{display:none;background:var(--surface);border:1.5px dashed var(--brand);border-radius:8px;padding:22px 16px;margin-top:14px;text-align:center;box-shadow:var(--shadow)}
+  .noresults.show{display:block}
+  .noresults h2{margin:0 0 6px;font-size:19px;color:var(--brand)}
+  .noresults p{margin:0 0 12px;color:var(--ink-soft);font-size:14px}
+
+  /* ── Closing-soon chip + fee table ─────── */
+  .chip-soon{display:inline-block;background:var(--new);color:#fff;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:999px;margin:0 0 10px;letter-spacing:.2px}
+  @media (prefers-color-scheme: dark){ .chip-soon{color:#14100f;background:#ff8f96} }
+  .feetable{border-collapse:collapse;margin:6px 0 10px;font-size:13.5px;width:100%}
+  .feetable th,.feetable td{border:1px solid var(--line);padding:5px 9px;text-align:left}
+  .feetable th{background:var(--surface-2)}
+
+  /* ── Tap targets ───────────────────────── */
+  .btn{min-height:44px;display:inline-flex;align-items:center}
+  .quals button{min-height:44px}
+
+  /* ── Hamburger nav ─────────────────────── */
+  #nav-toggle{display:none;background:var(--nav-dark);color:#fff;border:0;border-radius:6px;padding:10px 18px;font-size:15px;font-weight:700;cursor:pointer;min-height:44px;margin:6px 0}
+  .navlinks{display:flex;flex-wrap:wrap}
+
+  /* ── Admin panel ───────────────────────── */
+  .adminform{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+  .adminform label{font-size:13px;font-weight:600;display:block}
+  .adminform input,.adminform textarea{
+    width:100%;margin-top:4px;padding:10px;border:1.5px solid var(--line);border-radius:6px;
+    background:var(--surface-2);color:var(--ink);font-size:14.5px;min-height:44px;font-family:inherit;
+  }
+  .adminform .full{grid-column:1/-1}
+  .adminform .check{display:flex;align-items:center;gap:8px;font-size:14px}
+  .adminform .check input{width:20px;height:20px;min-height:0;margin:0}
+  .adminbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .btn.small{padding:7px 12px;font-size:13px}
+  .btn.danger{background:#b3261e;color:#fff}
+  .btn.neutral{background:var(--chip);color:var(--ink);border:1px solid var(--line)}
+  .adminlist{margin-top:16px}
+  .adminlist h3{margin:0 0 8px;font-size:15.5px}
+  .adminlist .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:6px;padding:8px 10px;margin-bottom:8px;background:var(--surface-2)}
+  .adminlist .row .t{font-size:14px;font-weight:600;flex:1;min-width:170px}
+  .adminlist .row .t small{display:block;font-weight:400;color:var(--ink-soft);font-size:12px}
+  .adminlist .row .ops{display:flex;gap:6px;flex-wrap:wrap}
+  #admin-msg{font-size:13.5px;font-weight:600;color:var(--green);margin:10px 0 0;display:none}
+
+  /* ── Bottom quick nav (mobile) ─────────── */
+  .bottomnav{display:none}
+  .grid2.single{grid-template-columns:1fr}
+  @media (max-width:600px){
+    .masthead{padding:14px 12px 10px}
+    .searchbar{margin-top:10px;padding:10px}
+    .ticker{margin-top:10px}
+    .alertbanner,.newbanner{padding:10px 12px;margin-top:10px}
+    .typefilter{margin-top:10px;gap:6px}
+    .typefilter button{padding:6px 11px;font-size:13.5px}
+    #nav-toggle{display:block}
+    .navlinks{display:none;flex-direction:column;width:100%}
+    .navlinks.open{display:flex}
+    .navlinks a{min-height:44px;display:flex;align-items:center;border-top:1px solid rgba(255,255,255,.16);width:100%}
+    .adminform{grid-template-columns:1fr}
+    .bottomnav{
+      display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;
+      background:var(--nav-dark);box-shadow:0 -2px 8px rgba(0,0,0,.3);
+    }
+    .bottomnav a{
+      flex:1;color:#fff;text-align:center;font-size:12.5px;font-weight:700;
+      min-height:50px;display:flex;align-items:center;justify-content:center;padding:6px 2px;
+    }
+    .bottomnav a:hover{text-decoration:none;background:var(--nav)}
+    body{padding-bottom:58px}
+  }
 </style>
 </head>
 <body>
@@ -250,15 +339,20 @@
 
 <nav class="mainnav" aria-label="Main">
   <div class="wrap">
-    <a href="#home">Home</a>
-    <a href="#latest-jobs">Latest Jobs</a>
-    <a href="#results">Results</a>
-    <a href="#admit-card">Admit Card</a>
-    <a href="#answer-key">Answer Key</a>
-    <a href="#syllabus">Syllabus</a>
-    <a href="#admission">Admission</a>
-    <a href="#job-details">Job Details</a>
-    <a href="#official-sites">Official Sites</a>
+    <button type="button" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰ Menu</button>
+    <div class="navlinks" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#latest-jobs">Latest Jobs</a>
+      <a href="#results">Results</a>
+      <a href="#admit-card">Admit Card</a>
+      <a href="#answer-key">Answer Key</a>
+      <a href="#bihar">Bihar Jobs</a>
+      <a href="#syllabus">Syllabus</a>
+      <a href="#admission">Admission</a>
+      <a href="#job-details">Job Details</a>
+      <a href="#official-sites">Official Sites</a>
+      <a href="#admin">Admin</a>
+    </div>
   </div>
 </nav>
 
@@ -281,9 +375,41 @@
       Supreme Court Junior Court Assistant — 250 पद, अंतिम तिथि 28 Oct 2026 &nbsp;★★★&nbsp;
       National Insurance AO — 321 पद, अंतिम तिथि 28 Oct 2026 &nbsp;★★★&nbsp;
       Indian Army TES 57 — अंतिम तिथि 12 Nov 2026 &nbsp;★★★&nbsp;
+      BSSC Field Assistant Mains Form — 201 पद, अंतिम तिथि 31 Oct 2026 &nbsp;★★★&nbsp;
+      Bihar STET 2026 परीक्षा 25 Oct से 20 Nov तक — Admit Card जारी &nbsp;★★★&nbsp;
       SSC CGL Tier 1 Admit Card जारी &nbsp;★★★&nbsp;
       SBI PO Mains Result घोषित
     </span></div>
+  </div>
+
+  <!-- ══════════ DEADLINE ALERT (auto-computed) ══════════ -->
+  <div class="alertbanner" id="deadline-alert" role="alert">
+    <h2>अंतिम तिथि अलर्ट — Last Date Alert</h2>
+    <p id="deadline-alert-text"></p>
+  </div>
+
+  <!-- ══════════ NEW RECRUITMENT ALERT (auto-computed from entry dates) ══════════ -->
+  <div class="newbanner" id="new-alert">
+    <h2>नई भर्ती अलर्ट — New Recruitment Alert</h2>
+    <p id="new-alert-text"></p>
+  </div>
+
+  <!-- ══════════ TYPE FILTER ══════════ -->
+  <div class="typefilter" role="group" aria-label="Filter by category">
+    <span class="tf-label">श्रेणी:</span>
+    <button type="button" data-type="all" aria-pressed="true">सभी (All)</button>
+    <button type="button" data-type="job" aria-pressed="false">Jobs</button>
+    <button type="button" data-type="result" aria-pressed="false">Results</button>
+    <button type="button" data-type="admit" aria-pressed="false">Admit Card</button>
+    <button type="button" data-type="answerkey" aria-pressed="false">Answer Key</button>
+    <button type="button" data-type="bihar" aria-pressed="false">Bihar</button>
+  </div>
+
+  <!-- ══════════ SEARCH EMPTY STATE ══════════ -->
+  <div class="noresults" id="no-results">
+    <h2>कोई परिणाम नहीं मिला</h2>
+    <p>आपकी खोज से कुछ नहीं मिला। वर्तनी जाँचकर दोबारा लिखें, या नीचे के बटन से खोज और सभी filter साफ़ करके पूरी लिस्ट देखें।</p>
+    <button type="button" class="btn apply" id="reset-search">Reset Search — खोज साफ़ करें</button>
   </div>
 
   <!-- ══════════ APPLY ONLINE TILES ══════════ -->
@@ -413,7 +539,7 @@
   <section id="job-details" aria-label="Job details">
     <div class="grid2" id="job-cards">
 
-      <article class="jobcard" data-tags="railway graduate ntpc rrb">
+      <article class="jobcard" data-tags="railway graduate ntpc rrb" data-card-id="ntpc-grad" data-updated="2026-10-07" data-lastdate="2026-11-06">
         <h3>Railway RRB NTPC Graduate Level Recruitment 2026 — CEN 06/2026</h3>
         <p class="org">Railway Recruitment Board (RRB) • Ministry of Railways</p>
         <div class="facts">
@@ -421,7 +547,7 @@
           <div><span>Qualification</span><b>Graduate</b></div>
           <div><span>Apply Start</span><b>08 Oct 2026</b></div>
           <div class="urgent"><span>Last Date</span><b>06 Nov 2026</b></div>
-          <div><span>Application Fee</span><b>₹500 (₹400 refund on appearing in CBT)</b></div>
+          <div><span>Age Limit</span><b>18–33 वर्ष (01 Jan 2027 को)</b></div>
           <div><span>Days Left</span><b data-countdown="2026-11-06">—</b></div>
         </div>
         <div class="actions">
@@ -429,24 +555,49 @@
           <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
         </div>
         <div class="jobdetail">
-          <h4>Post Names</h4>
+          <h4>पद व पदों की संख्या (Post-wise Vacancy)</h4>
           <ul>
-            <li>Chief Commercial cum Ticket Supervisor</li>
-            <li>Goods Train Manager</li>
-            <li>Junior Accounts Assistant cum Typist</li>
-            <li>Senior Clerk cum Typist</li>
+            <li>Goods Train Manager — 2,750 पद (Pay Level 5)</li>
+            <li>Senior Clerk cum Typist — 371 पद (Pay Level 5)</li>
+            <li>Junior Accounts Assistant cum Typist — 300 पद (Pay Level 5)</li>
+            <li>Chief Commercial cum Ticket Supervisor — 127 पद (Pay Level 6)</li>
           </ul>
-          <h4>Selection Process</h4>
+          <h4>योग्यता (Eligibility)</h4>
           <ul>
-            <li>CBT 1 → CBT 2 → Document Verification → Medical Examination</li>
+            <li>किसी मान्यता प्राप्त विश्वविद्यालय से किसी भी विषय में स्नातक (Graduate)</li>
+            <li>आयु सीमा: 18–33 वर्ष (01 Jan 2027 को); आरक्षित वर्गों को नियमानुसार छूट</li>
+            <li>केवल एक ही RRB के लिए आवेदन करें — एक से अधिक RRB में आवेदन करने पर सभी आवेदन रद्द हो जाएँगे</li>
+          </ul>
+          <h4>आवेदन शुल्क (Application Fee)</h4>
+          <table class="feetable">
+            <tr><th>श्रेणी</th><th>शुल्क</th><th>Refund</th></tr>
+            <tr><td>General / OBC</td><td>₹500</td><td>CBT 1 में उपस्थित होने पर ₹400 वापस</td></tr>
+            <tr><td>SC / ST / PwBD / महिला / Ex-Serviceman / EBC / अल्पसंख्यक</td><td>₹250</td><td>CBT 1 में उपस्थित होने पर पूरा वापस</td></tr>
+          </table>
+          <h4>महत्वपूर्ण तिथियाँ (Important Dates)</h4>
+          <ul>
+            <li>आवेदन शुरू: 08 Oct 2026 • अंतिम तिथि: 06 Nov 2026 (रात 11:59)</li>
+            <li>Fee payment की अंतिम तिथि: 08 Nov 2026</li>
+            <li>Form correction window: 09–18 Nov 2026</li>
+            <li>CBT 1: संभावित दिसंबर 2026 — आधिकारिक घोषणा बाकी</li>
+          </ul>
+          <h4>चयन प्रक्रिया (Selection Process)</h4>
+          <ul>
+            <li>CBT 1 (screening) → CBT 2 → Document Verification → Medical Examination</li>
             <li>इस CEN में Typing Skill Test नहीं है</li>
-            <li>Fee payment की अंतिम तिथि: 08 Nov 2026; form correction window: 09–18 Nov 2026</li>
+            <li>CBT 2 के अंकों के आधार पर merit बनती है</li>
           </ul>
-          <p>आवेदन से पहले आधिकारिक notification ध्यान से पढ़ें — पात्रता, आयु सीमा और RRB का चयन वहीं अंतिम माना जाएगा।</p>
+          <h4>सिलेबस व परीक्षा पैटर्न (Syllabus Outline)</h4>
+          <ul>
+            <li>CBT 1: 100 प्रश्न, 90 मिनट — General Awareness 40, Mathematics 30, General Intelligence &amp; Reasoning 30</li>
+            <li>CBT 2: 120 प्रश्न, 90 मिनट — General Awareness 50, Mathematics 35, Reasoning 35</li>
+            <li>प्रत्येक गलत उत्तर पर 1/3 अंक की negative marking</li>
+          </ul>
+          <p>आवेदन से पहले आधिकारिक notification (CEN 06/2026) ध्यान से पढ़ें — पात्रता, आयु सीमा और RRB का चयन वहीं अंतिम माना जाएगा।</p>
         </div>
       </article>
 
-      <article class="jobcard" data-tags="railway 12th ntpc rrb">
+      <article class="jobcard" data-tags="railway 12th ntpc rrb" data-card-id="ntpc-ug" data-updated="2026-10-14" data-lastdate="2026-11-13">
         <h3>Railway RRB NTPC 12th Pass Recruitment 2026 — CEN 07/2026</h3>
         <p class="org">Railway Recruitment Board (RRB) • Ministry of Railways</p>
         <div class="facts">
@@ -468,24 +619,30 @@
             <li>Train Clerk</li>
             <li>Accounts Clerk cum Typist</li>
           </ul>
-          <h4>Important Points</h4>
+          <h4>योग्यता व शुल्क</h4>
           <ul>
-            <li>Application fee ₹500 — CBT में उपस्थित होने पर ₹400 refund</li>
-            <li>Fee payment की अंतिम तिथि: 15 Nov 2026</li>
+            <li>योग्यता: 12वीं (10+2) उत्तीर्ण; आयु 18–30 वर्ष (01 Jan 2027 को)</li>
+            <li>Application fee: General/OBC ₹500 (CBT में उपस्थित होने पर ₹400 refund); SC/ST/PwBD/महिला/EBC आदि ₹250 (पूरा refund)</li>
+            <li>Fee payment की अंतिम तिथि: 15 Nov 2026; correction window: 16–25 Nov 2026</li>
+          </ul>
+          <h4>चयन प्रक्रिया व सिलेबस</h4>
+          <ul>
+            <li>CBT 1 → CBT 2 → Document Verification → Medical Examination</li>
+            <li>CBT 1: 100 प्रश्न (General Awareness 40, Maths 30, Reasoning 30), 90 मिनट; CBT 2: 120 प्रश्न, 90 मिनट; negative marking 1/3 अंक</li>
             <li>Exam city की जानकारी परीक्षा से लगभग 10 दिन पहले, admit card लगभग 4 दिन पहले जारी होता है</li>
           </ul>
         </div>
       </article>
 
-      <article class="jobcard" data-tags="graduate court supreme law">
+      <article class="jobcard" data-tags="graduate court supreme law" data-card-id="sci-jca" data-updated="2026-09-30" data-lastdate="2026-10-28">
         <h3>Supreme Court Junior Court Assistant Recruitment 2026</h3>
-        <p class="org">Supreme Court of India, New Delhi</p>
+        <p class="org">Supreme Court of India, New Delhi • Advt. No. F.6/2026-SC (RC)</p>
         <div class="facts">
-          <div><span>Total Posts</span><b>250</b></div>
+          <div><span>Total Posts</span><b>250 (संभावित)</b></div>
           <div><span>Pay Level</span><b>Level 6 — ₹35,400</b></div>
-          <div><span>Qualification</span><b>Graduate</b></div>
+          <div><span>Qualification</span><b>Graduate + Typing 35 wpm</b></div>
           <div class="urgent"><span>Last Date</span><b>28 Oct 2026</b></div>
-          <div><span>Apply Mode</span><b>Online — sci.gov.in</b></div>
+          <div><span>Age Limit</span><b>18–30 वर्ष (01 Sep 2026 को)</b></div>
           <div><span>Days Left</span><b data-countdown="2026-10-28">—</b></div>
         </div>
         <div class="actions">
@@ -493,25 +650,54 @@
           <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
         </div>
         <div class="jobdetail">
+          <h4>योग्यता (Eligibility)</h4>
+          <ul>
+            <li>मान्यता प्राप्त विश्वविद्यालय से स्नातक (Bachelor's degree)</li>
+            <li>Computer चलाने का ज्ञान और English typing speed 35 शब्द प्रति मिनट</li>
+            <li>आयु: 18–30 वर्ष (01 Sep 2026 को); SC/ST/OBC-NCL/PwBD/Ex-Serviceman को नियमानुसार छूट</li>
+            <li>केवल भारतीय नागरिक आवेदन कर सकते हैं</li>
+          </ul>
+          <h4>आवेदन शुल्क (Application Fee)</h4>
+          <table class="feetable">
+            <tr><th>श्रेणी</th><th>शुल्क</th></tr>
+            <tr><td>General / Unreserved</td><td>₹1,500</td></tr>
+            <tr><td>SC / ST / OBC (NCL) / Ex-Serviceman / PwBD</td><td>₹750</td></tr>
+          </table>
+          <p>शुल्क UCO Bank payment gateway से online जमा होगा; fee वापस नहीं होती।</p>
+          <h4>महत्वपूर्ण तिथियाँ (Important Dates)</h4>
+          <ul>
+            <li>आवेदन शुरू: 07 Oct 2026 • अंतिम तिथि: 28 Oct 2026 (रात 11:55)</li>
+            <li>Objective Test (संभावित): 20 Nov 2026</li>
+          </ul>
+          <h4>चयन प्रक्रिया (Selection Process)</h4>
+          <ul>
+            <li>Objective Type Test (100 प्रश्न, 100 अंक) → Typing Speed Test → Descriptive Written Test → Interview</li>
+            <li>Typing, Descriptive Test और Interview केवल Delhi/NCR में होते हैं</li>
+          </ul>
+          <h4>सिलेबस (Objective Test — विषयवार प्रश्न)</h4>
+          <ul>
+            <li>General English 20 • General Aptitude 15 • General Knowledge 15</li>
+            <li>न्यायपालिका से जुड़े संवैधानिक प्रावधान 15 • Computer Knowledge 15</li>
+            <li>Supreme Court Rules, 2013 — 10 • Supreme Court Officers &amp; Servants Rules, 1961 — 10</li>
+          </ul>
           <h4>साथ में चल रही अन्य Supreme Court भर्तियाँ</h4>
           <ul>
             <li>Senior Personal Assistant — 65 पद, Level 8 (₹47,600), अंतिम तिथि 10 Nov 2026</li>
             <li>Court Master (Shorthand) — 20 पद, Level 11 (₹67,700), अंतिम तिथि 15 Nov 2026</li>
-            <li>Junior Court Attendant — 12th pass उम्मीदवारों के लिए</li>
           </ul>
           <p>हर पद की पात्रता और चयन प्रक्रिया अलग है — आवेदन से पहले sci.gov.in पर संबंधित विज्ञापन ज़रूर पढ़ें।</p>
         </div>
       </article>
 
-      <article class="jobcard" data-tags="bank graduate insurance ao">
+      <article class="jobcard" data-tags="bank graduate insurance ao" data-card-id="nicl-ao" data-updated="2026-10-08" data-lastdate="2026-10-28">
         <h3>National Insurance Company AO Scale I Recruitment 2026</h3>
         <p class="org">National Insurance Company Limited (NICL)</p>
         <div class="facts">
           <div><span>Total Posts</span><b>321</b></div>
           <div><span>Post Name</span><b>Administrative Officer, Scale I</b></div>
-          <div><span>Qualification</span><b>Graduate / Post Graduate (post-wise)</b></div>
+          <div><span>Qualification</span><b>Graduate / PG — न्यूनतम 60% अंक</b></div>
           <div class="urgent"><span>Last Date</span><b>28 Oct 2026</b></div>
-          <div><span>Apply Mode</span><b>Online</b></div>
+          <div><span>Age Limit</span><b>21–30 वर्ष (01 Oct 2026 को)</b></div>
           <div><span>Days Left</span><b data-countdown="2026-10-28">—</b></div>
         </div>
         <div class="actions">
@@ -519,23 +705,48 @@
           <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
         </div>
         <div class="jobdetail">
-          <h4>Selection Process (सामान्य प्रक्रिया)</h4>
+          <h4>पदों का विभाजन</h4>
           <ul>
-            <li>Preliminary Exam → Main Exam → Interview</li>
-            <li>Generalist और Specialist दोनों stream के पद शामिल हो सकते हैं — stream-wise पात्रता notification में देखें</li>
+            <li>Generalist — 200 पद (किसी भी stream के स्नातक)</li>
+            <li>Specialist — 121 पद: Finance (CA/CMA) 20, Legal 20, IT 11, Automobile Engg. 20, Risk Engg. 28, Company Secretary 2, Agriculture 20</li>
+            <li>शुरुआती basic pay ₹82,485 प्रति माह; उम्मीदवार केवल एक ही discipline के लिए आवेदन कर सकता है</li>
+          </ul>
+          <h4>योग्यता (Eligibility)</h4>
+          <ul>
+            <li>Generalist: किसी भी विषय में Graduate/Post Graduate, न्यूनतम 60% अंक (SC/ST/PwBD के लिए 55%)</li>
+            <li>Specialist: संबंधित discipline की degree/professional योग्यता अनिवार्य</li>
+            <li>आयु: 21–30 वर्ष (01 Oct 2026 को); आरक्षण नियमानुसार</li>
+          </ul>
+          <h4>आवेदन शुल्क (Application Fee)</h4>
+          <table class="feetable">
+            <tr><th>श्रेणी</th><th>शुल्क</th></tr>
+            <tr><td>SC / ST / PwBD</td><td>₹250</td></tr>
+            <tr><td>अन्य सभी उम्मीदवार</td><td>₹1,000</td></tr>
+          </table>
+          <h4>महत्वपूर्ण तिथियाँ (Important Dates)</h4>
+          <ul>
+            <li>आवेदन: 08 Oct – 28 Oct 2026</li>
+            <li>Phase I (Prelims): 17 Nov 2026 • Phase II (Mains): 22 Dec 2026</li>
+          </ul>
+          <h4>चयन प्रक्रिया व सिलेबस</h4>
+          <ul>
+            <li>Prelims → Mains → Interview (अंतिम merit में Mains व Interview का अनुपात 80:20)</li>
+            <li>Prelims: 100 प्रश्न, 100 अंक, 60 मिनट — English 30, Reasoning 35, Quantitative Aptitude 35 (हर section के लिए अलग 20 मिनट)</li>
+            <li>Mains (Generalist): Reasoning, English, General Awareness, Computer Knowledge, Quantitative Aptitude — 250 अंक; Specialist के लिए अतिरिक्त Professional Knowledge section</li>
+            <li>गलत उत्तर पर प्रश्न के अंकों का 1/4 negative marking</li>
           </ul>
         </div>
       </article>
 
-      <article class="jobcard" data-tags="defence 12th army">
+      <article class="jobcard" data-tags="defence 12th army" data-card-id="army-tes57" data-updated="2026-10-14" data-lastdate="2026-11-12">
         <h3>Indian Army TES 57 Entry 2026 — Technical Entry Scheme</h3>
         <p class="org">Indian Army • Join Indian Army</p>
         <div class="facts">
-          <div><span>Entry</span><b>TES 57 (10+2 Technical Entry)</b></div>
-          <div><span>Qualification</span><b>12th with Physics, Chemistry, Maths</b></div>
-          <div><span>Apply Mode</span><b>Online</b></div>
+          <div><span>Total Posts</span><b>90 (Provisional)</b></div>
+          <div><span>Qualification</span><b>12th PCM 60% + JEE Main 2026</b></div>
+          <div><span>Age Limit</span><b>16½–19½ वर्ष</b></div>
           <div class="urgent"><span>Last Date</span><b>12 Nov 2026</b></div>
-          <div><span>Selection</span><b>Shortlisting → SSB Interview → Medical</b></div>
+          <div><span>Application Fee</span><b>कोई शुल्क नहीं</b></div>
           <div><span>Days Left</span><b data-countdown="2026-11-12">—</b></div>
         </div>
         <div class="actions">
@@ -545,22 +756,23 @@
         <div class="jobdetail">
           <h4>Important Points</h4>
           <ul>
-            <li>TES entry से उम्मीदवार अधिकारी (Officer) के रूप में कमीशन पाते हैं</li>
-            <li>JEE (Main) score और 10+2 marks के आधार पर shortlisting होती है — सटीक criteria आधिकारिक notification में देखें</li>
-            <li>SSB interview 5 दिनों का होता है; यात्रा और तैयारी पहले से plan करें</li>
+            <li>केवल अविवाहित पुरुष उम्मीदवार; 12वीं में Physics, Chemistry, Maths में कुल न्यूनतम 60% अंक और JEE Main 2026 में शामिल होना अनिवार्य है</li>
+            <li>आवेदन 14 Oct 2026 से शुरू; अंतिम तिथि 12 Nov 2026 (दोपहर 12 बजे तक)</li>
+            <li>JEE Main 2026 की CRL के आधार पर shortlisting → 5-दिवसीय SSB Interview → Medical; 4 वर्ष के प्रशिक्षण के बाद Lieutenant के रूप में Permanent Commission</li>
+            <li>Course जुलाई 2027 से शुरू होगा</li>
           </ul>
         </div>
       </article>
 
-      <article class="jobcard" data-tags="graduate university assistant">
+      <article class="jobcard" data-tags="graduate university assistant" data-card-id="du-assistant" data-updated="2026-10-19" data-lastdate="2026-11-09">
         <h3>Delhi University Senior Assistant &amp; Assistant Recruitment 2026</h3>
-        <p class="org">University of Delhi</p>
+        <p class="org">University of Delhi • Advt. No. R&amp;P/323/2026</p>
         <div class="facts">
           <div><span>Total Posts</span><b>126</b></div>
-          <div><span>Post Names</span><b>Senior Assistant, Assistant</b></div>
-          <div><span>Qualification</span><b>Graduate (post-wise)</b></div>
+          <div><span>Post Names</span><b>Senior Assistant 46, Assistant 80</b></div>
+          <div><span>Qualification</span><b>Graduate + अनुभव (2–3 वर्ष)</b></div>
           <div class="urgent"><span>Last Date</span><b>09 Nov 2026</b></div>
-          <div><span>Apply Mode</span><b>Online — du.ac.in</b></div>
+          <div><span>Application Fee</span><b>₹600 – ₹1,000 (श्रेणी अनुसार)</b></div>
           <div><span>Days Left</span><b data-countdown="2026-11-09">—</b></div>
         </div>
         <div class="actions">
@@ -568,16 +780,208 @@
           <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
         </div>
         <div class="jobdetail">
-          <h4>Important Points</h4>
+          <h4>योग्यता व आयु</h4>
           <ul>
-            <li>Non-teaching पदों की भर्ती — केंद्रीय विश्वविद्यालय में स्थायी नौकरी का अवसर</li>
-            <li>Post-wise अनुभव और आयु सीमा du.ac.in के विज्ञापन में दी गई है</li>
+            <li>Senior Assistant (Pay Level 6): स्नातक + Assistant या समकक्ष पद पर 3 वर्ष का अनुभव; अधिकतम आयु 35 वर्ष</li>
+            <li>Assistant (Pay Level 4): स्नातक + Junior Assistant या समकक्ष पद पर 2 वर्ष का अनुभव; English typing 35 wpm या Hindi typing 30 wpm; अधिकतम आयु 32 वर्ष</li>
+            <li>केवल degree पर्याप्त नहीं है — निर्धारित अनुभव अनिवार्य है</li>
+          </ul>
+          <h4>तिथियाँ व चयन प्रक्रिया</h4>
+          <ul>
+            <li>आवेदन: 23 Oct – 09 Nov 2026 (या Employment News में प्रकाशन से दो सप्ताह, जो बाद में हो)</li>
+            <li>चयन: Preliminary Exam → Descriptive Main Exam → Qualifying Skill Test</li>
           </ul>
         </div>
       </article>
 
     </div>
     <p id="qual-status" class="search-note" role="status" style="display:none"></p>
+  </section>
+
+  <!-- ══════════ BIHAR SECTION ══════════ -->
+  <section id="bihar" aria-label="Bihar jobs and board updates">
+    <div class="panel" style="margin-bottom:14px">
+      <h2>बिहार भर्ती — Bihar Jobs, Results &amp; Board Updates</h2>
+      <p style="margin:0;font-size:14.5px">बिहार की सभी बड़ी भर्तियाँ एक ही जगह — BPSC, BSSC, BTSC, BPSSC और Bihar Board (BSEB) की जानकारी, हर entry के साथ आधिकारिक वेबसाइट का लिंक। आवेदन से पहले संबंधित आयोग/बोर्ड की आधिकारिक सूचना ज़रूर जाँचें।</p>
+    </div>
+
+    <div class="grid3" style="margin-top:0">
+      <div class="box">
+        <h2 class="navy">BPSC <a href="https://bpsc.bihar.gov.in" target="_blank" rel="noopener">bpsc.bihar.gov.in</a></h2>
+        <ul data-list>
+          <li><a href="https://bpsc.bihar.gov.in" target="_blank" rel="noopener">BPSC School Teacher TRE 4.0 — 33,320 पद</a>
+            <span class="meta">Advt. 15/2026 • अंतिम तिथि <b>26 Oct 2026</b> • शुल्क ₹100</span></li>
+          <li><a href="https://bpsc.bihar.gov.in" target="_blank" rel="noopener">BPSC Exam Calendar व सभी विज्ञापन</a>
+            <span class="meta">आयोग की आधिकारिक वेबसाइट पर देखें</span></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h2 class="navy">BSSC <a href="https://bssc.bihar.gov.in" target="_blank" rel="noopener">bssc.bihar.gov.in</a></h2>
+        <ul data-list>
+          <li><a href="https://bssc.bihar.gov.in" target="_blank" rel="noopener">BSSC Field Assistant Mains Form 2026 — 201 पद</a>
+            <span class="meta">Advt. 03/25 • अंतिम तिथि <b>31 Oct 2026</b> • केवल Prelims उत्तीर्ण 1,005 अभ्यर्थी</span></li>
+          <li><a href="https://bssc.bihar.gov.in" target="_blank" rel="noopener">BSSC Inter Level / CGL — ताज़ा सूचनाएँ</a>
+            <span class="meta">आधिकारिक वेबसाइट पर नवीनतम नोटिस देखें</span></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h2 class="navy">BTSC <a href="https://btsc.bihar.gov.in" target="_blank" rel="noopener">btsc.bihar.gov.in</a></h2>
+        <ul data-list>
+          <li><a href="https://btsc.bihar.gov.in" target="_blank" rel="noopener">BTSC Fisheries Extension Officer — 231 पद</a>
+            <span class="meta">Advt. 28/2026 • आवेदन बंद — 23 Oct 2026</span></li>
+          <li><a href="https://btsc.bihar.gov.in" target="_blank" rel="noopener">BTSC Food Safety Officer — 105 पद</a>
+            <span class="meta">Health Department • CBT आधारित चयन</span></li>
+          <li><a href="https://btsc.bihar.gov.in" target="_blank" rel="noopener">BTSC Touring Veterinary Officer — 787 पद</a>
+            <span class="meta">Advt. 27/2026 • Animal &amp; Fisheries Dept.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="box">
+        <h2 class="navy">BPSSC — Bihar Police <a href="https://bpssc.bihar.gov.in" target="_blank" rel="noopener">bpssc.bihar.gov.in</a></h2>
+        <ul data-list>
+          <li><a href="https://bpssc.bihar.gov.in" target="_blank" rel="noopener">BPSSC Company Commander (Home Guard) — 65 पद</a>
+            <span class="meta">Advt. 11/2026 • आवेदन बंद — 10 Oct 2026 • केवल सेवारत Home Guards के लिए था</span></li>
+          <li><span style="font-size:14px">26 Oct 2026 की जाँच में BPSSC पर कोई नई खुली भर्ती नहीं मिली — नया विज्ञापन आते ही यहाँ जुड़ेगा। SI समेत पुरानी भर्तियों की स्थिति आधिकारिक वेबसाइट पर देखें।</span></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h2 class="navy">Bihar Board — BSEB <a href="https://biharboardonline.bihar.gov.in" target="_blank" rel="noopener">biharboardonline.bihar.gov.in</a></h2>
+        <ul data-list>
+          <li data-updated="2026-10-24"><a href="https://secondary.biharboardonline.com" target="_blank" rel="noopener">Bihar STET 2026 Admit Card — परीक्षा 25 Oct से 20 Nov 2026</a>
+            <span class="meta">4 Nov वाली परीक्षा अब <b>21 Nov 2026</b> को; संशोधित Admit Card 24 Oct से जारी</span></li>
+          <li><a href="https://results.biharboardonline.com" target="_blank" rel="noopener">BSEB Inter (12th) Result 2026 — घोषित</a>
+            <span class="meta">परिणाम तिथि: 23 Mar 2026 • Roll Code + Roll Number से देखें</span></li>
+          <li><a href="https://results.biharboardonline.com" target="_blank" rel="noopener">BSEB Matric (10th) Result 2026 — घोषित</a>
+            <span class="meta">परिणाम तिथि: 29 Mar 2026 • कुल 81.79% छात्र उत्तीर्ण</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid2" id="bihar-cards" style="margin-top:14px">
+
+      <article class="jobcard" data-tags="bihar graduate teacher bpsc" data-card-id="bpsc-tre4" data-updated="2026-09-29" data-lastdate="2026-10-26">
+        <h3>BPSC School Teacher TRE 4.0 Recruitment 2026 — बिहार शिक्षक भर्ती</h3>
+        <p class="org">Bihar Public Service Commission (BPSC) • Advt. No. 15/2026</p>
+        <div class="facts">
+          <div><span>Total Posts</span><b>33,320</b></div>
+          <div><span>Qualification</span><b>कक्षा-स्तर अनुसार + TET/STET</b></div>
+          <div><span>Apply Start</span><b>25 Sep 2026</b></div>
+          <div class="urgent"><span>Last Date</span><b>26 Oct 2026</b></div>
+          <div><span>Application Fee</span><b>₹100 (सभी श्रेणियाँ)</b></div>
+          <div><span>Days Left</span><b data-countdown="2026-10-26">—</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn apply" href="https://bpsc.bihar.gov.in" target="_blank" rel="noopener">Apply Online</a>
+          <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
+        </div>
+        <div class="jobdetail">
+          <h4>पद व स्तर (Vacancy — संशोधित कुल 33,320)</h4>
+          <ul>
+            <li>प्राथमिक शिक्षक (कक्षा 1–5), मध्य विद्यालय (6–8), माध्यमिक (9–10) और उच्च माध्यमिक (11–12) — मूल विज्ञापन 32,388 पदों का था, बाद में 932 पद बढ़ाए गए</li>
+            <li>Fee payment की अंतिम तिथि: 25 Oct 2026</li>
+          </ul>
+          <h4>योग्यता व आयु</h4>
+          <ul>
+            <li>कक्षा-स्तर के अनुसार निर्धारित शैक्षणिक योग्यता व शिक्षक पात्रता (CTET/STET) अनिवार्य — विषयवार विवरण विज्ञापन में देखें</li>
+            <li>न्यूनतम आयु: प्राथमिक/मध्य स्तर 18 वर्ष, माध्यमिक/उच्च माध्यमिक 21 वर्ष</li>
+          </ul>
+          <h4>चयन प्रक्रिया</h4>
+          <ul>
+            <li>लिखित परीक्षा → दस्तावेज़ सत्यापन; परीक्षा तिथि आयोग बाद में घोषित करेगा (exam calendar में TBD)</li>
+            <li>आवेदन केवल BPSC की आधिकारिक वेबसाइट bpsc.bihar.gov.in से — OTR (One Time Registration) के साथ</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="jobcard" data-tags="bihar 12th bssc agriculture" data-card-id="bssc-field-assistant" data-updated="2026-10-16" data-lastdate="2026-10-31">
+        <h3>BSSC Field Assistant Mains Online Form 2026 — क्षेत्र सहायक</h3>
+        <p class="org">Bihar Staff Selection Commission (BSSC) • Advt. No. 03/25</p>
+        <div class="facts">
+          <div><span>Total Posts</span><b>201</b></div>
+          <div><span>Qualification</span><b>12th (Agriculture) / Diploma in Agriculture</b></div>
+          <div><span>Mains Form Start</span><b>22 Oct 2026</b></div>
+          <div class="urgent"><span>Last Date</span><b>31 Oct 2026</b></div>
+          <div><span>Application Fee</span><b>Mains के लिए कोई शुल्क नहीं</b></div>
+          <div><span>Days Left</span><b data-countdown="2026-10-31">—</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn apply" href="https://bssc.bihar.gov.in" target="_blank" rel="noopener">Apply Online</a>
+          <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
+        </div>
+        <div class="jobdetail">
+          <h4>कौन आवेदन कर सकता है</h4>
+          <ul>
+            <li>केवल वे 1,005 अभ्यर्थी जो Field Assistant प्रारंभिक परीक्षा (10 Aug 2025) में उत्तीर्ण घोषित हुए हैं</li>
+            <li>शैक्षणिक योग्यता: इंटरमीडिएट (कृषि) या कृषि में डिप्लोमा</li>
+            <li>प्रारंभिक आवेदन में दावा किया गया आरक्षण वर्ग बदला नहीं जा सकता</li>
+          </ul>
+          <h4>Mains परीक्षा पैटर्न</h4>
+          <ul>
+            <li>Paper 1: हिंदी (केवल qualifying) — 100 प्रश्न, न्यूनतम 30% अंक आवश्यक</li>
+            <li>Paper 2: सामान्य ज्ञान — 150 प्रश्न; merit इसी के अंकों से बनेगी</li>
+            <li>प्रत्येक सही उत्तर 4 अंक, गलत उत्तर पर 1 अंक negative</li>
+            <li>Mains परीक्षा संभावित नवंबर 2026 के अंतिम सप्ताह में</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="jobcard" data-tags="bihar graduate btsc fisheries" data-card-id="btsc-fisheries" data-updated="2026-09-24" data-lastdate="2026-10-23">
+        <h3>BTSC Fisheries Extension Officer Recruitment 2026 — मत्स्य प्रसार पदाधिकारी</h3>
+        <p class="org">Bihar Technical Service Commission (BTSC) • Advt. No. 28/2026</p>
+        <div class="facts">
+          <div><span>Total Posts</span><b>231</b></div>
+          <div><span>Qualification</span><b>B.Sc. Fisheries (4 वर्षीय)</b></div>
+          <div><span>Apply Period</span><b>24 Sep – 23 Oct 2026</b></div>
+          <div class="urgent"><span>Last Date</span><b>23 Oct 2026 (बंद)</b></div>
+          <div><span>Application Fee</span><b>₹100</b></div>
+          <div><span>Days Left</span><b data-countdown="2026-10-23">—</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn apply" href="https://btsc.bihar.gov.in" target="_blank" rel="noopener">Official Website</a>
+          <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
+        </div>
+        <div class="jobdetail">
+          <h4>योग्यता व आयु</h4>
+          <ul>
+            <li>ICAR-मान्यता प्राप्त कृषि विश्वविद्यालय के Fisheries College से 4 वर्षीय स्नातक (Fisheries Science)</li>
+            <li>आयु: 21–42 वर्ष (श्रेणी अनुसार, 01 Aug 2026 को)</li>
+          </ul>
+          <h4>चयन प्रक्रिया</h4>
+          <ul>
+            <li>Computer Based Test (CBT) + संविदा कार्य-अनुभव के अंक</li>
+            <li>आवेदन अवधि समाप्त हो चुकी है — परीक्षा तिथि व Admit Card की जानकारी btsc.bihar.gov.in पर देखें</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="jobcard" data-tags="bihar graduate defence bpssc police" data-card-id="bpssc-commander" data-updated="2026-09-07" data-lastdate="2026-10-10">
+        <h3>BPSSC Company Commander Recruitment 2026 — गुल्म समादेष्टा (Home Guard)</h3>
+        <p class="org">Bihar Police Subordinate Services Commission (BPSSC) • Advt. No. 11/2026</p>
+        <div class="facts">
+          <div><span>Total Posts</span><b>65</b></div>
+          <div><span>Pay Level</span><b>Level 6</b></div>
+          <div><span>Apply Period</span><b>10 Sep – 10 Oct 2026</b></div>
+          <div class="urgent"><span>Last Date</span><b>10 Oct 2026 (बंद)</b></div>
+          <div><span>Application Fee</span><b>₹100</b></div>
+          <div><span>Days Left</span><b data-countdown="2026-10-10">—</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn apply" href="https://bpssc.bihar.gov.in" target="_blank" rel="noopener">Official Website</a>
+          <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
+        </div>
+        <div class="jobdetail">
+          <h4>महत्वपूर्ण जानकारी</h4>
+          <ul>
+            <li>यह विभागीय भर्ती थी — केवल 5+ वर्ष सेवा वाले नामांकित Bihar Home Guards ही आवेदन कर सकते थे; आम उम्मीदवारों के लिए नहीं थी</li>
+            <li>चयन: प्रारंभिक परीक्षा → मुख्य परीक्षा → शारीरिक दक्षता परीक्षा (PET)</li>
+            <li>आवेदन अवधि समाप्त — परीक्षा कार्यक्रम bpssc.bihar.gov.in पर देखें</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
   </section>
 
   <!-- ══════════ SYLLABUS / ADMISSION / DOCUMENTS ══════════ -->
@@ -652,13 +1056,73 @@
       <a href="https://www.joinindiannavy.gov.in" target="_blank" rel="noopener">Indian Navy<small>joinindiannavy.gov.in</small></a>
       <a href="https://upsssc.gov.in" target="_blank" rel="noopener">UPSSSC<small>upsssc.gov.in — उत्तर प्रदेश</small></a>
       <a href="https://bpsc.bihar.gov.in" target="_blank" rel="noopener">BPSC<small>bpsc.bihar.gov.in — बिहार</small></a>
+      <a href="https://bssc.bihar.gov.in" target="_blank" rel="noopener">BSSC<small>bssc.bihar.gov.in — बिहार कर्मचारी चयन</small></a>
+      <a href="https://btsc.bihar.gov.in" target="_blank" rel="noopener">BTSC<small>btsc.bihar.gov.in — बिहार तकनीकी सेवा</small></a>
+      <a href="https://bpssc.bihar.gov.in" target="_blank" rel="noopener">BPSSC<small>bpssc.bihar.gov.in — बिहार पुलिस</small></a>
+      <a href="https://biharboardonline.bihar.gov.in" target="_blank" rel="noopener">Bihar Board<small>biharboardonline.bihar.gov.in — BSEB</small></a>
       <a href="https://mppsc.mp.gov.in" target="_blank" rel="noopener">MPPSC<small>mppsc.mp.gov.in — मध्य प्रदेश</small></a>
       <a href="https://sci.gov.in" target="_blank" rel="noopener">Supreme Court<small>sci.gov.in — न्यायालय भर्ती</small></a>
       <a href="https://www.india.gov.in" target="_blank" rel="noopener">National Portal<small>india.gov.in — भारत सरकार</small></a>
     </div>
   </section>
 
+  <!-- ══════════ ADMIN PANEL ══════════ -->
+  <section class="panel" id="admin" aria-label="Admin panel">
+    <h2>Admin Panel — भर्ती जोड़ें / संपादित करें</h2>
+    <p style="margin:0 0 6px;font-size:14px;color:var(--ink-soft)">यहाँ से बिना code बदले नई भर्ती जोड़ें, मौजूदा entry बदलें या हटाएँ। नीचे की लिस्ट में किसी entry के सामने <b>Edit</b> दबाकर उसका विवरण form में भरें, फिर <b>Save Entry</b> दबाएँ।</p>
+    <form class="adminform" id="admin-form">
+      <label>भर्ती का शीर्षक (Title)
+        <input type="text" id="af-title" required placeholder="जैसे: SSC CGL Recruitment 2027" />
+      </label>
+      <label>संस्था (Organization)
+        <input type="text" id="af-org" placeholder="जैसे: Staff Selection Commission" />
+      </label>
+      <label>कुल पद (Total Posts)
+        <input type="text" id="af-posts" placeholder="जैसे: 5,000" />
+      </label>
+      <label>योग्यता (Qualification)
+        <input type="text" id="af-qual" placeholder="जैसे: Graduate" />
+      </label>
+      <label>अंतिम तिथि (Last Date)
+        <input type="date" id="af-lastdate" />
+      </label>
+      <label>आधिकारिक / Apply लिंक (URL)
+        <input type="url" id="af-url" placeholder="https://…" />
+      </label>
+      <label class="full">Filter Tags (खाली जगह से अलग करें — जैसे: graduate bank ssc)
+        <input type="text" id="af-tags" placeholder="graduate bank" />
+      </label>
+      <label class="full">विवरण (Details — हर पंक्ति एक bullet बनेगी)
+        <textarea id="af-details" rows="4" placeholder="योग्यता: …&#10;आयु सीमा: …&#10;चयन प्रक्रिया: …"></textarea>
+      </label>
+      <label class="check full"><input type="checkbox" id="af-bihar" /> यह बिहार की भर्ती है (Bihar tag जुड़ेगा)</label>
+      <div class="full" style="display:flex;gap:8px;flex-wrap:wrap">
+        <button type="submit" class="btn apply" id="af-save">Save Entry</button>
+        <button type="button" class="btn neutral" id="af-cancel" style="display:none">Cancel Edit</button>
+      </div>
+    </form>
+    <p id="admin-msg" role="status"></p>
+    <div class="adminbar">
+      <button type="button" class="btn neutral" id="admin-export">Export JSON</button>
+      <label class="btn neutral" for="admin-import-file" style="cursor:pointer">Import JSON</label>
+      <input type="file" id="admin-import-file" accept="application/json,.json" style="display:none" />
+      <button type="button" class="btn danger" id="admin-reset">Reset — मूल लिस्ट वापस लाएँ</button>
+    </div>
+    <div class="adminlist" id="admin-list">
+      <h3>मौजूदा Entries</h3>
+      <div id="admin-rows"></div>
+    </div>
+  </section>
+
 </main>
+
+<nav class="bottomnav" aria-label="Quick navigation">
+  <a href="#home">Home</a>
+  <a href="#latest-jobs">Jobs</a>
+  <a href="#results">Results</a>
+  <a href="#bihar">Bihar</a>
+  <a href="#admin">Admin</a>
+</nav>
 
 <footer>
   <div class="wrap">
@@ -668,9 +1132,11 @@
       <a href="#results">Results</a>
       <a href="#admit-card">Admit Card</a>
       <a href="#answer-key">Answer Key</a>
+      <a href="#bihar">Bihar Jobs</a>
       <a href="#syllabus">Syllabus</a>
       <a href="#admission">Admission</a>
       <a href="#official-sites">Official Sites</a>
+      <a href="#admin">Admin</a>
     </nav>
     <p class="disclaimer"><b>Disclaimer:</b> Sarkari Result Portal एक स्वतंत्र सूचना पोर्टल है — यह किसी सरकारी संस्था की आधिकारिक वेबसाइट नहीं है। यहाँ दी गई जानकारी विभिन्न आधिकारिक सूचनाओं के आधार पर तैयार की जाती है। किसी भी भर्ती में आवेदन करने से पहले संबंधित विभाग की आधिकारिक वेबसाइट पर जारी notification अवश्य पढ़ें; किसी त्रुटि के लिए पोर्टल जिम्मेदार नहीं होगा। सभी परीक्षा नाम, संस्था नाम और ट्रेडमार्क उनके संबंधित स्वामियों के हैं।</p>
     <p>© 2026 Sarkari Result Portal — सरकारी नौकरी की जानकारी, सरल भाषा में।</p>
@@ -682,35 +1148,227 @@
 (function(){
   "use strict";
 
-  /* Days-left countdowns, computed against the visitor's date */
-  var today = new Date(); today.setHours(0,0,0,0);
-  document.querySelectorAll("[data-countdown]").forEach(function(el){
-    var d = new Date(el.getAttribute("data-countdown") + "T00:00:00");
-    var diff = Math.round((d - today) / 86400000);
-    el.textContent = diff > 0 ? diff + " दिन बाकी" : (diff === 0 ? "आज अंतिम तिथि!" : "तिथि निकल गई");
-  });
-
-  /* Full-details toggles on job cards */
-  document.querySelectorAll(".jobcard .btn.detail").forEach(function(btn){
-    btn.addEventListener("click", function(){
-      var panel = btn.closest(".jobcard").querySelector(".jobdetail");
-      var open = panel.classList.toggle("open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-      btn.textContent = open ? "Hide Details" : "Full Details";
+  function $$(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); }
+  function daysUntil(iso){
+    var t = new Date(); t.setHours(0,0,0,0);
+    var d = new Date(iso + "T00:00:00");
+    return Math.round((d - t) / 86400000);
+  }
+  function fmtDate(iso){
+    return new Date(iso + "T00:00:00").toLocaleDateString("en-IN", {day:"numeric", month:"long", year:"numeric"});
+  }
+  function fmtShort(iso){
+    return new Date(iso + "T00:00:00").toLocaleDateString("en-IN", {day:"numeric", month:"short"});
+  }
+  function esc(s){
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function(ch){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch];
     });
+  }
+  function refreshCountdowns(scope){
+    $$("[data-countdown]", scope).forEach(function(el){
+      var diff = daysUntil(el.getAttribute("data-countdown"));
+      el.textContent = diff > 0 ? diff + " दिन बाकी" : (diff === 0 ? "आज अंतिम तिथि!" : "तिथि निकल गई");
+    });
+  }
+
+  /* ════════ Admin data (saved in this browser) ════════ */
+  var LS_KEY = "srp_entries_v1";
+  var store = {custom:[], overrides:{}, hidden:[]};
+  try {
+    var raw = localStorage.getItem(LS_KEY);
+    if (raw) {
+      var parsed = JSON.parse(raw);
+      if (parsed) { store.custom = parsed.custom || []; store.overrides = parsed.overrides || {}; store.hidden = parsed.hidden || []; }
+    }
+  } catch(e) {}
+  function saveStore(){ try { localStorage.setItem(LS_KEY, JSON.stringify(store)); } catch(e) {} }
+  function isHidden(id){ return store.hidden.indexOf(id) !== -1; }
+
+  function detailsHTML(text){
+    var lines = String(text || "").split(/\n+/).map(function(x){ return x.trim(); }).filter(Boolean);
+    if (!lines.length) return "<p>आवेदन से पहले आधिकारिक notification ज़रूर पढ़ें।</p>";
+    if (lines.length === 1) return "<p>" + esc(lines[0]) + "</p>";
+    return "<ul>" + lines.map(function(l){ return "<li>" + esc(l) + "</li>"; }).join("") + "</ul>";
+  }
+  function buildCard(en){
+    var art = document.createElement("article");
+    art.className = "jobcard";
+    art.setAttribute("data-card-id", en.id);
+    art.setAttribute("data-tags", en.tags || "");
+    if (en.updated) art.setAttribute("data-updated", en.updated);
+    if (en.lastDate) art.setAttribute("data-lastdate", en.lastDate);
+    var facts =
+      "<div><span>Total Posts</span><b>" + esc(en.posts || "—") + "</b></div>" +
+      "<div><span>Qualification</span><b>" + esc(en.qual || "—") + "</b></div>";
+    if (en.lastDate) {
+      facts += "<div class=\"urgent\"><span>Last Date</span><b>" + esc(fmtDate(en.lastDate)) + "</b></div>" +
+               "<div><span>Days Left</span><b data-countdown=\"" + esc(en.lastDate) + "\">—</b></div>";
+    }
+    art.innerHTML =
+      "<h3>" + esc(en.title) + "</h3>" +
+      "<p class=\"org\">" + esc(en.org || "") + "</p>" +
+      "<div class=\"facts\">" + facts + "</div>" +
+      "<div class=\"actions\">" +
+        (en.url ? "<a class=\"btn apply\" href=\"" + esc(en.url) + "\" target=\"_blank\" rel=\"noopener\">Apply Online</a>" : "") +
+        "<button class=\"btn detail\" type=\"button\" aria-expanded=\"false\">Full Details</button>" +
+      "</div>" +
+      "<div class=\"jobdetail\">" + detailsHTML(en.details) + "</div>";
+    return art;
+  }
+  function findFactB(card, label){
+    var found = null;
+    $$(".facts > div", card).forEach(function(div){
+      var sp = div.querySelector("span");
+      if (sp && sp.textContent.trim().toLowerCase() === label) found = div.querySelector("b");
+    });
+    return found;
+  }
+  function applyOverride(card, ov){
+    if (ov.title) card.querySelector("h3").textContent = ov.title;
+    if (ov.org != null) card.querySelector(".org").textContent = ov.org;
+    var b;
+    if (ov.posts) { b = findFactB(card, "total posts"); if (b) b.textContent = ov.posts; }
+    if (ov.qual) { b = findFactB(card, "qualification"); if (b) b.textContent = ov.qual; }
+    if (ov.lastDate) {
+      card.setAttribute("data-lastdate", ov.lastDate);
+      b = findFactB(card, "last date"); if (b) b.textContent = fmtDate(ov.lastDate);
+      var cd = card.querySelector("[data-countdown]"); if (cd) cd.setAttribute("data-countdown", ov.lastDate);
+    }
+    if (ov.url) { var a = card.querySelector(".actions a.apply"); if (a) a.setAttribute("href", ov.url); }
+    if (ov.details) { var jd = card.querySelector(".jobdetail"); if (jd) jd.innerHTML = detailsHTML(ov.details); }
+    if (ov.tags != null) card.setAttribute("data-tags", ov.tags);
+  }
+  function applyStored(){
+    var grid = document.getElementById("job-cards");
+    store.custom.forEach(function(en){
+      if (document.querySelector("[data-card-id=\"" + en.id + "\"]")) return;
+      grid.appendChild(buildCard(en));
+    });
+    Object.keys(store.overrides).forEach(function(id){
+      var card = document.querySelector("[data-card-id=\"" + id + "\"]");
+      if (card) applyOverride(card, store.overrides[id]);
+    });
+    store.hidden.forEach(function(id){
+      var card = document.querySelector("[data-card-id=\"" + id + "\"]");
+      if (card) { card.style.display = "none"; card.setAttribute("data-admin-hidden", "1"); }
+    });
+  }
+  applyStored();
+  refreshCountdowns(document);
+
+  /* ════════ Last Updated — newest entry date on the page ════════ */
+  (function(){
+    var max = null;
+    $$("[data-updated]").forEach(function(el){
+      var v = el.getAttribute("data-updated");
+      if (v && (!max || v > max)) max = v;
+    });
+    var line = document.getElementById("today-line");
+    if (line && max) line.textContent = "Last Updated: " + fmtDate(max);
+  })();
+
+  /* ════════ Deadline alert banner + closing-soon chips ════════ */
+  function buildAlert(){
+    var soon = [];
+    $$(".jobcard").forEach(function(card){
+      if (card.getAttribute("data-admin-hidden")) return;
+      var iso = card.getAttribute("data-lastdate");
+      if (!iso) return;
+      var diff = daysUntil(iso);
+      if (diff >= 0 && diff <= 7) {
+        soon.push({card: card, iso: iso, diff: diff});
+        if (!card.querySelector(".chip-soon")) {
+          var chip = document.createElement("span");
+          chip.className = "chip-soon";
+          chip.textContent = diff === 0 ? "Last date near — आज अंतिम तिथि!" : "Last date near — " + diff + " दिन बाकी";
+          var actions = card.querySelector(".actions");
+          card.insertBefore(chip, actions);
+        }
+      }
+    });
+    var banner = document.getElementById("deadline-alert");
+    var text = document.getElementById("deadline-alert-text");
+    if (soon.length) {
+      soon.sort(function(a, b){ return a.diff - b.diff; });
+      var names = soon.map(function(s){
+        var t = s.card.querySelector("h3").textContent.split("—")[0].trim();
+        return "<b>" + esc(t) + "</b> (" + fmtShort(s.iso) + ")";
+      });
+      text.innerHTML = "अगले 7 दिनों में <b>" + soon.length + "</b> भर्तियों की अंतिम तिथि आ रही है: " + names.join(" • ") + " — समय पर आवेदन करें।";
+      banner.classList.add("show");
+    } else {
+      banner.classList.remove("show");
+    }
+  }
+  buildAlert();
+
+  /* ════════ New-recruitment alert — entries added/updated in the last 15 days ════════ */
+  (function(){
+    var entries = [];
+    var maxD = null;
+    $$(".jobcard").forEach(function(card){
+      var u = card.getAttribute("data-updated");
+      if (u && (!maxD || u > maxD)) maxD = u;
+    });
+    if (!maxD) return;
+    var cutoff = new Date(maxD + "T00:00:00"); cutoff.setDate(cutoff.getDate() - 15);
+    $$(".jobcard").forEach(function(card){
+      if (card.getAttribute("data-admin-hidden")) return;
+      var u = card.getAttribute("data-updated");
+      if (!u) return;
+      if (new Date(u + "T00:00:00") >= cutoff) {
+        entries.push({card: card, updated: u});
+      }
+    });
+    if (!entries.length) return;
+    entries.sort(function(a, b){ return a.updated < b.updated ? 1 : -1; });
+    var names = entries.slice(0, 5).map(function(s){
+      var t = s.card.querySelector("h3").textContent.split("—")[0].trim();
+      return "<b>" + esc(t) + "</b> (" + fmtShort(s.updated) + ")";
+    });
+    document.getElementById("new-alert-text").innerHTML =
+      "हाल में जुड़ी/अपडेट हुई <b>" + entries.length + "</b> भर्तियाँ: " + names.join(" • ") + " — पूरी जानकारी नीचे Job Details व Bihar सेक्शन में देखें।";
+    document.getElementById("new-alert").classList.add("show");
+  })();
+
+  /* ════════ Hamburger menu ════════ */
+  var toggle = document.getElementById("nav-toggle");
+  var navLinks = document.getElementById("nav-links");
+  toggle.addEventListener("click", function(){
+    var open = navLinks.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  navLinks.addEventListener("click", function(e){
+    if (e.target.tagName === "A") {
+      navLinks.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
   });
 
-  /* Qualification filter for job cards */
-  var qualBtns = document.querySelectorAll(".quals button");
-  var cards = document.querySelectorAll("#job-cards .jobcard");
+  /* ════════ Full-details toggles (delegated — works for admin-added cards) ════════ */
+  document.addEventListener("click", function(e){
+    var btn = e.target.closest ? e.target.closest(".jobcard .btn.detail") : null;
+    if (!btn) return;
+    var panel = btn.closest(".jobcard").querySelector(".jobdetail");
+    var open = panel.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.textContent = open ? "Hide Details" : "Full Details";
+  });
+
+  /* ════════ Qualification filter ════════ */
+  var qualBtns = $$(".quals button");
   var qualStatus = document.getElementById("qual-status");
+  function visibleCards(){
+    return $$(".jobcard").filter(function(c){ return !c.getAttribute("data-admin-hidden"); });
+  }
   qualBtns.forEach(function(btn){
     btn.addEventListener("click", function(){
-      qualBtns.forEach(function(b){ b.setAttribute("aria-pressed","false"); });
-      btn.setAttribute("aria-pressed","true");
+      qualBtns.forEach(function(b){ b.setAttribute("aria-pressed", "false"); });
+      btn.setAttribute("aria-pressed", "true");
       var q = btn.getAttribute("data-qual");
       var shown = 0;
-      cards.forEach(function(card){
+      visibleCards().forEach(function(card){
         var match = (q === "all") || (card.getAttribute("data-tags") || "").split(" ").indexOf(q) !== -1;
         card.classList.toggle("filtered-out", !match);
         if (match) shown++;
@@ -723,17 +1381,45 @@
     });
   });
 
-  /* Live search across every list on the page */
+  /* ════════ Type / category filter ════════ */
+  var typeUnits = ["results", "latest-jobs", "answer-key", "admit-card", "job-details", "bihar", "syllabus", "admission", "documents"];
+  var typeMap = {
+    job: ["latest-jobs", "job-details"],
+    result: ["results"],
+    admit: ["admit-card"],
+    answerkey: ["answer-key"],
+    bihar: ["bihar"]
+  };
+  var typeBtns = $$(".typefilter button");
+  function applyType(type){
+    typeBtns.forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-type") === type ? "true" : "false"); });
+    typeUnits.forEach(function(id){
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.style.display = (type === "all" || (typeMap[type] || []).indexOf(id) !== -1) ? "" : "none";
+    });
+    $$("section.grid2.classic-grid, section.grid3").forEach(function(sec){
+      var kids = $$(":scope > *", sec).filter(function(k){ return k.style.display !== "none"; });
+      sec.style.display = kids.length ? "" : "none";
+      sec.classList.toggle("single", sec.classList.contains("grid2") && kids.length === 1);
+    });
+  }
+  typeBtns.forEach(function(btn){
+    btn.addEventListener("click", function(){ applyType(btn.getAttribute("data-type")); });
+  });
+
+  /* ════════ Live search + empty state ════════ */
   var input = document.getElementById("search-input");
   var status = document.getElementById("search-status");
-  var items = Array.prototype.slice.call(document.querySelectorAll("[data-list] li"));
-  var cardList = Array.prototype.slice.call(cards);
+  var noResults = document.getElementById("no-results");
   function runSearch(){
     var q = input.value.trim().toLowerCase();
-    if (!q){
+    var items = $$("[data-list] li");
+    if (!q) {
       items.forEach(function(li){ li.classList.remove("hidden-item"); });
-      cardList.forEach(function(c){ c.style.display = ""; });
+      visibleCards().forEach(function(c){ if (!c.classList.contains("filtered-out")) c.style.display = ""; });
       status.style.display = "none";
+      noResults.classList.remove("show");
       return;
     }
     var hits = 0;
@@ -742,7 +1428,7 @@
       li.classList.toggle("hidden-item", !match);
       if (match) hits++;
     });
-    cardList.forEach(function(c){
+    visibleCards().forEach(function(c){
       var match = c.textContent.toLowerCase().indexOf(q) !== -1;
       c.style.display = match ? "" : "none";
       if (match) hits++;
@@ -750,12 +1436,192 @@
     status.style.display = "block";
     status.textContent = hits > 0
       ? "“" + input.value.trim() + "” के लिए " + hits + " परिणाम मिले।"
-      : "“" + input.value.trim() + "” के लिए कोई परिणाम नहीं मिला — कुछ और लिखकर देखें।";
+      : "“" + input.value.trim() + "” के लिए कोई परिणाम नहीं मिला।";
+    noResults.classList.toggle("show", hits === 0);
   }
   input.addEventListener("input", runSearch);
   document.getElementById("search-form").addEventListener("submit", function(e){
     e.preventDefault(); runSearch();
   });
+  document.getElementById("reset-search").addEventListener("click", function(){
+    input.value = "";
+    applyType("all");
+    qualBtns.forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-qual") === "all" ? "true" : "false"); });
+    visibleCards().forEach(function(c){ c.classList.remove("filtered-out"); });
+    qualStatus.style.display = "none";
+    runSearch();
+    input.focus();
+  });
+
+  /* ════════ Admin panel ════════ */
+  var form = document.getElementById("admin-form");
+  var fTitle = document.getElementById("af-title"), fOrg = document.getElementById("af-org"),
+      fPosts = document.getElementById("af-posts"), fQual = document.getElementById("af-qual"),
+      fLast = document.getElementById("af-lastdate"), fUrl = document.getElementById("af-url"),
+      fTags = document.getElementById("af-tags"), fDetails = document.getElementById("af-details"),
+      fBihar = document.getElementById("af-bihar"),
+      saveBtn = document.getElementById("af-save"), cancelBtn = document.getElementById("af-cancel"),
+      msg = document.getElementById("admin-msg"), rowsBox = document.getElementById("admin-rows");
+  var editingId = null;
+
+  function showMsg(t){
+    msg.style.display = "block"; msg.textContent = t;
+    setTimeout(function(){ msg.style.display = "none"; }, 4000);
+  }
+  function getFact(card, label){
+    var b = findFactB(card, label);
+    return b ? b.textContent.trim() : "";
+  }
+  function cardToEntry(card){
+    var id = card.getAttribute("data-card-id");
+    var custom = store.custom.filter(function(e){ return e.id === id; })[0];
+    if (custom) return JSON.parse(JSON.stringify(custom));
+    var ov = store.overrides[id] || {};
+    var a = card.querySelector(".actions a.apply");
+    return {
+      id: id,
+      title: card.querySelector("h3").textContent.trim(),
+      org: card.querySelector(".org").textContent.trim(),
+      posts: getFact(card, "total posts"),
+      qual: getFact(card, "qualification"),
+      lastDate: card.getAttribute("data-lastdate") || "",
+      url: a ? a.getAttribute("href") : "",
+      tags: card.getAttribute("data-tags") || "",
+      details: ov.details || ""
+    };
+  }
+  function renderAdminList(){
+    rowsBox.innerHTML = "";
+    $$(".jobcard").forEach(function(card){
+      var id = card.getAttribute("data-card-id");
+      if (!id) return;
+      var en = cardToEntry(card);
+      var hidden = isHidden(id);
+      var row = document.createElement("div");
+      row.className = "row";
+      var meta = [en.posts ? en.posts + " पद" : "", en.lastDate ? "अंतिम तिथि " + fmtShort(en.lastDate) : "", hidden ? "छिपी हुई (Hidden)" : "", store.custom.some(function(e){ return e.id === id; }) ? "Admin द्वारा जोड़ी गई" : "मूल entry"].filter(Boolean).join(" • ");
+      row.innerHTML = "<div class=\"t\">" + esc(en.title) + "<small>" + esc(meta) + "</small></div>";
+      var ops = document.createElement("div");
+      ops.className = "ops";
+      var editBtn = document.createElement("button");
+      editBtn.type = "button"; editBtn.className = "btn neutral small"; editBtn.textContent = "Edit";
+      editBtn.addEventListener("click", function(){ startEdit(id); });
+      ops.appendChild(editBtn);
+      var delBtn = document.createElement("button");
+      delBtn.type = "button"; delBtn.className = "btn small " + (hidden ? "neutral" : "danger");
+      delBtn.textContent = hidden ? "Show" : "Delete";
+      delBtn.addEventListener("click", function(){ toggleHidden(id); });
+      ops.appendChild(delBtn);
+      row.appendChild(ops);
+      rowsBox.appendChild(row);
+    });
+  }
+  function startEdit(id){
+    var card = document.querySelector("[data-card-id=\"" + id + "\"]");
+    if (!card) return;
+    var en = cardToEntry(card);
+    editingId = id;
+    fTitle.value = en.title || ""; fOrg.value = en.org || ""; fPosts.value = en.posts || "";
+    fQual.value = en.qual || ""; fLast.value = en.lastDate || ""; fUrl.value = en.url || "";
+    fTags.value = en.tags || ""; fDetails.value = en.details || "";
+    fBihar.checked = (en.tags || "").split(" ").indexOf("bihar") !== -1;
+    saveBtn.textContent = "Save Changes";
+    cancelBtn.style.display = "";
+    document.getElementById("admin").scrollIntoView({behavior:"smooth", block:"start"});
+    fTitle.focus();
+  }
+  function endEdit(){
+    editingId = null;
+    form.reset();
+    saveBtn.textContent = "Save Entry";
+    cancelBtn.style.display = "none";
+  }
+  cancelBtn.addEventListener("click", endEdit);
+  function toggleHidden(id){
+    var card = document.querySelector("[data-card-id=\"" + id + "\"]");
+    if (isHidden(id)) {
+      store.hidden = store.hidden.filter(function(x){ return x !== id; });
+      if (card) { card.removeAttribute("data-admin-hidden"); card.style.display = ""; }
+      showMsg("Entry फिर से दिखाई देने लगी।");
+    } else {
+      store.hidden.push(id);
+      if (card) { card.style.display = "none"; card.setAttribute("data-admin-hidden", "1"); }
+      showMsg("Entry छिपा दी गई।");
+    }
+    saveStore(); renderAdminList(); buildAlert(); runSearch();
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var tags = fTags.value.trim();
+    if (fBihar.checked && tags.split(" ").indexOf("bihar") === -1) tags = (tags + " bihar").trim();
+    var data = {
+      title: fTitle.value.trim(), org: fOrg.value.trim(), posts: fPosts.value.trim(),
+      qual: fQual.value.trim(), lastDate: fLast.value || "", url: fUrl.value.trim(),
+      tags: tags, details: fDetails.value.trim()
+    };
+    if (!data.title) { showMsg("शीर्षक (Title) भरना ज़रूरी है।"); return; }
+    var todayIso = new Date().toISOString().slice(0, 10);
+    if (editingId) {
+      var idx = store.custom.findIndex(function(en){ return en.id === editingId; });
+      if (idx !== -1) {
+        data.id = editingId; data.updated = todayIso;
+        store.custom[idx] = data;
+        var old = document.querySelector("[data-card-id=\"" + editingId + "\"]");
+        var fresh = buildCard(data);
+        if (isHidden(editingId)) { fresh.style.display = "none"; fresh.setAttribute("data-admin-hidden", "1"); }
+        old.parentNode.replaceChild(fresh, old);
+        showMsg("Entry update हो गई।");
+      } else {
+        store.overrides[editingId] = data;
+        var card = document.querySelector("[data-card-id=\"" + editingId + "\"]");
+        if (card) applyOverride(card, data);
+        showMsg("Entry update हो गई।");
+      }
+    } else {
+      data.id = "custom-" + Date.now();
+      data.updated = todayIso;
+      store.custom.push(data);
+      document.getElementById("job-cards").appendChild(buildCard(data));
+      showMsg("नई भर्ती जुड़ गई — Job Details में देखें।");
+    }
+    saveStore();
+    endEdit();
+    refreshCountdowns(document);
+    buildAlert(); renderAdminList(); runSearch();
+  });
+  document.getElementById("admin-export").addEventListener("click", function(){
+    var blob = new Blob([JSON.stringify(store, null, 2)], {type: "application/json"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "sarkari-portal-entries.json";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 2000);
+    showMsg("Entries JSON download हो गई।");
+  });
+  document.getElementById("admin-import-file").addEventListener("change", function(){
+    var file = this.files && this.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(){
+      try {
+        var data = JSON.parse(reader.result);
+        if (!data || !Array.isArray(data.custom) || typeof data.overrides !== "object" || !Array.isArray(data.hidden)) throw new Error("bad");
+        store = data; saveStore();
+        showMsg("Import सफल — page reload हो रहा है…");
+        setTimeout(function(){ location.reload(); }, 700);
+      } catch(err) {
+        showMsg("Import विफल — सही Export JSON file चुनें।");
+      }
+    };
+    reader.readAsText(file);
+    this.value = "";
+  });
+  document.getElementById("admin-reset").addEventListener("click", function(){
+    try { localStorage.removeItem(LS_KEY); } catch(e) {}
+    showMsg("मूल लिस्ट बहाल — page reload हो रहा है…");
+    setTimeout(function(){ location.reload(); }, 700);
+  });
+  renderAdminList();
 })();
 </script>
 </body>
