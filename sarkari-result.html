@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Sarkari Result Portal — latest government jobs, results, admit cards, answer keys and admissions. Daily updated Sarkari Naukri information with links to official websites." />
+<link rel="icon" href="data:," />
+<title>Sarkari Result Portal — Latest Jobs, Results, Admit Card</title>
+<style>
+  :root{
+    --bg:#f2f3f5;
+    --surface:#ffffff;
+    --surface-2:#fafbfc;
+    --ink:#191c22;
+    --ink-soft:#454b57;
+    --line:#d7dbe2;
+    --brand:#9e1b1b;
+    --brand-dark:#7c1212;
+    --nav:#17356e;
+    --nav-dark:#10264f;
+    --link:#0b3d91;
+    --link-visited:#5b2d8e;
+    --accent:#b8860b;
+    --new:#c1121f;
+    --green:#1e7a34;
+    --chip:#eef1f6;
+    --shadow:0 1px 3px rgba(16,24,40,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#101216;
+      --surface:#191c22;
+      --surface-2:#1f232c;
+      --ink:#eceef2;
+      --ink-soft:#aab1bf;
+      --line:#333947;
+      --brand:#c33;
+      --brand-dark:#a32424;
+      --nav:#1d335f;
+      --nav-dark:#16274a;
+      --link:#8db4f2;
+      --link-visited:#c4a6e8;
+      --accent:#d9a92f;
+      --new:#ff6b74;
+      --green:#5cc476;
+      --chip:#242a36;
+      --shadow:0 1px 3px rgba(0,0,0,.4);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:15.5px;line-height:1.5;
+  }
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 12px}
+
+  /* ── Top strip ─────────────────────────── */
+  .topstrip{background:var(--brand-dark);color:#fff;font-size:12.5px}
+  .topstrip .wrap{display:flex;justify-content:space-between;gap:10px;padding-top:5px;padding-bottom:5px;flex-wrap:wrap}
+  .topstrip b{font-weight:600}
+
+  /* ── Masthead ──────────────────────────── */
+  .masthead{background:linear-gradient(180deg,var(--brand),var(--brand-dark));color:#fff;text-align:center;padding:20px 12px 16px}
+  .masthead h1{margin:0;font-size:clamp(30px,6vw,46px);font-weight:800;letter-spacing:.5px;line-height:1.1}
+  .masthead h1 .thin{font-weight:300}
+  .masthead p{margin:6px 0 0;font-size:clamp(13px,2.6vw,16px);color:#ffd9d9}
+  .masthead .hindi{font-size:13px;color:#ffe9b8;margin-top:3px}
+
+  /* ── Nav ───────────────────────────────── */
+  nav.mainnav{background:var(--nav);position:sticky;top:0;z-index:50;box-shadow:var(--shadow)}
+  nav.mainnav .wrap{display:flex;flex-wrap:wrap;padding:0 6px}
+  nav.mainnav a{color:#fff;padding:11px 14px;font-size:14.5px;font-weight:600;display:block}
+  nav.mainnav a:hover{background:var(--nav-dark);text-decoration:none}
+
+  /* ── Search ────────────────────────────── */
+  .searchbar{background:var(--surface);border:1px solid var(--line);border-radius:8px;margin:14px auto 0;padding:12px;box-shadow:var(--shadow)}
+  .searchbar form{display:flex;gap:8px}
+  .searchbar input{
+    flex:1;min-width:0;padding:11px 14px;font-size:16px;border:1.5px solid var(--line);
+    border-radius:6px;background:var(--surface-2);color:var(--ink);
+  }
+  .searchbar input:focus{outline:2px solid var(--nav);outline-offset:1px}
+  .searchbar button{
+    background:var(--brand);color:#fff;border:0;border-radius:6px;padding:0 22px;
+    font-size:15px;font-weight:700;cursor:pointer;
+  }
+  .searchbar button:hover{background:var(--brand-dark)}
+  .search-note{font-size:12.5px;color:var(--ink-soft);margin:7px 2px 0}
+  #search-status{font-size:13px;color:var(--brand);font-weight:600;margin:6px 2px 0;display:none}
+
+  /* ── Ticker ────────────────────────────── */
+  .ticker{display:flex;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:12px;box-shadow:var(--shadow)}
+  .ticker .tag{background:var(--brand);color:#fff;font-weight:700;font-size:13px;padding:9px 12px;display:flex;align-items:center;white-space:nowrap}
+  .ticker .track{overflow:hidden;flex:1;display:flex;align-items:center}
+  .ticker .move{display:inline-block;white-space:nowrap;padding-left:100%;animation:tick 55s linear infinite;font-size:13.5px}
+  .ticker:hover .move{animation-play-state:paused}
+  @keyframes tick{to{transform:translateX(-100%)}}
+  @media (prefers-reduced-motion: reduce){
+    .ticker .move{animation:none;padding-left:10px;white-space:normal}
+    html{scroll-behavior:auto}
+  }
+
+  /* ── Section boxes ─────────────────────── */
+  section{margin-top:16px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+  .box h2{
+    margin:0;padding:9px 14px;font-size:17px;color:#fff;background:var(--brand);
+    display:flex;justify-content:space-between;align-items:center;letter-spacing:.2px;
+  }
+  .box h2.green{background:var(--green)}
+  .box h2.navy{background:var(--nav)}
+  .box h2.gold{background:#8a6508}
+  .box h2 a{color:#ffe9b8;font-size:12px;font-weight:600}
+  .box ul{list-style:none;margin:0;padding:8px 0}
+  .box ul li{padding:5px 14px 5px 26px;position:relative;border-bottom:1px dashed var(--line)}
+  .box ul li:last-child{border-bottom:0}
+  .box ul li::before{content:"»";position:absolute;left:12px;color:var(--brand);font-weight:700}
+  .box ul li a{font-size:14.5px;font-weight:550}
+  .meta{display:block;font-size:12px;color:var(--ink-soft);margin-top:1px}
+  .meta b{color:var(--brand);font-weight:700}
+  .badge-new{
+    display:inline-block;background:var(--new);color:#fff;font-size:10px;font-weight:800;
+    padding:1px 6px;border-radius:8px;margin-left:6px;vertical-align:2px;letter-spacing:.4px;
+  }
+  @media (prefers-color-scheme: dark){ .badge-new{color:#14100f;background:#ff8f96} }
+  li.hidden-item{display:none}
+
+  /* ── Qualification chips ───────────────── */
+  .quals{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .quals button{
+    border:1px solid var(--line);background:var(--surface);color:var(--ink);
+    padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:var(--shadow);
+  }
+  .quals button[aria-pressed="true"]{background:var(--nav);color:#fff;border-color:var(--nav)}
+
+  /* ── Job detail cards ──────────────────── */
+  .jobcard{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;box-shadow:var(--shadow)}
+  .jobcard h3{margin:0 0 4px;font-size:17.5px;line-height:1.35}
+  .jobcard .org{font-size:13px;color:var(--ink-soft);margin:0 0 10px}
+  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:6px 14px;font-size:13.5px;margin:0 0 12px}
+  .facts div{background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:6px 10px}
+  .facts span{display:block;font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.5px}
+  .facts b{font-size:14px}
+  .facts .urgent b{color:var(--new)}
+  .jobcard .actions{display:flex;gap:8px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:9px 16px;border-radius:6px;font-size:14px;font-weight:700;cursor:pointer;border:0;
+  }
+  .btn.apply{background:var(--green);color:#fff}
+  .btn.detail{background:var(--chip);color:var(--ink);border:1px solid var(--line)}
+  .btn:hover{text-decoration:none;filter:brightness(1.07)}
+  .jobdetail{display:none;margin-top:12px;border-top:1px dashed var(--line);padding-top:10px;font-size:14px}
+  .jobdetail.open{display:block}
+  .jobdetail h4{margin:10px 0 4px;font-size:14.5px}
+  .jobdetail ul{margin:4px 0 8px;padding-left:20px}
+  .jobdetail li{margin:2px 0}
+  .jobcard.filtered-out{display:none}
+
+  /* ── Steps / misc panels ───────────────── */
+  .panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px;box-shadow:var(--shadow)}
+  .panel h2{margin:0 0 10px;font-size:19px;color:var(--brand)}
+  .steps{counter-reset:step;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 22px}
+  .steps li{position:relative;padding-left:44px;font-size:14.5px}
+  .steps li::before{
+    counter-increment:step;content:counter(step);position:absolute;left:0;top:0;
+    width:30px;height:30px;border-radius:50%;background:var(--nav);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;
+  }
+  .steps b{display:block;font-size:15px}
+  .officials{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .officials a{
+    background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:10px 12px;
+    font-weight:600;font-size:14px;display:block;text-align:center;
+  }
+  .officials a small{display:block;font-weight:400;color:var(--ink-soft);font-size:11.5px;margin-top:2px}
+
+  /* ── Footer ────────────────────────────── */
+  footer{margin-top:26px;background:var(--nav-dark);color:#cfd9ee}
+  footer .wrap{padding:22px 12px 26px}
+  footer nav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:12px}
+  footer nav a{color:#fff;font-size:14px;font-weight:600}
+  footer p{font-size:13px;margin:8px 0;color:#aebadd}
+  footer .disclaimer{border:1px solid #35507f;border-radius:8px;padding:10px 14px;background:rgba(255,255,255,.04)}
+  footer .sign{margin-top:16px;font-size:16px;color:#fff}
+  footer .sign .sig{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:20px;color:#ffe9b8}
+
+  @media (max-width:900px){
+    .grid3,.grid4{grid-template-columns:repeat(2,1fr)}
+    .officials{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:600px){
+    .grid3,.grid2,.grid4{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .facts{grid-template-columns:1fr 1fr}
+    nav.mainnav a{padding:10px 10px;font-size:13.5px}
+    .searchbar form{flex-direction:column}
+    .searchbar button{padding:11px}
+  }
+  /* ── Apply-online tiles (classic portal style) ── */
+  .tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:14px}
+  .tiles a{
+    color:#fff;font-weight:700;font-size:15.5px;text-align:center;line-height:1.3;
+    padding:15px 10px;border-radius:3px;display:flex;align-items:center;justify-content:center;min-height:56px;
+  }
+  .tiles a:hover{text-decoration:none;filter:brightness(1.12)}
+  .t-olive{background:#7a9a01}.t-blue{background:#0b4bd3}.t-orange{background:#ff7300}
+  .t-red{background:#a60000}.t-ored{background:#ff4400}.t-green{background:#00940a}
+  .t-pink{background:#e600a5}.t-sky{background:#1a7fd4}
+
+  /* ── Classic two-column boxes (sarkari portal format) ── */
+  .grid2.classic-grid{gap:10px}
+  .box.classic{border:2px solid #d9a82e}
+  .box.classic h2{justify-content:center;text-align:center;font-size:19px;background:var(--brand)}
+  .box.classic ul{padding:6px 0}
+  .box.classic ul li{border-bottom:0;padding:6px 12px 6px 22px}
+  .box.classic ul li::before{content:"•";left:9px;color:var(--ink)}
+  .box.classic ul li a{text-decoration:underline;font-weight:500}
+  @media (max-width:600px){
+    .grid2.classic-grid{grid-template-columns:1fr 1fr}
+    .box.classic h2{font-size:16.5px;padding:8px 6px}
+    .box.classic ul li{padding:5px 8px 5px 18px}
+    .box.classic ul li::before{left:6px}
+    .box.classic ul li a{font-size:13.5px}
+    .tiles a{font-size:13.5px;padding:12px 6px;min-height:50px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topstrip">
+  <div class="wrap">
+    <span><b>SarkariResultPortal</b> — सरकारी नौकरी की हर जानकारी, सबसे पहले</span>
+    <span id="today-line">Last Updated: 26 October 2026</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <h1>Sarkari Result <span class="thin">Portal</span></h1>
+  <p>Latest Jobs &nbsp;•&nbsp; Results &nbsp;•&nbsp; Admit Card &nbsp;•&nbsp; Answer Key &nbsp;•&nbsp; Syllabus &nbsp;•&nbsp; Admission</p>
+  <p class="hindi">सरकारी नौकरी, रिजल्ट और एडमिट कार्ड की ताज़ा जानकारी — हर लिंक सीधा आधिकारिक वेबसाइट पर</p>
+</header>
+
+<nav class="mainnav" aria-label="Main">
+  <div class="wrap">
+    <a href="#home">Home</a>
+    <a href="#latest-jobs">Latest Jobs</a>
+    <a href="#results">Results</a>
+    <a href="#admit-card">Admit Card</a>
+    <a href="#answer-key">Answer Key</a>
+    <a href="#syllabus">Syllabus</a>
+    <a href="#admission">Admission</a>
+    <a href="#job-details">Job Details</a>
+    <a href="#official-sites">Official Sites</a>
+  </div>
+</nav>
+
+<main class="wrap" id="home">
+
+  <div class="searchbar">
+    <form id="search-form" role="search">
+      <input type="search" id="search-input" placeholder="Search करें — जैसे: SSC, Railway, Police, Bank, Teacher…" aria-label="Search jobs, results and admit cards" />
+      <button type="submit">Search</button>
+    </form>
+    <p class="search-note">ऊपर लिखते ही नीचे की सारी लिस्ट अपने-आप filter हो जाएगी। किसी भी भर्ती की अंतिम जानकारी के लिए हमेशा आधिकारिक वेबसाइट ज़रूर देखें।</p>
+    <p id="search-status" role="status"></p>
+  </div>
+
+  <div class="ticker" aria-label="Latest updates">
+    <span class="tag">LIVE UPDATES</span>
+    <div class="track"><span class="move">
+      RRB NTPC Graduate CEN 06/2026 — 3,548 पद, अंतिम तिथि 6 Nov 2026 &nbsp;★★★&nbsp;
+      RRB NTPC 12th Pass CEN 07/2026 — 1,688 पद, अंतिम तिथि 13 Nov 2026 &nbsp;★★★&nbsp;
+      Supreme Court Junior Court Assistant — 250 पद, अंतिम तिथि 28 Oct 2026 &nbsp;★★★&nbsp;
+      National Insurance AO — 321 पद, अंतिम तिथि 28 Oct 2026 &nbsp;★★★&nbsp;
+      Indian Army TES 57 — अंतिम तिथि 12 Nov 2026 &nbsp;★★★&nbsp;
+      SSC CGL Tier 1 Admit Card जारी &nbsp;★★★&nbsp;
+      SBI PO Mains Result घोषित
+    </span></div>
+  </div>
+
+  <!-- ══════════ APPLY ONLINE TILES ══════════ -->
+  <section class="tiles" aria-label="Top apply online links">
+    <a class="t-olive" href="https://upbasiceduboard.gov.in" target="_blank" rel="noopener">UP Primary Teacher 2026 Apply Online</a>
+    <a class="t-blue" href="https://bpsc.bihar.gov.in" target="_blank" rel="noopener">Bihar School Teacher TRE 4 Apply Online</a>
+    <a class="t-orange" href="https://rrbapply.gov.in" target="_blank" rel="noopener">Railway NTPC 10+2 Level Apply Online</a>
+    <a class="t-red" href="https://rrbapply.gov.in" target="_blank" rel="noopener">Railway NTPC Graduate Level Apply Online</a>
+    <a class="t-ored" href="https://allindiabarexamination.com" target="_blank" rel="noopener">All India BAR AIBE 2026 Apply Online</a>
+    <a class="t-green" href="https://scholarship.up.gov.in" target="_blank" rel="noopener">UP Scholarship 2026 Apply Online</a>
+    <a class="t-pink" href="https://upessc.up.gov.in" target="_blank" rel="noopener">UP TGT Teacher 2026 Apply Online</a>
+    <a class="t-sky" href="https://upsssc.gov.in" target="_blank" rel="noopener">UPSSSC PET 2026 Admit Card</a>
+  </section>
+
+  <!-- ══════════ RESULT + LATEST JOB (classic two-column) ══════════ -->
+  <section class="grid2 classic-grid" aria-label="Results and latest jobs">
+
+    <div class="box classic" id="results">
+      <h2>Result</h2>
+      <ul data-list>
+        <li><a href="https://www.isro.gov.in" target="_blank" rel="noopener">ISRO ICRB Assistant and Other Post Result 2026</a></li>
+        <li><a href="https://uppbpb.gov.in" target="_blank" rel="noopener">UP Police Home Guard Marks 2026</a></li>
+        <li><a href="https://cotcorp.org.in" target="_blank" rel="noopener">Cotton Corporation of India CCI Various Post Result 2026</a></li>
+        <li><a href="https://ssc.gov.in" target="_blank" rel="noopener">SSC GD Constable Revised Result 2026</a></li>
+        <li><a href="https://www.ibps.in" target="_blank" rel="noopener">IBPS SO 16th Pre Score Card 2026</a></li>
+        <li><a href="https://upsc.gov.in" target="_blank" rel="noopener">UPSC CDS II Result 2026</a></li>
+        <li><a href="https://www.sbi.co.in" target="_blank" rel="noopener">SBI Junior Associates Clerk Backlog Pre Result 2026</a></li>
+        <li><a href="https://uppsc.up.nic.in" target="_blank" rel="noopener">UPPSC LT Grade Assistant Teacher 2025 Final Result</a></li>
+        <li><a href="https://www.ibps.in" target="_blank" rel="noopener">IBPS Specialist Officer SO SPL 16th Pre Result 2026</a></li>
+        <li><a href="https://www.sbi.co.in" target="_blank" rel="noopener">SBI Probationary Officers PO Mains Result 2026</a></li>
+        <li><a href="https://uppbpb.gov.in" target="_blank" rel="noopener">UP Police Constable Final Result 2026</a></li>
+        <li><a href="https://www.ssb.gov.in" target="_blank" rel="noopener">SSB Head Constable Ministerial Result / Marks 2026</a></li>
+        <li><a href="https://upsc.gov.in" target="_blank" rel="noopener">UPSC NDA II Written Exam Result 2026</a></li>
+        <li><a href="https://rbi.org.in" target="_blank" rel="noopener">RBI Officer Grade B Final Result 2026</a></li>
+        <li><a href="https://bseh.org.in" target="_blank" rel="noopener">Board Results — UP, Bihar, MP, Haryana Boards</a></li>
+      </ul>
+    </div>
+
+    <div class="box classic" id="latest-jobs">
+      <h2>Latest Job</h2>
+      <ul data-list>
+        <li><a href="https://uppsc.up.nic.in" target="_blank" rel="noopener">UPPSC Review Officer RO ARO Online Form 2026</a></li>
+        <li><a href="https://upessc.up.gov.in" target="_blank" rel="noopener">UPESSC UP TGT Online Form 2026</a></li>
+        <li><a href="https://upessc.up.gov.in" target="_blank" rel="noopener">UPESSC UP Headmaster Online Form 2026</a></li>
+        <li><a href="https://www.lichousing.com" target="_blank" rel="noopener">LIC HFL Apprentice Online Form 2026</a></li>
+        <li><a href="https://upessc.up.gov.in" target="_blank" rel="noopener">UPESSC UP Principal Inter Level Online Form 2026</a></li>
+        <li><a href="https://nwr.indianrailways.gov.in" target="_blank" rel="noopener">NWR RRC Jaipur Apprentices Online Form 2026</a></li>
+        <li><a href="https://www.bhel.com" target="_blank" rel="noopener">BHEL Artisan Various Trade Post Online Form 2026</a></li>
+        <li><a href="https://upsssc.gov.in" target="_blank" rel="noopener">UPSSSC Physical Instructor &amp; Other Post Online Form 2026</a></li>
+        <li><a href="https://rrbapply.gov.in" target="_blank" rel="noopener">Railway RRB Station Master Online Form 2026</a></li>
+        <li><a href="https://sci.gov.in" target="_blank" rel="noopener">Supreme Court of India Court Master Online Form 2026</a></li>
+        <li><a href="https://icsil.in" target="_blank" rel="noopener">ICSIL Data Entry Operator DEO Post Online Form 2026</a></li>
+        <li><a href="https://cewacor.nic.in" target="_blank" rel="noopener">CWC Assistant Manager and Junior Executive Online Form 2026</a></li>
+        <li><a href="https://esb.mp.gov.in" target="_blank" rel="noopener">MPESB MP Police Constable Driver Online Form 2026</a></li>
+        <li><a href="https://rrbapply.gov.in" target="_blank" rel="noopener">Railway RRB NTPC Graduate Level CEN 06/2026</a></li>
+        <li><a href="https://rrbapply.gov.in" target="_blank" rel="noopener">Railway RRB NTPC 12th Pass CEN 07/2026</a></li>
+        <li><a href="https://sci.gov.in" target="_blank" rel="noopener">Supreme Court Junior Court Assistant 2026</a></li>
+        <li><a href="https://nationalinsurance.nic.co.in" target="_blank" rel="noopener">National Insurance NICL AO Scale I 2026</a></li>
+        <li><a href="https://joinindianarmy.nic.in" target="_blank" rel="noopener">Indian Army TES 57 Entry 2026</a></li>
+        <li><a href="https://du.ac.in" target="_blank" rel="noopener">Delhi University Senior Assistant &amp; Assistant 2026</a></li>
+        <li><a href="https://psc.wb.gov.in" target="_blank" rel="noopener">WBPSC Sub Surveyor Recruitment 2026</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════ ANSWER KEY + ADMIT CARD (classic two-column) ══════════ -->
+  <section class="grid2 classic-grid" aria-label="Answer keys and admit cards">
+
+    <div class="box classic" id="answer-key">
+      <h2>Answer Key</h2>
+      <ul data-list>
+        <li><a href="https://rrbapply.gov.in" target="_blank" rel="noopener">Railway RRB Section Controller Answer Key 2026 | CEN 03/2026</a></li>
+        <li><a href="https://rrbapply.gov.in" target="_blank" rel="noopener">Railway RRB Technician CEN 02/2026 Answer Key 2026</a></li>
+        <li><a href="https://ssc.gov.in" target="_blank" rel="noopener">SSC Selection Post 14th Answer Key 2026</a></li>
+        <li><a href="https://esb.mp.gov.in" target="_blank" rel="noopener">MPESB Group 2 Sub Group 4 Patwari and Other Post Answer Key 2026</a></li>
+        <li><a href="https://rpsc.rajasthan.gov.in" target="_blank" rel="noopener">Rajasthan State Eligibility Test SET Answer Key 2026</a></li>
+        <li><a href="https://ubse.uk.gov.in" target="_blank" rel="noopener">Uttarakhand UK TET UTET Answer Key 2026</a></li>
+        <li><a href="https://natboard.edu.in" target="_blank" rel="noopener">NBEMS NAT Board Group A B C Various Post Answer Key 2026</a></li>
+        <li><a href="https://upsssc.gov.in" target="_blank" rel="noopener">UPSSSC Forest Guard / Wild Life Guard Mains Answer Key 2026</a></li>
+        <li><a href="https://upsssc.gov.in" target="_blank" rel="noopener">UPSSSC Scientific and Lab Assistant Mains Answer Key 2026</a></li>
+        <li><a href="https://indianairforce.nic.in" target="_blank" rel="noopener">Indian Airforce Agniveervayu Intake 02/2027 Answer Key 2026</a></li>
+        <li><a href="https://indianairforce.nic.in" target="_blank" rel="noopener">Indian Air Force Airmen Group Y Medical Assistant INET 02/2027 Answer Key</a></li>
+        <li><a href="https://upessc.up.gov.in" target="_blank" rel="noopener">UPESSC UP Principal Answer Key 2026</a></li>
+        <li><a href="https://www.isro.gov.in" target="_blank" rel="noopener">ISRO ICRB Assistant and Other Post Answer Key 2026</a></li>
+        <li><a href="https://rrbapply.gov.in" target="_blank" rel="noopener">Railway RRB NTPC 10+2 UG Level CBT II Answer Key 2026 | CEN 07/2025</a></li>
+        <li><a href="https://upsc.gov.in" target="_blank" rel="noopener">UPSC Answer Keys — सभी परीक्षाएँ</a></li>
+      </ul>
+    </div>
+
+    <div class="box classic" id="admit-card">
+      <h2>Admit Card</h2>
+      <ul data-list>
+        <li><a href="https://esb.mp.gov.in" target="_blank" rel="noopener">MPESB MP Police Sub Inspector SI Admit Card 2026</a></li>
+        <li><a href="https://www.bankofbaroda.in" target="_blank" rel="noopener">Bank of Baroda Specialist Officer SO Admit Card 2026</a></li>
+        <li><a href="https://rrbapply.gov.in" target="_blank" rel="noopener">Railway RRB ALP CEN 01/2026 Exam City / Admit Card</a></li>
+        <li><a href="https://uppsc.up.nic.in" target="_blank" rel="noopener">UPPSC Lecturer 2023 Exam City Details</a></li>
+        <li><a href="https://upessc.up.gov.in" target="_blank" rel="noopener">UPESSC UP Special TET Admit Card 2026</a></li>
+        <li><a href="https://ssc.gov.in" target="_blank" rel="noopener">SSC Junior Engineer JE Paper I Exam City Details 2026</a></li>
+        <li><a href="https://upsssc.gov.in" target="_blank" rel="noopener">UPSSSC PET Admit Card 2026</a></li>
+        <li><a href="https://biharboardonline.com" target="_blank" rel="noopener">Bihar STET Admit Card 2026</a></li>
+        <li><a href="https://rrbapply.gov.in" target="_blank" rel="noopener">Railway RRB Junior Engineer JE Admit Card 2026</a></li>
+        <li><a href="https://nationalinsurance.nic.co.in" target="_blank" rel="noopener">National Insurance NICL Assistant Phase II Mains Admit Card 2026</a></li>
+        <li><a href="https://bsf.gov.in" target="_blank" rel="noopener">BSF HC RO / RM 2025 CBT Exam Admit Card 2026</a></li>
+        <li><a href="https://www.ibps.in" target="_blank" rel="noopener">IBPS Specialist Officer SO SPL 16th Admit Card 2026</a></li>
+        <li><a href="https://mppsc.mp.gov.in" target="_blank" rel="noopener">MPPSC ADPO Admit Card 2026</a></li>
+        <li><a href="https://rrbapply.gov.in" target="_blank" rel="noopener">RRB ALP CEN 01/2025 CBAT Exam City Details</a></li>
+        <li><a href="https://www.sbi.co.in" target="_blank" rel="noopener">SBI Clerk Backlog Phase II Mains Admit Card 2026</a></li>
+        <li><a href="https://uiic.co.in" target="_blank" rel="noopener">United India Insurance UIIC AO Admit Card 2026</a></li>
+        <li><a href="https://ssc.gov.in" target="_blank" rel="noopener">SSC CGL Tier 1 Admit Card 2026</a></li>
+        <li><a href="https://jhtet.jharkhand.gov.in" target="_blank" rel="noopener">Jharkhand JAC JHTET Admit Card 2026</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════ QUALIFICATION FILTER ══════════ -->
+  <div class="quals" role="group" aria-label="Filter jobs by qualification">
+    <button type="button" data-qual="all" aria-pressed="true">All Jobs</button>
+    <button type="button" data-qual="10th" aria-pressed="false">10th Pass</button>
+    <button type="button" data-qual="12th" aria-pressed="false">12th Pass</button>
+    <button type="button" data-qual="graduate" aria-pressed="false">Graduate</button>
+    <button type="button" data-qual="bank" aria-pressed="false">Bank / Insurance</button>
+    <button type="button" data-qual="railway" aria-pressed="false">Railway</button>
+    <button type="button" data-qual="defence" aria-pressed="false">Defence</button>
+  </div>
+
+  <!-- ══════════ JOB DETAIL CARDS ══════════ -->
+  <section id="job-details" aria-label="Job details">
+    <div class="grid2" id="job-cards">
+
+      <article class="jobcard" data-tags="railway graduate ntpc rrb">
+        <h3>Railway RRB NTPC Graduate Level Recruitment 2026 — CEN 06/2026</h3>
+        <p class="org">Railway Recruitment Board (RRB) • Ministry of Railways</p>
+        <div class="facts">
+          <div><span>Total Posts</span><b>3,548</b></div>
+          <div><span>Qualification</span><b>Graduate</b></div>
+          <div><span>Apply Start</span><b>08 Oct 2026</b></div>
+          <div class="urgent"><span>Last Date</span><b>06 Nov 2026</b></div>
+          <div><span>Application Fee</span><b>₹500 (₹400 refund on appearing in CBT)</b></div>
+          <div><span>Days Left</span><b data-countdown="2026-11-06">—</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn apply" href="https://rrbapply.gov.in" target="_blank" rel="noopener">Apply Online</a>
+          <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
+        </div>
+        <div class="jobdetail">
+          <h4>Post Names</h4>
+          <ul>
+            <li>Chief Commercial cum Ticket Supervisor</li>
+            <li>Goods Train Manager</li>
+            <li>Junior Accounts Assistant cum Typist</li>
+            <li>Senior Clerk cum Typist</li>
+          </ul>
+          <h4>Selection Process</h4>
+          <ul>
+            <li>CBT 1 → CBT 2 → Document Verification → Medical Examination</li>
+            <li>इस CEN में Typing Skill Test नहीं है</li>
+            <li>Fee payment की अंतिम तिथि: 08 Nov 2026; form correction window: 09–18 Nov 2026</li>
+          </ul>
+          <p>आवेदन से पहले आधिकारिक notification ध्यान से पढ़ें — पात्रता, आयु सीमा और RRB का चयन वहीं अंतिम माना जाएगा।</p>
+        </div>
+      </article>
+
+      <article class="jobcard" data-tags="railway 12th ntpc rrb">
+        <h3>Railway RRB NTPC 12th Pass Recruitment 2026 — CEN 07/2026</h3>
+        <p class="org">Railway Recruitment Board (RRB) • Ministry of Railways</p>
+        <div class="facts">
+          <div><span>Total Posts</span><b>1,688</b></div>
+          <div><span>Qualification</span><b>12th Pass</b></div>
+          <div><span>Apply Start</span><b>15 Oct 2026</b></div>
+          <div class="urgent"><span>Last Date</span><b>13 Nov 2026</b></div>
+          <div><span>Age Limit</span><b>18–30 वर्ष (01 Jan 2027 को)</b></div>
+          <div><span>Days Left</span><b data-countdown="2026-11-13">—</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn apply" href="https://rrbapply.gov.in" target="_blank" rel="noopener">Apply Online</a>
+          <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
+        </div>
+        <div class="jobdetail">
+          <h4>Post Names</h4>
+          <ul>
+            <li>Commercial cum Ticket Clerk</li>
+            <li>Train Clerk</li>
+            <li>Accounts Clerk cum Typist</li>
+          </ul>
+          <h4>Important Points</h4>
+          <ul>
+            <li>Application fee ₹500 — CBT में उपस्थित होने पर ₹400 refund</li>
+            <li>Fee payment की अंतिम तिथि: 15 Nov 2026</li>
+            <li>Exam city की जानकारी परीक्षा से लगभग 10 दिन पहले, admit card लगभग 4 दिन पहले जारी होता है</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="jobcard" data-tags="graduate court supreme law">
+        <h3>Supreme Court Junior Court Assistant Recruitment 2026</h3>
+        <p class="org">Supreme Court of India, New Delhi</p>
+        <div class="facts">
+          <div><span>Total Posts</span><b>250</b></div>
+          <div><span>Pay Level</span><b>Level 6 — ₹35,400</b></div>
+          <div><span>Qualification</span><b>Graduate</b></div>
+          <div class="urgent"><span>Last Date</span><b>28 Oct 2026</b></div>
+          <div><span>Apply Mode</span><b>Online — sci.gov.in</b></div>
+          <div><span>Days Left</span><b data-countdown="2026-10-28">—</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn apply" href="https://sci.gov.in" target="_blank" rel="noopener">Apply Online</a>
+          <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
+        </div>
+        <div class="jobdetail">
+          <h4>साथ में चल रही अन्य Supreme Court भर्तियाँ</h4>
+          <ul>
+            <li>Senior Personal Assistant — 65 पद, Level 8 (₹47,600), अंतिम तिथि 10 Nov 2026</li>
+            <li>Court Master (Shorthand) — 20 पद, Level 11 (₹67,700), अंतिम तिथि 15 Nov 2026</li>
+            <li>Junior Court Attendant — 12th pass उम्मीदवारों के लिए</li>
+          </ul>
+          <p>हर पद की पात्रता और चयन प्रक्रिया अलग है — आवेदन से पहले sci.gov.in पर संबंधित विज्ञापन ज़रूर पढ़ें।</p>
+        </div>
+      </article>
+
+      <article class="jobcard" data-tags="bank graduate insurance ao">
+        <h3>National Insurance Company AO Scale I Recruitment 2026</h3>
+        <p class="org">National Insurance Company Limited (NICL)</p>
+        <div class="facts">
+          <div><span>Total Posts</span><b>321</b></div>
+          <div><span>Post Name</span><b>Administrative Officer, Scale I</b></div>
+          <div><span>Qualification</span><b>Graduate / Post Graduate (post-wise)</b></div>
+          <div class="urgent"><span>Last Date</span><b>28 Oct 2026</b></div>
+          <div><span>Apply Mode</span><b>Online</b></div>
+          <div><span>Days Left</span><b data-countdown="2026-10-28">—</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn apply" href="https://nationalinsurance.nic.co.in" target="_blank" rel="noopener">Apply Online</a>
+          <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
+        </div>
+        <div class="jobdetail">
+          <h4>Selection Process (सामान्य प्रक्रिया)</h4>
+          <ul>
+            <li>Preliminary Exam → Main Exam → Interview</li>
+            <li>Generalist और Specialist दोनों stream के पद शामिल हो सकते हैं — stream-wise पात्रता notification में देखें</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="jobcard" data-tags="defence 12th army">
+        <h3>Indian Army TES 57 Entry 2026 — Technical Entry Scheme</h3>
+        <p class="org">Indian Army • Join Indian Army</p>
+        <div class="facts">
+          <div><span>Entry</span><b>TES 57 (10+2 Technical Entry)</b></div>
+          <div><span>Qualification</span><b>12th with Physics, Chemistry, Maths</b></div>
+          <div><span>Apply Mode</span><b>Online</b></div>
+          <div class="urgent"><span>Last Date</span><b>12 Nov 2026</b></div>
+          <div><span>Selection</span><b>Shortlisting → SSB Interview → Medical</b></div>
+          <div><span>Days Left</span><b data-countdown="2026-11-12">—</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn apply" href="https://joinindianarmy.nic.in" target="_blank" rel="noopener">Apply Online</a>
+          <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
+        </div>
+        <div class="jobdetail">
+          <h4>Important Points</h4>
+          <ul>
+            <li>TES entry से उम्मीदवार अधिकारी (Officer) के रूप में कमीशन पाते हैं</li>
+            <li>JEE (Main) score और 10+2 marks के आधार पर shortlisting होती है — सटीक criteria आधिकारिक notification में देखें</li>
+            <li>SSB interview 5 दिनों का होता है; यात्रा और तैयारी पहले से plan करें</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="jobcard" data-tags="graduate university assistant">
+        <h3>Delhi University Senior Assistant &amp; Assistant Recruitment 2026</h3>
+        <p class="org">University of Delhi</p>
+        <div class="facts">
+          <div><span>Total Posts</span><b>126</b></div>
+          <div><span>Post Names</span><b>Senior Assistant, Assistant</b></div>
+          <div><span>Qualification</span><b>Graduate (post-wise)</b></div>
+          <div class="urgent"><span>Last Date</span><b>09 Nov 2026</b></div>
+          <div><span>Apply Mode</span><b>Online — du.ac.in</b></div>
+          <div><span>Days Left</span><b data-countdown="2026-11-09">—</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn apply" href="https://du.ac.in" target="_blank" rel="noopener">Apply Online</a>
+          <button class="btn detail" type="button" aria-expanded="false">Full Details</button>
+        </div>
+        <div class="jobdetail">
+          <h4>Important Points</h4>
+          <ul>
+            <li>Non-teaching पदों की भर्ती — केंद्रीय विश्वविद्यालय में स्थायी नौकरी का अवसर</li>
+            <li>Post-wise अनुभव और आयु सीमा du.ac.in के विज्ञापन में दी गई है</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+    <p id="qual-status" class="search-note" role="status" style="display:none"></p>
+  </section>
+
+  <!-- ══════════ SYLLABUS / ADMISSION / DOCUMENTS ══════════ -->
+  <section class="grid3" aria-label="Syllabus, admission and documents">
+
+    <div class="box" id="syllabus">
+      <h2 class="gold">Syllabus</h2>
+      <ul data-list>
+        <li><a href="https://ssc.gov.in" target="_blank" rel="noopener">SSC CGL / CHSL / GD Syllabus &amp; Exam Pattern</a>
+          <span class="meta">Tier-wise विषय और अंक विभाजन</span></li>
+        <li><a href="https://rrbapply.gov.in" target="_blank" rel="noopener">RRB NTPC Syllabus — Maths, Reasoning, GK</a>
+          <span class="meta">CBT 1 व CBT 2 का पाठ्यक्रम</span></li>
+        <li><a href="https://upsc.gov.in" target="_blank" rel="noopener">UPSC Civil Services Syllabus</a>
+          <span class="meta">Prelims + Mains + Optional subjects</span></li>
+        <li><a href="https://www.ibps.in" target="_blank" rel="noopener">IBPS PO / Clerk Syllabus</a>
+          <span class="meta">बैंक परीक्षाओं का पाठ्यक्रम</span></li>
+      </ul>
+    </div>
+
+    <div class="box" id="admission">
+      <h2 class="gold">Admission</h2>
+      <ul data-list>
+        <li><a href="https://jeemain.nta.ac.in" target="_blank" rel="noopener">JEE Main 2027 — NTA</a>
+          <span class="meta">इंजीनियरिंग प्रवेश परीक्षा की जानकारी</span></li>
+        <li><a href="https://neet.nta.ac.in" target="_blank" rel="noopener">NEET UG — NTA</a>
+          <span class="meta">मेडिकल प्रवेश परीक्षा अपडेट</span></li>
+        <li><a href="https://cuet.nta.ac.in" target="_blank" rel="noopener">CUET UG / PG — NTA</a>
+          <span class="meta">केंद्रीय विश्वविद्यालयों में प्रवेश</span></li>
+        <li><a href="https://ctet.nic.in" target="_blank" rel="noopener">CTET — CBSE</a>
+          <span class="meta">केंद्रीय शिक्षक पात्रता परीक्षा</span></li>
+      </ul>
+    </div>
+
+    <div class="box" id="documents">
+      <h2 class="gold">Documents / Certificate</h2>
+      <ul data-list>
+        <li><a href="https://www.digilocker.gov.in" target="_blank" rel="noopener">DigiLocker — Marksheet &amp; Certificate Download</a>
+          <span class="meta">सरकारी डिजिटल दस्तावेज़</span></li>
+        <li><a href="https://uidai.gov.in" target="_blank" rel="noopener">Aadhaar Card Services — UIDAI</a>
+          <span class="meta">Download, update और PVC card</span></li>
+        <li><a href="https://www.incometax.gov.in" target="_blank" rel="noopener">PAN Card Services — Income Tax / NSDL</a>
+          <span class="meta">नया PAN, सुधार और e-PAN</span></li>
+        <li><a href="https://voters.eci.gov.in" target="_blank" rel="noopener">Voter ID — Election Commission</a>
+          <span class="meta">नया पंजीकरण और सूची में नाम जाँचें</span></li>
+        <li><a href="https://parivahan.gov.in" target="_blank" rel="noopener">Driving Licence — Parivahan Sewa</a>
+          <span class="meta">Learner / permanent licence सेवाएँ</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════ HOW TO APPLY ══════════ -->
+  <section class="panel" aria-label="How to apply">
+    <h2>Online Form भरने का सही तरीका</h2>
+    <ol class="steps">
+      <li><b>Notification ध्यान से पढ़ें</b>पात्रता, आयु सीमा, पदों की संख्या और चयन प्रक्रिया सबसे पहले आधिकारिक विज्ञापन में जाँचें।</li>
+      <li><b>Documents तैयार रखें</b>Photo, signature, 10वीं/12वीं की marksheet, जाति/आय प्रमाण पत्र — सब scan करके सही size में रखें।</li>
+      <li><b>Registration करें</b>सिर्फ आधिकारिक वेबसाइट पर ही registration करें; mobile number और email वही दें जो आपके पास active हों।</li>
+      <li><b>Form भरकर fee जमा करें</b>Submit से पहले हर जानकारी दोबारा जाँचें, फिर fee का payment करके final print ज़रूर निकालें।</li>
+    </ol>
+  </section>
+
+  <!-- ══════════ OFFICIAL SITES ══════════ -->
+  <section class="panel" id="official-sites" aria-label="Official websites">
+    <h2>महत्वपूर्ण आधिकारिक वेबसाइटें</h2>
+    <div class="officials">
+      <a href="https://ssc.gov.in" target="_blank" rel="noopener">SSC<small>ssc.gov.in — कर्मचारी चयन आयोग</small></a>
+      <a href="https://upsc.gov.in" target="_blank" rel="noopener">UPSC<small>upsc.gov.in — संघ लोक सेवा आयोग</small></a>
+      <a href="https://www.ibps.in" target="_blank" rel="noopener">IBPS<small>ibps.in — बैंकिंग भर्ती</small></a>
+      <a href="https://rrbapply.gov.in" target="_blank" rel="noopener">Railway RRB<small>rrbapply.gov.in — रेलवे भर्ती</small></a>
+      <a href="https://joinindianarmy.nic.in" target="_blank" rel="noopener">Indian Army<small>joinindianarmy.nic.in</small></a>
+      <a href="https://indianairforce.nic.in" target="_blank" rel="noopener">Indian Air Force<small>indianairforce.nic.in</small></a>
+      <a href="https://www.joinindiannavy.gov.in" target="_blank" rel="noopener">Indian Navy<small>joinindiannavy.gov.in</small></a>
+      <a href="https://upsssc.gov.in" target="_blank" rel="noopener">UPSSSC<small>upsssc.gov.in — उत्तर प्रदेश</small></a>
+      <a href="https://bpsc.bihar.gov.in" target="_blank" rel="noopener">BPSC<small>bpsc.bihar.gov.in — बिहार</small></a>
+      <a href="https://mppsc.mp.gov.in" target="_blank" rel="noopener">MPPSC<small>mppsc.mp.gov.in — मध्य प्रदेश</small></a>
+      <a href="https://sci.gov.in" target="_blank" rel="noopener">Supreme Court<small>sci.gov.in — न्यायालय भर्ती</small></a>
+      <a href="https://www.india.gov.in" target="_blank" rel="noopener">National Portal<small>india.gov.in — भारत सरकार</small></a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="#home">Home</a>
+      <a href="#latest-jobs">Latest Jobs</a>
+      <a href="#results">Results</a>
+      <a href="#admit-card">Admit Card</a>
+      <a href="#answer-key">Answer Key</a>
+      <a href="#syllabus">Syllabus</a>
+      <a href="#admission">Admission</a>
+      <a href="#official-sites">Official Sites</a>
+    </nav>
+    <p class="disclaimer"><b>Disclaimer:</b> Sarkari Result Portal एक स्वतंत्र सूचना पोर्टल है — यह किसी सरकारी संस्था की आधिकारिक वेबसाइट नहीं है। यहाँ दी गई जानकारी विभिन्न आधिकारिक सूचनाओं के आधार पर तैयार की जाती है। किसी भी भर्ती में आवेदन करने से पहले संबंधित विभाग की आधिकारिक वेबसाइट पर जारी notification अवश्य पढ़ें; किसी त्रुटि के लिए पोर्टल जिम्मेदार नहीं होगा। सभी परीक्षा नाम, संस्था नाम और ट्रेडमार्क उनके संबंधित स्वामियों के हैं।</p>
+    <p>© 2026 Sarkari Result Portal — सरकारी नौकरी की जानकारी, सरल भाषा में।</p>
+    <p class="sign">Site by <span class="sig">— Rajan Kumar</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Days-left countdowns, computed against the visitor's date */
+  var today = new Date(); today.setHours(0,0,0,0);
+  document.querySelectorAll("[data-countdown]").forEach(function(el){
+    var d = new Date(el.getAttribute("data-countdown") + "T00:00:00");
+    var diff = Math.round((d - today) / 86400000);
+    el.textContent = diff > 0 ? diff + " दिन बाकी" : (diff === 0 ? "आज अंतिम तिथि!" : "तिथि निकल गई");
+  });
+
+  /* Full-details toggles on job cards */
+  document.querySelectorAll(".jobcard .btn.detail").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var panel = btn.closest(".jobcard").querySelector(".jobdetail");
+      var open = panel.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.textContent = open ? "Hide Details" : "Full Details";
+    });
+  });
+
+  /* Qualification filter for job cards */
+  var qualBtns = document.querySelectorAll(".quals button");
+  var cards = document.querySelectorAll("#job-cards .jobcard");
+  var qualStatus = document.getElementById("qual-status");
+  qualBtns.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      qualBtns.forEach(function(b){ b.setAttribute("aria-pressed","false"); });
+      btn.setAttribute("aria-pressed","true");
+      var q = btn.getAttribute("data-qual");
+      var shown = 0;
+      cards.forEach(function(card){
+        var match = (q === "all") || (card.getAttribute("data-tags") || "").split(" ").indexOf(q) !== -1;
+        card.classList.toggle("filtered-out", !match);
+        if (match) shown++;
+      });
+      qualStatus.style.display = "block";
+      qualStatus.textContent = q === "all"
+        ? "सभी " + shown + " भर्तियाँ दिखाई जा रही हैं।"
+        : "“" + btn.textContent + "” श्रेणी की " + shown + " भर्तियाँ मिलीं।";
+      document.getElementById("job-details").scrollIntoView({behavior:"smooth", block:"start"});
+    });
+  });
+
+  /* Live search across every list on the page */
+  var input = document.getElementById("search-input");
+  var status = document.getElementById("search-status");
+  var items = Array.prototype.slice.call(document.querySelectorAll("[data-list] li"));
+  var cardList = Array.prototype.slice.call(cards);
+  function runSearch(){
+    var q = input.value.trim().toLowerCase();
+    if (!q){
+      items.forEach(function(li){ li.classList.remove("hidden-item"); });
+      cardList.forEach(function(c){ c.style.display = ""; });
+      status.style.display = "none";
+      return;
+    }
+    var hits = 0;
+    items.forEach(function(li){
+      var match = li.textContent.toLowerCase().indexOf(q) !== -1;
+      li.classList.toggle("hidden-item", !match);
+      if (match) hits++;
+    });
+    cardList.forEach(function(c){
+      var match = c.textContent.toLowerCase().indexOf(q) !== -1;
+      c.style.display = match ? "" : "none";
+      if (match) hits++;
+    });
+    status.style.display = "block";
+    status.textContent = hits > 0
+      ? "“" + input.value.trim() + "” के लिए " + hits + " परिणाम मिले।"
+      : "“" + input.value.trim() + "” के लिए कोई परिणाम नहीं मिला — कुछ और लिखकर देखें।";
+  }
+  input.addEventListener("input", runSearch);
+  document.getElementById("search-form").addEventListener("submit", function(e){
+    e.preventDefault(); runSearch();
+  });
+})();
+</script>
+</body>
+</html>
