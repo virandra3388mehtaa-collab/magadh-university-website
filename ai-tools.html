@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="AI Tools Directory — discover handpicked AI tools for writing, image, video, audio, coding, marketing and productivity. Free AI tools, new tools, compare tools, ratings and reviews. हिंदी और English दोनों में।" />
+<meta property="og:title" content="AI Tools Directory — Find the Right AI Tool for Any Task" />
+<meta property="og:description" content="Curated AI tools directory with free tools, new tools, comparisons, ratings and guides — in English and Hindi." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:," />
+<title>AI Tools Directory — Find the Right AI Tool for Any Task</title>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"AI Tools Directory","description":"Curated directory of AI tools with comparisons, ratings and guides.","potentialAction":{"@type":"SearchAction","target":"#all-tools","query-input":"required name=search_term_string"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"AI Tools Directory — Categories","itemListElement":[{"@type":"ListItem","position":1,"name":"Chatbots"},{"@type":"ListItem","position":2,"name":"Image"},{"@type":"ListItem","position":3,"name":"Video"},{"@type":"ListItem","position":4,"name":"Audio & Voice"},{"@type":"ListItem","position":5,"name":"Writing"},{"@type":"ListItem","position":6,"name":"Coding"},{"@type":"ListItem","position":7,"name":"Productivity"},{"@type":"ListItem","position":8,"name":"Marketing"},{"@type":"ListItem","position":9,"name":"Design"},{"@type":"ListItem","position":10,"name":"Research"}]}
+</script>
+<style>
+  :root{
+    --bg:#f7f7f4;
+    --surface:#ffffff;
+    --surface-2:#f0efe9;
+    --ink:#16181d;
+    --ink-2:#4b5563;
+    --ink-3:#7a8191;
+    --line:#e5e3da;
+    --accent:#0f766e;
+    --accent-ink:#0b5e57;
+    --accent-soft:#e6f4f1;
+    --amber:#d97706;
+    --amber-soft:#fdf1de;
+    --heart:#d6336c;
+    --chip:#ffffff;
+    --shadow:0 1px 2px rgba(20,22,26,.05), 0 10px 30px rgba(20,22,26,.06);
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f1115;
+      --surface:#171a20;
+      --surface-2:#1e222b;
+      --ink:#f2f3f5;
+      --ink-2:#b8bec9;
+      --ink-3:#8b93a3;
+      --line:#2a2f3a;
+      --accent:#2dd4bf;
+      --accent-ink:#5eead4;
+      --accent-soft:#12322e;
+      --amber:#f5b04c;
+      --amber-soft:#33270f;
+      --heart:#f783ac;
+      --chip:#1e222b;
+      --shadow:0 1px 2px rgba(0,0,0,.35), 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-sans-system,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  button{font-family:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:40;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:8px 0;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.02em;font-size:18px}
+  .brand-mark{width:34px;height:34px;border-radius:9px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:15px;font-weight:900}
+  .brand span em{font-style:normal;color:var(--accent)}
+  .nav-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .nav-links a{text-decoration:none;color:var(--ink-2);font-size:14px;font-weight:600}
+  .nav-links a:hover{color:var(--ink)}
+  .head-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .hbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 13px;border-radius:999px;font-size:13.5px;font-weight:700;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+  .hbtn:hover{border-color:var(--accent);color:var(--accent-ink)}
+  .hbtn.solid{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .hbtn .cnt{background:var(--accent);color:#fff;border-radius:999px;font-size:11px;padding:1px 7px;font-weight:800}
+  @media (prefers-color-scheme: dark){ .hbtn .cnt{color:#06201c} }
+  .lang-toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+  .lang-toggle button{border:0;background:transparent;color:var(--ink-2);padding:8px 12px;font-size:13px;font-weight:800;cursor:pointer}
+  .lang-toggle button.on{background:var(--accent);color:#fff}
+  @media (prefers-color-scheme: dark){ .lang-toggle button.on{color:#06201c} }
+  .user-chip{display:none;align-items:center;gap:8px;font-size:13.5px;font-weight:700}
+  .user-chip .avatar{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:900}
+  @media(max-width:720px){ .nav-links{display:none} }
+
+  /* Hero */
+  .hero{padding:52px 0 26px;text-align:center}
+  .hero-badge{display:inline-flex;gap:8px;align-items:center;background:var(--surface);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--ink-2)}
+  .hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block}
+  h1{font-size:clamp(32px,6vw,56px);line-height:1.03;letter-spacing:-.04em;margin:20px auto 14px;max-width:820px;font-weight:900}
+  h1 .hl{color:var(--accent)}
+  .hero p{max-width:620px;margin:0 auto;color:var(--ink-2);font-size:17px;line-height:1.6}
+  .searchbar{max-width:720px;margin:26px auto 0;background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:6px;display:flex;gap:6px;box-shadow:var(--shadow)}
+  .searchbar input{flex:1;border:0;outline:0;background:transparent;color:var(--ink);font-size:16px;padding:12px 16px;min-width:0}
+  .searchbar input::placeholder{color:var(--ink-3)}
+  .searchbar button{border:0;background:var(--accent);color:#fff;font-weight:800;padding:12px 22px;border-radius:999px;cursor:pointer;font-size:15px;white-space:nowrap}
+  @media (prefers-color-scheme: dark){ .searchbar button{color:#06201c} }
+  .quick{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+  .quick span{font-size:13px;color:var(--ink-3);align-self:center}
+  .quick button{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);padding:7px 12px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer}
+  .quick button:hover{border-color:var(--accent);color:var(--accent-ink)}
+  .stats{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+  .stat{text-align:center}
+  .stat b{display:block;font-size:22px;letter-spacing:-.02em}
+  .stat small{color:var(--ink-3);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+
+  /* View tabs */
+  .viewtabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 4px}
+  .vtab{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);padding:9px 16px;border-radius:999px;font-size:14px;font-weight:800;cursor:pointer}
+  .vtab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+  @media (prefers-color-scheme: dark){ .vtab.active{color:#06201c} }
+  .view-note{display:none;background:var(--accent-soft);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:14px;color:var(--ink);margin-top:12px;line-height:1.55}
+  .view-note.show{display:block}
+
+  /* Categories */
+  section{padding:26px 0}
+  .sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:16px}
+  .sec-head h2{font-size:24px;letter-spacing:-.03em;margin:0}
+  .sec-head p{margin:4px 0 0;color:var(--ink-2);font-size:14.5px}
+  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media(max-width:900px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:460px){.cat-grid{grid-template-columns:1fr 1fr;gap:10px}}
+  .cat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;text-align:left;cursor:pointer;display:flex;gap:12px;align-items:center;width:100%;color:var(--ink)}
+  .cat:hover{border-color:var(--accent)}
+  .cat .ic{width:42px;height:42px;border-radius:11px;background:var(--accent-soft);display:grid;place-items:center;font-size:19px;flex:none}
+  .cat b{display:block;font-size:15px}
+  .cat small{color:var(--ink-3);font-size:12.5px;font-weight:600}
+
+  /* Filters */
+  .filters{position:sticky;top:64px;z-index:30;background:var(--bg);padding:12px 0;border-bottom:1px solid var(--line)}
+  .filter-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .pill{border:1px solid var(--line);background:var(--chip);color:var(--ink-2);padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:700;cursor:pointer}
+  .pill.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .filter-sep{width:1px;height:22px;background:var(--line);margin:0 4px}
+  select{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 12px;font-size:13.5px;font-weight:600}
+
+  /* Cards */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:620px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:11px}
+  .card:hover{border-color:color-mix(in srgb, var(--accent) 55%, var(--line))}
+  .card-top{display:flex;gap:12px;align-items:flex-start}
+  .tile{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:17px;flex:none;letter-spacing:.01em}
+  .card h3{margin:0;font-size:16.5px;letter-spacing:-.01em}
+  .card h3 a{text-decoration:none}
+  .card h3 a:hover{color:var(--accent-ink)}
+  .cat-label{font-size:12px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+  .badges{margin-left:auto;display:flex;flex-direction:column;gap:5px;align-items:flex-end}
+  .trend{background:var(--amber-soft);color:var(--amber);font-size:11px;font-weight:800;padding:5px 8px;border-radius:999px;white-space:nowrap}
+  .newbadge{background:var(--accent);color:#fff;font-size:11px;font-weight:800;padding:5px 8px;border-radius:999px;white-space:nowrap}
+  @media (prefers-color-scheme: dark){ .newbadge{color:#06201c} }
+  .desc{color:var(--ink-2);font-size:14.5px;line-height:1.55;margin:0;flex:1}
+  .tags{display:flex;gap:6px;flex-wrap:wrap}
+  .tag{font-size:12px;font-weight:600;background:var(--surface-2);color:var(--ink-2);padding:5px 8px;border-radius:999px}
+  .stars-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .stars{display:inline-flex;gap:1px}
+  .stars button{border:0;background:none;padding:1px;cursor:pointer;font-size:17px;line-height:1;color:var(--line)}
+  .stars button.lit{color:var(--amber)}
+  .stars button:hover{transform:scale(1.15)}
+  .rate-meta{font-size:12.5px;color:var(--ink-3);font-weight:600}
+  .card-actions{display:flex;gap:8px;flex-wrap:wrap}
+  .abtn{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);padding:7px 12px;border-radius:999px;font-size:12.5px;font-weight:700;cursor:pointer;display:inline-flex;gap:5px;align-items:center}
+  .abtn:hover{border-color:var(--accent);color:var(--accent-ink)}
+  .abtn.faved{color:var(--heart);border-color:var(--heart)}
+  .abtn.incmp{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
+  .card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:12px}
+  .price{font-size:13px;font-weight:800}
+  .price.free{color:var(--accent-ink)} .price.paid{color:var(--ink-2)}
+  .visit{text-decoration:none;font-size:13.5px;font-weight:800;color:var(--accent-ink);display:inline-flex;gap:6px;align-items:center}
+  .visit:hover{text-decoration:underline}
+  .empty{display:none;text-align:center;padding:48px 16px;border:1px dashed var(--line);border-radius:var(--radius);background:var(--surface)}
+  .empty b{font-size:17px;display:block;margin-bottom:6px}
+  .empty p{color:var(--ink-2);margin:0}
+  .count-line{font-size:13.5px;color:var(--ink-3);font-weight:600;margin:14px 2px}
+
+  /* Sponsored */
+  .sponsored{border:1.5px dashed var(--line);border-radius:20px;padding:22px;background:var(--surface-2)}
+  .sponsored .ad-label{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px;display:block}
+  .ad-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:700px){.ad-grid{grid-template-columns:1fr}}
+  .ad-slot{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center}
+  .ad-slot b{display:block;font-size:16px;margin-bottom:6px}
+  .ad-slot p{color:var(--ink-2);font-size:13.5px;margin:0 0 12px;line-height:1.55}
+  .ad-slot a{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:800;padding:9px 16px;border-radius:999px;font-size:13.5px}
+
+  /* Articles */
+  .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:900px){.art-grid{grid-template-columns:1fr}}
+  .art{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .art .kicker{font-size:11.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-ink)}
+  .art h3{margin:8px 0;font-size:18px;letter-spacing:-.02em;line-height:1.3}
+  .art p{color:var(--ink-2);font-size:14px;line-height:1.65;margin:0 0 10px}
+  .art details summary{cursor:pointer;font-weight:800;font-size:14px;color:var(--accent-ink)}
+  .art details div{margin-top:10px}
+  .art .meta-line{font-size:12px;color:var(--ink-3);font-weight:600}
+
+  /* How / Submit */
+  .band{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+  @media(max-width:760px){.band{grid-template-columns:1fr}}
+  .band h2{margin:0 0 8px;font-size:24px;letter-spacing:-.03em}
+  .band p{color:var(--ink-2);line-height:1.6;margin:0}
+  .steps{display:grid;gap:10px}
+  .step{display:flex;gap:12px;background:var(--surface-2);border-radius:12px;padding:12px 14px}
+  .step b{width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:13px;flex:none}
+  .step div b{width:auto;height:auto;background:none;color:var(--ink);display:block;font-size:14px}
+  .step div span{font-size:13.5px;color:var(--ink-2);line-height:1.5;display:block}
+  .btn{display:inline-block;margin-top:16px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:800;padding:12px 18px;border-radius:999px;font-size:14.5px;border:0;cursor:pointer}
+
+  /* Admin */
+  .admin-panel{display:none;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}
+  .admin-panel.open{display:block}
+  .admin-panel h2{margin:0 0 6px;font-size:22px;letter-spacing:-.02em}
+  .admin-panel>p{color:var(--ink-2);font-size:14px;line-height:1.55;margin:0 0 16px}
+  .scope-note{font-size:12.5px;color:var(--ink-3);font-weight:600}
+  .admin-form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:640px){.admin-form{grid-template-columns:1fr}}
+  .admin-form label{font-size:12.5px;font-weight:700;color:var(--ink-2);display:grid;gap:5px}
+  .admin-form input,.admin-form select,.admin-form textarea{border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-family:inherit;width:100%}
+  .admin-form .full{grid-column:1/-1}
+  .admin-list{margin-top:18px;border-top:1px solid var(--line)}
+  .admin-row{display:flex;align-items:center;gap:10px;padding:10px 2px;border-bottom:1px solid var(--line);font-size:14px;flex-wrap:wrap}
+  .admin-row b{font-size:14.5px}
+  .admin-row small{color:var(--ink-3);font-weight:600}
+  .admin-row .del{margin-left:auto;border:1px solid var(--line);background:var(--surface);color:#c92a2a;padding:6px 12px;border-radius:999px;font-size:12.5px;font-weight:800;cursor:pointer}
+  @media (prefers-color-scheme: dark){ .admin-row .del{color:#ff8787} }
+
+  /* Compare tray */
+  .cmp-tray{position:fixed;left:50%;transform:translateX(-50%) translateY(140%);bottom:16px;z-index:60;background:var(--ink);color:var(--bg);border-radius:999px;padding:10px 12px 10px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 12px 34px rgba(0,0,0,.3);transition:transform .25s;max-width:calc(100vw - 24px);flex-wrap:wrap;justify-content:center}
+  .cmp-tray.show{transform:translateX(-50%) translateY(0)}
+  .cmp-tray span{font-size:13.5px;font-weight:700}
+  .cmp-tray button{border:0;border-radius:999px;padding:9px 16px;font-weight:800;cursor:pointer;font-size:13.5px}
+  .cmp-tray .go{background:var(--accent);color:#fff}
+  @media (prefers-color-scheme: dark){ .cmp-tray .go{color:#06201c} }
+  .cmp-tray .clear{background:transparent;color:var(--bg);border:1px solid color-mix(in srgb, var(--bg) 40%, transparent)}
+
+  /* Modals */
+  .modal-back{position:fixed;inset:0;background:rgba(10,12,16,.55);z-index:80;display:none;align-items:flex-start;justify-content:center;padding:20px 12px;overflow-y:auto}
+  .modal-back.open{display:flex}
+  .modal{background:var(--surface);color:var(--ink);border-radius:20px;max-width:560px;width:100%;padding:26px;box-shadow:var(--shadow);margin:auto 0}
+  .modal.wide{max-width:860px}
+  .modal h2{margin:0 0 6px;font-size:22px;letter-spacing:-.02em}
+  .modal .sub{color:var(--ink-2);font-size:14px;line-height:1.55;margin:0 0 16px}
+  .modal .x{float:right;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer}
+  .auth-tabs{display:flex;gap:8px;margin-bottom:16px}
+  .auth-tabs button{flex:1;border:1px solid var(--line);background:var(--surface-2);color:var(--ink-2);padding:10px;border-radius:10px;font-weight:800;cursor:pointer;font-size:14px}
+  .auth-tabs button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .modal form{display:grid;gap:12px}
+  .modal label{font-size:12.5px;font-weight:700;color:var(--ink-2);display:grid;gap:5px}
+  .modal input,.modal textarea{border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:10px;padding:11px 12px;font-size:15px;font-family:inherit;width:100%}
+  .modal .primary-btn{border:0;background:var(--accent);color:#fff;font-weight:800;padding:12px;border-radius:999px;cursor:pointer;font-size:15px}
+  @media (prefers-color-scheme: dark){ .modal .primary-btn{color:#06201c} }
+  .review-item{border-top:1px solid var(--line);padding:12px 0}
+  .review-item b{font-size:14px}
+  .review-item .rmeta{font-size:12px;color:var(--ink-3);font-weight:600;margin-left:6px}
+  .review-item p{margin:5px 0 0;color:var(--ink-2);font-size:14px;line-height:1.55}
+  .big-stars{display:flex;gap:2px;margin:6px 0 12px}
+  .big-stars button{border:0;background:none;font-size:30px;cursor:pointer;color:var(--line);padding:2px;line-height:1}
+  .big-stars button.lit{color:var(--amber)}
+
+  /* Compare table (stacks on mobile) */
+  .cmp-grid{display:grid;gap:12px}
+  .cmp-col{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--surface-2)}
+  .cmp-col h3{margin:0 0 4px;font-size:17px}
+  .cmp-col dl{margin:10px 0 0;display:grid;gap:8px}
+  .cmp-col dt{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3)}
+  .cmp-col dd{margin:2px 0 0;font-size:14px;line-height:1.5}
+  @media(min-width:700px){ .cmp-grid.c2{grid-template-columns:1fr 1fr} .cmp-grid.c3{grid-template-columns:1fr 1fr 1fr} }
+
+  /* Toast */
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(160%);background:var(--ink);color:var(--bg);padding:12px 20px;border-radius:999px;font-size:14px;font-weight:700;z-index:90;transition:transform .25s;box-shadow:0 10px 28px rgba(0,0,0,.28);max-width:calc(100vw - 32px);text-align:center}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+
+  footer{border-top:1px solid var(--line);margin-top:36px;padding:28px 0 110px}
+  .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .foot-links{display:flex;gap:18px;flex-wrap:wrap}
+  .foot-links a{color:var(--ink-2);text-decoration:none;font-size:14px;font-weight:600}
+  .foot small{color:var(--ink-3);line-height:1.6;display:block;max-width:640px;margin-top:10px}
+  .signature{margin-top:18px;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:17px;color:var(--ink-2)}
+  body.hi .only-en{display:none}
+  body.en .only-hi{display:none}
+</style>
+</head>
+<body class="en">
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="brand-mark">AI</span><span>AI Tools <em>Directory</em></span></a>
+    <nav class="nav-links">
+      <a href="#categories" data-i18n="navCat">Categories</a>
+      <a href="#all-tools" data-view-link="free" data-i18n="navFree">Free Tools</a>
+      <a href="#all-tools" data-view-link="new" data-i18n="navNew">New Tools</a>
+      <a href="#articles" data-i18n="navArticles">Guides</a>
+      <a href="#submit" data-i18n="navSubmit">Submit a Tool</a>
+    </nav>
+    <div class="head-actions">
+      <div class="lang-toggle" role="group" aria-label="Language / भाषा">
+        <button id="langEn" class="on" type="button">EN</button>
+        <button id="langHi" type="button">हिंदी</button>
+      </div>
+      <button class="hbtn" id="favBtn" type="button">♥ <span data-i18n="favorites">Favorites</span> <span class="cnt" id="favCount">0</span></button>
+      <button class="hbtn" id="cmpBtn" type="button">⚖ <span data-i18n="compare">Compare</span> <span class="cnt" id="cmpCount">0</span></button>
+      <button class="hbtn" id="adminBtn" type="button" data-i18n="admin">Admin</button>
+      <span class="user-chip" id="userChip"><span class="avatar" id="userAvatar">?</span><span id="userName"></span><button class="hbtn" id="logoutBtn" type="button" data-i18n="logout">Log out</button></span>
+      <button class="hbtn solid" id="loginBtn" type="button" data-i18n="login">Log in / Sign up</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <!-- HERO -->
+    <div class="hero">
+      <span class="hero-badge"><i></i> <span data-i18n="heroBadge">Updated directory · New tools added regularly</span></span>
+      <h1><span class="only-en">Find the right <span class="hl">AI tool</span> for any task</span><span class="only-hi">हर काम के लिए सही <span class="hl">AI टूल</span> खोजें</span></h1>
+      <p data-i18n="heroSub">Search a curated directory of AI tools for writing, images, video, voice, coding, marketing and everyday productivity — compared by category and pricing, in one place.</p>
+      <form class="searchbar" id="heroSearch" role="search">
+        <input id="searchInput" type="search" data-i18n-ph="searchPh" placeholder="Try “video editor”, “logo”, “voice clone”, “code helper”…" aria-label="Search AI tools" />
+        <button type="submit" data-i18n="search">Search</button>
+      </form>
+      <div class="quick">
+        <span data-i18n="popular">Popular:</span>
+        <button data-q="chat">Chatbots</button>
+        <button data-q="image">Image Generator</button>
+        <button data-q="video">Video</button>
+        <button data-q="voice">Voice</button>
+        <button data-q="writing">Writing</button>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="statTools">48</b><small data-i18n="statTools">AI Tools Listed</small></div>
+        <div class="stat"><b>10</b><small data-i18n="statCat">Categories</small></div>
+        <div class="stat"><b id="statFree">0</b><small data-i18n="statFree">Free / Free-Plan Tools</small></div>
+      </div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <section id="categories">
+      <div class="sec-head">
+        <div><h2 data-i18n="catTitle">Browse by category</h2><p data-i18n="catSub">Pick a job — we will show you the tools built for it.</p></div>
+      </div>
+      <div class="cat-grid" id="catGrid"></div>
+    </section>
+
+    <!-- TRENDING -->
+    <section id="trending">
+      <div class="sec-head">
+        <div><h2 data-i18n="trendTitle">Trending this week</h2><p data-i18n="trendSub">The tools people are searching for the most right now.</p></div>
+      </div>
+      <div class="grid" id="trendGrid"></div>
+    </section>
+
+    <!-- SPONSORED / AFFILIATE -->
+    <section id="sponsored" aria-label="Sponsored">
+      <div class="sponsored">
+        <span class="ad-label" data-i18n="adLabel">Advertisement · Sponsored</span>
+        <div class="ad-grid">
+          <div class="ad-slot">
+            <b data-i18n="adSlotTitle">Your product here</b>
+            <p data-i18n="adSlotText">Reach thousands of AI-tool seekers. Sponsored placements and affiliate partnerships are available on this directory.</p>
+            <a href="mailto:?subject=Advertising%20on%20AI%20Tools%20Directory" data-i18n="adCta">Advertise with us →</a>
+          </div>
+          <div class="ad-slot">
+            <b data-i18n="affSlotTitle">Partner picks</b>
+            <p data-i18n="affSlotText">Some tool links on this page may become affiliate links in future. If you sign up through one, we may earn a small commission — at no extra cost to you.</p>
+            <a href="#all-tools" data-i18n="affCta">Browse tools →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL TOOLS + VIEWS -->
+    <section id="all-tools">
+      <div class="sec-head">
+        <div><h2 id="toolsHeading" data-i18n="allTitle">All AI tools</h2><p data-i18n="allSub">Filter by category or pricing, or search by name and task. Tap ♥ to save a favorite, add up to 3 tools to compare, and rate the tools you use.</p></div>
+      </div>
+      <div class="viewtabs" role="tablist" aria-label="Tool views">
+        <button class="vtab active" data-view="all" type="button" data-i18n="viewAll">All Tools</button>
+        <button class="vtab" data-view="free" type="button" data-i18n="viewFree">🆓 Free Tools</button>
+        <button class="vtab" data-view="new" type="button" data-i18n="viewNew">✨ New Tools</button>
+        <button class="vtab" data-view="favs" type="button" data-i18n="viewFavs">♥ My Favorites</button>
+      </div>
+      <p class="view-note" id="viewNote"></p>
+      <div class="filters">
+        <div class="filter-row" id="filterRow">
+          <button class="pill active" data-cat="all">All</button>
+          <button class="pill" data-cat="Chatbots">Chatbots</button>
+          <button class="pill" data-cat="Image">Image</button>
+          <button class="pill" data-cat="Video">Video</button>
+          <button class="pill" data-cat="Audio & Voice">Audio &amp; Voice</button>
+          <button class="pill" data-cat="Writing">Writing</button>
+          <button class="pill" data-cat="Coding">Coding</button>
+          <button class="pill" data-cat="Productivity">Productivity</button>
+          <button class="pill" data-cat="Marketing">Marketing</button>
+          <button class="pill" data-cat="Design">Design</button>
+          <button class="pill" data-cat="Research">Research</button>
+          <span class="filter-sep" aria-hidden="true"></span>
+          <select id="priceFilter" aria-label="Filter by pricing">
+            <option value="all" data-i18n="priceAny">Any pricing</option>
+            <option value="Free">Free</option>
+            <option value="Freemium">Freemium</option>
+            <option value="Paid">Paid</option>
+          </select>
+          <select id="sortSel" aria-label="Sort tools">
+            <option value="popular" data-i18n="sortPop">Sort: Popular</option>
+            <option value="az">Sort: A – Z</option>
+            <option value="new" data-i18n="sortNew">Sort: Newest</option>
+            <option value="rating" data-i18n="sortRating">Sort: My top rated</option>
+          </select>
+        </div>
+      </div>
+      <p class="count-line" id="countLine"></p>
+      <div class="grid" id="toolsGrid"></div>
+      <div class="empty" id="emptyState">
+        <b id="emptyTitle" data-i18n="emptyTitle">No tool matches your search</b>
+        <p id="emptyText" data-i18n="emptyText">Try a shorter keyword, or clear the category and pricing filters.</p>
+      </div>
+    </section>
+
+    <!-- SEO ARTICLES -->
+    <section id="articles">
+      <div class="sec-head">
+        <div><h2 data-i18n="artTitle">Guides &amp; articles</h2><p data-i18n="artSub">Practical, original guides to help you pick and use AI tools well.</p></div>
+      </div>
+      <div class="art-grid">
+        <article class="art">
+          <span class="kicker" data-i18n="art1Kick">Guide · Students</span>
+          <h3><span class="only-en">Best free AI tools for students in 2026</span><span class="only-hi">2026 में छात्रों के लिए सबसे अच्छे मुफ़्त AI टूल्स</span></h3>
+          <p class="only-en">Notes, doubts, assignments and exam prep — students get the most from AI when every tool is free or has a generous free plan. Start with a chatbot for doubts, a research tool for cited answers, and a paraphraser for polishing your own writing.</p>
+          <p class="only-hi">नोट्स, डाउट, असाइनमेंट और परीक्षा की तैयारी — छात्रों के लिए वही टूल सबसे अच्छे हैं जो मुफ़्त हों या जिनका फ्री प्लान मज़बूत हो। डाउट के लिए चैटबॉट, सोर्स के साथ जवाब के लिए रिसर्च टूल और अपनी लिखावट सुधारने के लिए पैराफ़्रेज़र से शुरुआत करें।</p>
+          <details>
+            <summary data-i18n="readMore">Read more</summary>
+            <div>
+              <p class="only-en"><b>Our picks from this directory:</b> ChatGPT and Google Gemini for everyday doubts and explanations; Perplexity when you need sources you can cite; ChatPDF to question your own notes and textbooks; Grammarly's free tier to clean up grammar before submission; and Whisper if you record lectures and need transcripts. Tip: keep one tool per job instead of five similar apps — your marks improve from better questions, not more apps.</p>
+              <p class="only-hi"><b>इस डायरेक्टरी से हमारी पसंद:</b> रोज़ के डाउट के लिए ChatGPT और Google Gemini; जहाँ सोर्स चाहिए वहाँ Perplexity; अपने नोट्स से सवाल पूछने के लिए ChatPDF; सबमिट करने से पहले ग्रामर ठीक करने के लिए Grammarly का फ्री प्लान; और लेक्चर रिकॉर्डिंग के ट्रांसक्रिप्ट के लिए Whisper। टिप: हर काम के लिए एक ही टूल रखें — नंबर बेहतर सवालों से बढ़ते हैं, ज़्यादा ऐप्स से नहीं।</p>
+            </div>
+          </details>
+          <p class="meta-line">5 min read · AI Tools Directory Editorial</p>
+        </article>
+        <article class="art">
+          <span class="kicker" data-i18n="art2Kick">Guide · Creators</span>
+          <h3><span class="only-en">How to choose an AI video generator</span><span class="only-hi">AI वीडियो जनरेटर कैसे चुनें</span></h3>
+          <p class="only-en">Text-to-video tools differ in realism, clip length, Hindi-voice support and free credits. Before paying, test the same prompt on three tools and compare motion quality, faces and how well they follow your scene.</p>
+          <p class="only-hi">टेक्स्ट-टू-वीडियो टूल्स में असली अंतर रियलिज़्म, क्लिप की लंबाई, हिंदी वॉइस सपोर्ट और फ्री क्रेडिट का होता है। पैसे देने से पहले एक ही प्रॉम्प्ट तीन टूल्स पर चलाकर मोशन, चेहरे और सीन की सटीकता तुलना करें।</p>
+          <details>
+            <summary data-i18n="readMore">Read more</summary>
+            <div>
+              <p class="only-en"><b>From this directory:</b> Runway for the most control and editing tools; Kling AI for realistic motion; Luma Dream Machine for fast, clean clips; Pika for fun effects; and CapCut to finish everything with captions and music. Use the Compare feature above — add any three video tools and check pricing and features side by side before you decide.</p>
+              <p class="only-hi"><b>इस डायरेक्टरी से:</b> सबसे ज़्यादा कंट्रोल के लिए Runway; रियलिस्टिक मोशन के लिए Kling AI; तेज़ और साफ़ क्लिप के लिए Luma Dream Machine; मज़ेदार इफ़ेक्ट के लिए Pika; और कैप्शन-म्यूज़िक के साथ फिनिशिंग के लिए CapCut। ऊपर दिया Compare फ़ीचर इस्तेमाल करें — कोई भी तीन वीडियो टूल जोड़कर कीमत और फ़ीचर आमने-सामने देखें।</p>
+            </div>
+          </details>
+          <p class="meta-line">4 min read · AI Tools Directory Editorial</p>
+        </article>
+        <article class="art">
+          <span class="kicker" data-i18n="art3Kick">Guide · Beginners</span>
+          <h3><span class="only-en">AI tools for YouTube creators: script to thumbnail</span><span class="only-hi">YouTube क्रिएटर्स के लिए AI टूल्स: स्क्रिप्ट से थंबनेल तक</span></h3>
+          <p class="only-en">A full creator workflow needs five steps: ideas, script, voice, edit and thumbnail. One good tool per step beats a folder full of apps — here is a simple, mostly-free stack that covers all five.</p>
+          <p class="only-hi">क्रिएटर वर्कफ़्लो के पाँच कदम हैं: आइडिया, स्क्रिप्ट, वॉइस, एडिट और थंबनेल। हर कदम के लिए एक अच्छा टूल, दर्जनों ऐप्स से बेहतर है — यहाँ ज़्यादातर मुफ़्त स्टैक दिया है जो पाँचों कदम कवर करता है।</p>
+          <details>
+            <summary data-i18n="readMore">Read more</summary>
+            <div>
+              <p class="only-en"><b>The stack:</b> ChatGPT or Claude for ideas and scripts; ElevenLabs or Murf AI for voiceover; CapCut for editing and auto-captions; OpusClip to cut Shorts from long videos; Ideogram for thumbnails with readable text; and Canva Magic Studio for channel art. Save the ones you pick with the ♥ button so your personal toolkit is always one tap away.</p>
+              <p class="only-hi"><b>स्टैक:</b> आइडिया और स्क्रिप्ट के लिए ChatGPT या Claude; वॉइसओवर के लिए ElevenLabs या Murf AI; एडिटिंग और ऑटो-कैप्शन के लिए CapCut; लंबे वीडियो से Shorts काटने के लिए OpusClip; पढ़ने-योग्य टेक्स्ट वाले थंबनेल के लिए Ideogram; और चैनल आर्ट के लिए Canva Magic Studio। जो टूल चुनें, उन्हें ♥ बटन से सेव कर लें — आपकी अपनी टूलकिट हमेशा एक टैप दूर रहेगी।</p>
+            </div>
+          </details>
+          <p class="meta-line">6 min read · AI Tools Directory Editorial</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ADMIN -->
+    <section id="admin">
+      <div class="admin-panel" id="adminPanel">
+        <h2 data-i18n="adminTitle">Admin dashboard</h2>
+        <p><span data-i18n="adminSub">Add a new tool or remove an existing one — no HTML editing needed.</span> <span class="scope-note" data-i18n="adminScope">Changes apply to this browser session's view; ask the site owner to publish them for everyone.</span></p>
+        <form class="admin-form" id="adminForm">
+          <label><span data-i18n="fName">Tool name *</span><input id="aName" required placeholder="e.g. My AI Tool" /></label>
+          <label><span data-i18n="fUrl">Official website URL *</span><input id="aUrl" required type="url" placeholder="https://…" /></label>
+          <label><span data-i18n="fCat">Category</span>
+            <select id="aCat">
+              <option>Chatbots</option><option>Image</option><option>Video</option><option>Audio &amp; Voice</option><option>Writing</option><option>Coding</option><option>Productivity</option><option>Marketing</option><option>Design</option><option>Research</option>
+            </select></label>
+          <label><span data-i18n="fPrice">Pricing</span>
+            <select id="aPrice"><option>Free</option><option selected>Freemium</option><option>Paid</option></select></label>
+          <label class="full"><span data-i18n="fDesc">One-line description *</span><textarea id="aDesc" required rows="2" placeholder="What does this tool do?"></textarea></label>
+          <label class="full"><span data-i18n="fTags">Tags (comma separated)</span><input id="aTags" placeholder="AI, Editor, Free Tier" /></label>
+          <div class="full"><button class="btn" type="submit" style="margin-top:4px" data-i18n="addTool">+ Add tool</button></div>
+        </form>
+        <div class="admin-list" id="adminList"></div>
+      </div>
+    </section>
+
+    <!-- SUBMIT -->
+    <section id="submit">
+      <div class="band">
+        <div>
+          <h2 data-i18n="submitTitle">Built an AI tool? Get it listed.</h2>
+          <p data-i18n="submitSub">Makers can request a listing in this directory. Send the tool name, its official website link, a one-line description and its pricing model — listings are reviewed before they go live so the directory stays useful and trustworthy.</p>
+          <a class="btn" href="mailto:?subject=AI%20Tool%20Submission%20for%20Directory&body=Tool%20name%3A%0AOfficial%20website%3A%0AOne-line%20description%3A%0ACategory%3A%0APricing%20(Free%20%2F%20Freemium%20%2F%20Paid)%3A" data-i18n="submitBtn">Submit via Email →</a>
+        </div>
+        <div class="steps">
+          <div class="step"><b>1</b><div><b data-i18n="step1t">Send the details</b><span data-i18n="step1s">Tool name, official link, category and pricing.</span></div></div>
+          <div class="step"><b>2</b><div><b data-i18n="step2t">We review it</b><span data-i18n="step2s">We check the tool works and the description is accurate.</span></div></div>
+          <div class="step"><b>3</b><div><b data-i18n="step3t">It goes live</b><span data-i18n="step3s">Approved tools appear in the directory with a direct link.</span></div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#top"><span class="brand-mark">AI</span><span>AI Tools <em>Directory</em></span></a>
+      <div class="foot-links">
+        <a href="#categories" data-i18n="navCat">Categories</a><a href="#trending" data-i18n="trendTitle">Trending this week</a><a href="#all-tools" data-i18n="allTitle">All AI tools</a><a href="#articles" data-i18n="navArticles">Guides</a><a href="#submit" data-i18n="navSubmit">Submit a Tool</a>
+      </div>
+    </div>
+    <small data-i18n="footAbout">An independent, curated directory. All tool names and trademarks belong to their respective owners; listings here are short original descriptions with links to each tool's official website, for discovery purposes only. Pricing can change — always confirm on the official site before paying.</small>
+    <small data-i18n="footAff">Affiliate disclosure: some links on this site may be affiliate links. If you buy or subscribe through them, this directory may earn a commission at no extra cost to you. Sponsored placements are always labelled “Advertisement”.</small>
+    <div class="signature">— Rajan Kumar</div>
+  </div>
+</footer>
+
+<!-- Compare tray -->
+<div class="cmp-tray" id="cmpTray">
+  <span id="cmpTrayText"></span>
+  <button class="go" id="cmpGo" type="button" data-i18n="compareNow">Compare now →</button>
+  <button class="clear" id="cmpClear" type="button" data-i18n="clear">Clear</button>
+</div>
+
+<!-- Auth modal -->
+<div class="modal-back" id="authModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button class="x" type="button" data-close="authModal" aria-label="Close">✕</button>
+    <h2 id="authTitle" data-i18n="authTitle">Welcome</h2>
+    <p class="sub"><span data-i18n="authSub">Create an account to keep your favorite tools and ratings together.</span> <span class="scope-note" data-i18n="authScope">Demo sign-in — your account stays in this tab only and no password is sent anywhere.</span></p>
+    <div class="auth-tabs">
+      <button id="tabLogin" class="on" type="button" data-i18n="tabLogin">Log in</button>
+      <button id="tabSignup" type="button" data-i18n="tabSignup">Sign up</button>
+    </div>
+    <form id="authForm">
+      <label id="nameField" style="display:none"><span data-i18n="yourName">Your name</span><input id="authName" autocomplete="name" placeholder="e.g. Rajan" /></label>
+      <label><span data-i18n="email">Email</span><input id="authEmail" type="email" required autocomplete="email" placeholder="you@example.com" /></label>
+      <label><span data-i18n="password">Password</span><input id="authPass" type="password" required autocomplete="current-password" placeholder="••••••••" /></label>
+      <button class="primary-btn" type="submit" id="authSubmit" data-i18n="tabLogin">Log in</button>
+    </form>
+  </div>
+</div>
+
+<!-- Review modal -->
+<div class="modal-back" id="reviewModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="reviewTitle">
+    <button class="x" type="button" data-close="reviewModal" aria-label="Close">✕</button>
+    <h2 id="reviewTitle">Tool</h2>
+    <p class="sub" id="reviewSub"></p>
+    <b data-i18n="yourRating">Your rating</b>
+    <div class="big-stars" id="bigStars"></div>
+    <form id="reviewForm">
+      <label><span data-i18n="writeReview">Write a short review</span><textarea id="reviewText" rows="3" placeholder="…"></textarea></label>
+      <button class="primary-btn" type="submit" data-i18n="postReview">Post review</button>
+    </form>
+    <div id="reviewList" style="margin-top:10px"></div>
+  </div>
+</div>
+
+<!-- Compare modal -->
+<div class="modal-back" id="cmpModal">
+  <div class="modal wide" role="dialog" aria-modal="true" aria-labelledby="cmpTitle">
+    <button class="x" type="button" data-close="cmpModal" aria-label="Close">✕</button>
+    <h2 id="cmpTitle" data-i18n="cmpTitle">Tool comparison</h2>
+    <p class="sub" data-i18n="cmpSub">Side-by-side: category, pricing, your rating and what each tool does best.</p>
+    <div class="cmp-grid" id="cmpGrid"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+<script>
+var CATEGORIES = [
+  {name:"Chatbots", icon:"💬", blurb:"Chat, answers & assistants"},
+  {name:"Image", icon:"🖼️", blurb:"Generate & edit images"},
+  {name:"Video", icon:"🎬", blurb:"Create & edit video"},
+  {name:"Audio & Voice", icon:"🎙️", blurb:"Voice, music & transcription"},
+  {name:"Writing", icon:"✍️", blurb:"Copy, blogs & editing"},
+  {name:"Coding", icon:"💻", blurb:"Code faster with AI"},
+  {name:"Productivity", icon:"⚡", blurb:"Notes, meetings & tasks"},
+  {name:"Marketing", icon:"📈", blurb:"Ads, SEO & social media"},
+  {name:"Design", icon:"🎨", blurb:"Logos, UI & presentations"},
+  {name:"Research", icon:"🔎", blurb:"Search & paper analysis"}
+];
+
+var TOOLS = [
+  {n:"ChatGPT", c:"Chatbots", p:"Freemium", d:"Conversational assistant for answers, writing, brainstorming, coding help and everyday problem-solving.", tags:["Chat","Writing","Coding"], url:"https://chatgpt.com", hot:1, added:9},
+  {n:"Claude", c:"Chatbots", p:"Freemium", d:"Thoughtful AI assistant known for long-document analysis, careful writing and nuanced reasoning.", tags:["Chat","Documents","Reasoning"], url:"https://claude.ai", hot:1, added:8},
+  {n:"Google Gemini", c:"Chatbots", p:"Freemium", d:"Google's multimodal assistant for search-style answers, drafting, image understanding and Workspace help.", tags:["Chat","Multimodal","Search"], url:"https://gemini.google.com", hot:1, added:10},
+  {n:"Microsoft Copilot", c:"Chatbots", p:"Freemium", d:"AI companion built into Windows and Microsoft 365 for summaries, drafts and quick answers.", tags:["Chat","Office","Windows"], url:"https://copilot.microsoft.com", hot:0, added:5},
+  {n:"Perplexity", c:"Research", p:"Freemium", d:"Answer engine that replies with cited sources — ideal for quick research and fact-checking.", tags:["Search","Citations","Research"], url:"https://www.perplexity.ai", hot:1, added:9},
+  {n:"Poe", c:"Chatbots", p:"Freemium", d:"One app to chat with many leading AI models and community-built bots side by side.", tags:["Multi-model","Chat","Bots"], url:"https://poe.com", hot:0, added:4},
+  {n:"Midjourney", c:"Image", p:"Paid", d:"Highly artistic image generation from text prompts, popular for illustrations, posters and concept art.", tags:["Text-to-Image","Art","Posters"], url:"https://www.midjourney.com", hot:1, added:7},
+  {n:"DALL·E", c:"Image", p:"Freemium", d:"OpenAI's image model that turns plain-language descriptions into original pictures and edits.", tags:["Text-to-Image","Editing"], url:"https://openai.com/dall-e-3", hot:0, added:6},
+  {n:"Ideogram", c:"Image", p:"Freemium", d:"Image generator especially strong at rendering readable text inside posters, logos and thumbnails.", tags:["Text in Image","Thumbnails"], url:"https://ideogram.ai", hot:1, added:10},
+  {n:"Leonardo AI", c:"Image", p:"Freemium", d:"Creative suite for game assets, illustrations and product visuals with fine style control.", tags:["Assets","Illustration","Styles"], url:"https://leonardo.ai", hot:0, added:5},
+  {n:"Adobe Firefly", c:"Image", p:"Freemium", d:"Generative image and text effects designed for commercial use, integrated with Adobe apps.", tags:["Commercial","Adobe","Effects"], url:"https://firefly.adobe.com", hot:0, added:6},
+  {n:"Remove.bg", c:"Image", p:"Freemium", d:"One-click background removal for photos — a staple for product shots and profile pictures.", tags:["Background Remove","Photos"], url:"https://www.remove.bg", hot:0, added:3},
+  {n:"Runway", c:"Video", p:"Freemium", d:"Text-to-video and AI video editing suite used for short films, ads and social clips.", tags:["Text-to-Video","Editing"], url:"https://runwayml.com", hot:1, added:10},
+  {n:"Kling AI", c:"Video", p:"Freemium", d:"Realistic text-to-video generation with strong motion and cinematic short clips.", tags:["Text-to-Video","Realistic"], url:"https://klingai.com", hot:1, added:9},
+  {n:"Luma Dream Machine", c:"Video", p:"Freemium", d:"Fast, high-quality video generation from text and images, popular for creative shorts.", tags:["Text-to-Video","Image-to-Video"], url:"https://lumalabs.ai", hot:0, added:8},
+  {n:"Pika", c:"Video", p:"Freemium", d:"Playful AI video maker with effects like squash, melt and explode for social content.", tags:["Effects","Social Video"], url:"https://pika.art", hot:0, added:5},
+  {n:"CapCut", c:"Video", p:"Freemium", d:"All-in-one video editor with AI captions, background removal and effects for Shorts and Reels.", tags:["Editor","Captions","Shorts"], url:"https://www.capcut.com", hot:1, added:7},
+  {n:"HeyGen", c:"Video", p:"Freemium", d:"AI avatar videos — turn a script into a talking presenter video in many languages.", tags:["Avatar","Presenter","Dubbing"], url:"https://www.heygen.com", hot:0, added:6},
+  {n:"ElevenLabs", c:"Audio & Voice", p:"Freemium", d:"Natural text-to-speech and voice cloning used for narration, audiobooks and video voiceovers.", tags:["Text-to-Speech","Voice Clone"], url:"https://elevenlabs.io", hot:1, added:9},
+  {n:"Suno", c:"Audio & Voice", p:"Freemium", d:"Generate complete songs — lyrics, vocals and music — from a simple text prompt.", tags:["Music","Songs"], url:"https://suno.com", hot:1, added:10},
+  {n:"Udio", c:"Audio & Voice", p:"Freemium", d:"Music generation tool for creating original tracks in many genres from text descriptions.", tags:["Music","Tracks"], url:"https://www.udio.com", hot:0, added:6},
+  {n:"Whisper", c:"Audio & Voice", p:"Free", d:"OpenAI's open-source speech recognition — transcribe audio to text in many languages.", tags:["Transcription","Open Source"], url:"https://openai.com/research/whisper", hot:0, added:2},
+  {n:"Murf AI", c:"Audio & Voice", p:"Freemium", d:"Studio-quality voiceovers for explainer videos, e-learning and presentations.", tags:["Voiceover","Narration"], url:"https://murf.ai", hot:0, added:4},
+  {n:"Grammarly", c:"Writing", p:"Freemium", d:"Writing assistant that fixes grammar, tone and clarity across email, docs and social posts.", tags:["Grammar","Editing","Tone"], url:"https://www.grammarly.com", hot:0, added:3},
+  {n:"QuillBot", c:"Writing", p:"Freemium", d:"Paraphrasing and summarizing tool that helps rewrite sentences in different tones.", tags:["Paraphrase","Summarize"], url:"https://quillbot.com", hot:0, added:4},
+  {n:"Jasper", c:"Writing", p:"Paid", d:"Marketing-focused AI writer for ad copy, blog posts and brand-consistent campaigns.", tags:["Marketing Copy","Blogs"], url:"https://www.jasper.ai", hot:0, added:5},
+  {n:"Copy.ai", c:"Writing", p:"Freemium", d:"Go-to-market AI writer for sales emails, social captions and product descriptions.", tags:["Sales Copy","Social"], url:"https://www.copy.ai", hot:0, added:5},
+  {n:"Notion AI", c:"Writing", p:"Paid", d:"AI inside Notion that drafts, summarizes and organizes notes, docs and wikis.", tags:["Notes","Docs","Summary"], url:"https://www.notion.com/product/ai", hot:0, added:6},
+  {n:"GitHub Copilot", c:"Coding", p:"Paid", d:"AI pair programmer that suggests code, writes tests and explains errors inside your editor.", tags:["Code Completion","IDE"], url:"https://github.com/features/copilot", hot:1, added:8},
+  {n:"Cursor", c:"Coding", p:"Freemium", d:"AI-first code editor that edits whole files from instructions and answers codebase questions.", tags:["Editor","Codebase Chat"], url:"https://www.cursor.com", hot:1, added:10},
+  {n:"Replit", c:"Coding", p:"Freemium", d:"Browser-based coding platform with an AI agent that helps build and deploy apps quickly.", tags:["Build Apps","Deploy"], url:"https://replit.com", hot:0, added:7},
+  {n:"Codeium", c:"Coding", p:"Freemium", d:"Free AI code completion and chat for many languages and editors, popular with students.", tags:["Completion","Free Tier"], url:"https://codeium.com", hot:0, added:4},
+  {n:"v0 by Vercel", c:"Coding", p:"Freemium", d:"Describe a UI in words and get working React components you can refine and ship.", tags:["UI Generation","React"], url:"https://v0.dev", hot:0, added:8},
+  {n:"Otter.ai", c:"Productivity", p:"Freemium", d:"Meeting assistant that records, transcribes and summarizes calls automatically.", tags:["Meetings","Transcription"], url:"https://otter.ai", hot:0, added:4},
+  {n:"Fireflies.ai", c:"Productivity", p:"Freemium", d:"AI notetaker for online meetings with searchable transcripts and action items.", tags:["Meetings","Notes"], url:"https://fireflies.ai", hot:0, added:5},
+  {n:"Mem", c:"Productivity", p:"Freemium", d:"Self-organizing notes app that resurfaces related ideas with AI search.", tags:["Notes","Search"], url:"https://mem.ai", hot:0, added:2},
+  {n:"Motion", c:"Productivity", p:"Paid", d:"AI calendar that auto-schedules tasks and meetings around your priorities.", tags:["Calendar","Scheduling"], url:"https://www.usemotion.com", hot:0, added:3},
+  {n:"Canva Magic Studio", c:"Design", p:"Freemium", d:"Canva's AI suite for designs, presentations, Magic Write copy and one-click edits.", tags:["Design","Presentations"], url:"https://www.canva.com/magic-studio/", hot:1, added:8},
+  {n:"Figma AI", c:"Design", p:"Freemium", d:"AI features inside Figma for UI drafts, content fill and faster design workflows.", tags:["UI Design","Prototyping"], url:"https://www.figma.com/ai/", hot:0, added:7},
+  {n:"Looka", c:"Design", p:"Paid", d:"AI logo maker that builds a brand kit — logo, colors and fonts — from your business name.", tags:["Logo","Branding"], url:"https://looka.com", hot:0, added:3},
+  {n:"Gamma", c:"Design", p:"Freemium", d:"Turn an outline into a polished presentation or document in minutes with AI layouts.", tags:["Presentations","Slides"], url:"https://gamma.app", hot:0, added:7},
+  {n:"Framer AI", c:"Design", p:"Freemium", d:"Website builder that generates full landing pages from a text prompt.", tags:["Websites","Landing Pages"], url:"https://www.framer.com", hot:0, added:6},
+  {n:"AdCreative.ai", c:"Marketing", p:"Paid", d:"Generates ad banners and copy designed to convert, for social and display campaigns.", tags:["Ads","Banners"], url:"https://www.adcreative.ai", hot:0, added:4},
+  {n:"Surfer SEO", c:"Marketing", p:"Paid", d:"Content editor that scores articles against top-ranking pages to improve search rankings.", tags:["SEO","Content"], url:"https://surferseo.com", hot:0, added:5},
+  {n:"OpusClip", c:"Marketing", p:"Freemium", d:"Cuts long videos into viral short clips with captions, scored for social platforms.", tags:["Shorts","Clipping"], url:"https://www.opus.pro", hot:1, added:9},
+  {n:"Elicit", c:"Research", p:"Freemium", d:"Research assistant that finds academic papers and extracts key findings into tables.", tags:["Papers","Literature Review"], url:"https://elicit.com", hot:0, added:6},
+  {n:"Consensus", c:"Research", p:"Freemium", d:"Search engine over peer-reviewed studies that answers questions with evidence summaries.", tags:["Studies","Evidence"], url:"https://consensus.app", hot:0, added:5},
+  {n:"ChatPDF", c:"Research", p:"Freemium", d:"Upload a PDF and chat with it — ask questions and get answers from the document itself.", tags:["PDF","Q&A"], url:"https://www.chatpdf.com", hot:0, added:6}
+];
+
+/* ── i18n ─────────────────────────────── */
+var I18N = {
+en:{navCat:"Categories",navFree:"Free Tools",navNew:"New Tools",navArticles:"Guides",navSubmit:"Submit a Tool",favorites:"Favorites",compare:"Compare",admin:"Admin",login:"Log in / Sign up",logout:"Log out",heroBadge:"Updated directory · New tools added regularly",heroSub:"Search a curated directory of AI tools for writing, images, video, voice, coding, marketing and everyday productivity — compared by category and pricing, in one place.",searchPh:"Try “video editor”, “logo”, “voice clone”, “code helper”…",search:"Search",popular:"Popular:",statTools:"AI Tools Listed",statCat:"Categories",statFree:"Free / Free-Plan Tools",catTitle:"Browse by category",catSub:"Pick a job — we will show you the tools built for it.",trendTitle:"Trending this week",trendSub:"The tools people are searching for the most right now.",adLabel:"Advertisement · Sponsored",adSlotTitle:"Your product here",adSlotText:"Reach thousands of AI-tool seekers. Sponsored placements and affiliate partnerships are available on this directory.",adCta:"Advertise with us →",affSlotTitle:"Partner picks",affSlotText:"Some tool links on this page may become affiliate links in future. If you sign up through one, we may earn a small commission — at no extra cost to you.",affCta:"Browse tools →",allTitle:"All AI tools",allSub:"Filter by category or pricing, or search by name and task. Tap ♥ to save a favorite, add up to 3 tools to compare, and rate the tools you use.",viewAll:"All Tools",viewFree:"🆓 Free Tools",viewNew:"✨ New Tools",viewFavs:"♥ My Favorites",priceAny:"Any pricing",sortPop:"Sort: Popular",sortNew:"Sort: Newest",sortRating:"Sort: My top rated",emptyTitle:"No tool matches your search",emptyText:"Try a shorter keyword, or clear the category and pricing filters.",artTitle:"Guides & articles",artSub:"Practical, original guides to help you pick and use AI tools well.",art1Kick:"Guide · Students",art2Kick:"Guide · Creators",art3Kick:"Guide · Beginners",readMore:"Read more",adminTitle:"Admin dashboard",adminSub:"Add a new tool or remove an existing one — no HTML editing needed.",adminScope:"Changes apply to this browser session's view; ask the site owner to publish them for everyone.",fName:"Tool name *",fUrl:"Official website URL *",fCat:"Category",fPrice:"Pricing",fDesc:"One-line description *",fTags:"Tags (comma separated)",addTool:"+ Add tool",submitTitle:"Built an AI tool? Get it listed.",submitSub:"Makers can request a listing in this directory. Send the tool name, its official website link, a one-line description and its pricing model — listings are reviewed before they go live so the directory stays useful and trustworthy.",submitBtn:"Submit via Email →",step1t:"Send the details",step1s:"Tool name, official link, category and pricing.",step2t:"We review it",step2s:"We check the tool works and the description is accurate.",step3t:"It goes live",step3s:"Approved tools appear in the directory with a direct link.",footAbout:"An independent, curated directory. All tool names and trademarks belong to their respective owners; listings here are short original descriptions with links to each tool's official website, for discovery purposes only. Pricing can change — always confirm on the official site before paying.",footAff:"Affiliate disclosure: some links on this site may be affiliate links. If you buy or subscribe through them, this directory may earn a commission at no extra cost to you. Sponsored placements are always labelled “Advertisement”.",authTitle:"Welcome",authSub:"Create an account to keep your favorite tools and ratings together.",authScope:"Demo sign-in — your account stays in this tab only and no password is sent anywhere.",tabLogin:"Log in",tabSignup:"Sign up",yourName:"Your name",email:"Email",password:"Password",yourRating:"Your rating",writeReview:"Write a short review",postReview:"Post review",compareNow:"Compare now →",clear:"Clear",cmpTitle:"Tool comparison",cmpSub:"Side-by-side: category, pricing, your rating and what each tool does best.",visit:"Visit Website ↗",saveFav:"Save",savedFav:"Saved",addCmp:"Compare",inCmp:"In compare ✓",reviews:"Reviews",rateIt:"Rate this tool",yourRated:"You rated",noRating:"Not rated yet",newTag:"NEW",trendTag:"🔥 Trending",toolsWord:"tools",showing:"Showing",ofWord:"of",inWord:"in",forWord:"for",freeNote:"<b>Free Tools view:</b> showing only tools that are fully free or have a free plan (Freemium). Use the pricing filter and choose <b>Free</b> to see 100%-free tools only.",newNote:"<b>New Tools view:</b> the most recently added tools in the directory, newest first — look for the green NEW badge.",favNote:"<b>My Favorites:</b> tools you saved with the ♥ button. Tap ♥ on any tool card to add it here.",favEmptyT:"No favorites yet",favEmptyP:"Tap the ♥ button on any tool to save it here for quick access.",freeEmptyT:"No free tool matches",guest:"Guest",welcomeBack:"Welcome",signedIn:"Signed in",loggedOut:"Logged out",toolAdded:"Tool added to the directory",toolRemoved:"Tool removed",reviewPosted:"Review posted — thank you!",ratedMsg:"rating saved",cmpFull:"You can compare up to 3 tools",needTwo:"Add at least 2 tools to compare",cmpSelected:"selected for compare",catWord:"Category",priceWord:"Pricing",descWord:"What it does",tagsWord:"Best for",ratingWord:"Your rating",visitWord:"Website",remove:"Remove",reviewBy:"by"},
+hi:{navCat:"कैटेगरी",navFree:"मुफ़्त टूल्स",navNew:"नए टूल्स",navArticles:"गाइड",navSubmit:"टूल जोड़ें",favorites:"पसंदीदा",compare:"तुलना",admin:"एडमिन",login:"लॉगिन / साइन अप",logout:"लॉग आउट",heroBadge:"अपडेटेड डायरेक्टरी · नए टूल्स नियमित रूप से जुड़ते हैं",heroSub:"राइटिंग, इमेज, वीडियो, वॉइस, कोडिंग, मार्केटिंग और रोज़ के कामों के लिए चुने हुए AI टूल्स एक ही जगह — कैटेगरी और कीमत के हिसाब से तुलना के साथ खोजें।",searchPh:"लिखें “video editor”, “logo”, “voice clone”, “code helper”…",search:"खोजें",popular:"लोकप्रिय:",statTools:"AI टूल्स लिस्टेड",statCat:"कैटेगरी",statFree:"मुफ़्त / फ्री-प्लान टूल्स",catTitle:"कैटेगरी से खोजें",catSub:"अपना काम चुनें — हम उसके लिए बने टूल्स दिखाएंगे।",trendTitle:"इस हफ़्ते ट्रेंडिंग",trendSub:"वे टूल्स जिन्हें लोग अभी सबसे ज़्यादा खोज रहे हैं।",adLabel:"विज्ञापन · स्पॉन्सर्ड",adSlotTitle:"आपका प्रोडक्ट यहाँ",adSlotText:"हज़ारों AI टूल खोजने वालों तक पहुँचें। इस डायरेक्टरी पर स्पॉन्सर्ड प्लेसमेंट और एफिलिएट पार्टनरशिप उपलब्ध है।",adCta:"हमारे साथ विज्ञापन करें →",affSlotTitle:"पार्टनर पिक्स",affSlotText:"इस पेज के कुछ टूल लिंक भविष्य में एफिलिएट लिंक बन सकते हैं। उनके ज़रिए साइन अप करने पर हमें थोड़ा कमीशन मिल सकता है — आपको कोई अतिरिक्त खर्च नहीं होगा।",affCta:"टूल्स देखें →",allTitle:"सभी AI टूल्स",allSub:"कैटेगरी या कीमत से फ़िल्टर करें, या नाम और काम से खोजें। ♥ दबाकर पसंदीदा सेव करें, 3 टूल तक तुलना में जोड़ें, और इस्तेमाल किए टूल्स को रेट करें।",viewAll:"सभी टूल्स",viewFree:"🆓 मुफ़्त टूल्स",viewNew:"✨ नए टूल्स",viewFavs:"♥ मेरे पसंदीदा",priceAny:"कोई भी कीमत",sortPop:"सॉर्ट: लोकप्रिय",sortNew:"सॉर्ट: सबसे नए",sortRating:"सॉर्ट: मेरी टॉप रेटिंग",emptyTitle:"कोई टूल आपकी खोज से नहीं मिला",emptyText:"छोटा कीवर्ड लिखें, या कैटेगरी और कीमत फ़िल्टर हटाकर देखें।",artTitle:"गाइड और आर्टिकल",artSub:"AI टूल सही से चुनने और इस्तेमाल करने के लिए प्रैक्टिकल, ओरिजिनल गाइड।",art1Kick:"गाइड · छात्र",art2Kick:"गाइड · क्रिएटर",art3Kick:"गाइड · शुरुआत",readMore:"और पढ़ें",adminTitle:"एडमिन डैशबोर्ड",adminSub:"नया टूल जोड़ें या मौजूदा हटाएँ — HTML बदलने की ज़रूरत नहीं।",adminScope:"बदलाव इस ब्राउज़र सेशन के व्यू पर लागू होंगे; सबके लिए प्रकाशित करने के लिए साइट मालिक से कहें।",fName:"टूल का नाम *",fUrl:"आधिकारिक वेबसाइट URL *",fCat:"कैटेगरी",fPrice:"कीमत",fDesc:"एक लाइन में विवरण *",fTags:"टैग (कॉमा से अलग)",addTool:"+ टूल जोड़ें",submitTitle:"AI टूल बनाया है? यहाँ लिस्ट कराएँ।",submitSub:"मेकर्स इस डायरेक्टरी में लिस्टिंग के लिए अनुरोध भेज सकते हैं। टूल का नाम, आधिकारिक वेबसाइट लिंक, एक लाइन का विवरण और कीमत मॉडल भेजें — लिस्टिंग लाइव होने से पहले रिव्यू होती है ताकि डायरेक्टरी उपयोगी और भरोसेमंद बनी रहे।",submitBtn:"ईमेल से भेजें →",step1t:"विवरण भेजें",step1s:"टूल का नाम, आधिकारिक लिंक, कैटेगरी और कीमत।",step2t:"हम रिव्यू करते हैं",step2s:"हम जाँचते हैं कि टूल काम करता है और विवरण सही है।",step3t:"लाइव हो जाता है",step3s:"मंज़ूर टूल्स डायरेक्टरी में सीधे लिंक के साथ दिखते हैं।",footAbout:"एक स्वतंत्र, चुनी हुई डायरेक्टरी। सभी टूल नाम और ट्रेडमार्क उनके मालिकों के हैं; यहाँ की लिस्टिंग खोज के लिए छोटे ओरिजिनल विवरण हैं, हर टूल की आधिकारिक वेबसाइट के लिंक के साथ। कीमत बदल सकती है — भुगतान से पहले हमेशा आधिकारिक साइट पर पुष्टि करें।",footAff:"एफिलिएट डिस्क्लोज़र: इस साइट के कुछ लिंक एफिलिएट लिंक हो सकते हैं। उनके ज़रिए खरीद या सब्सक्रिप्शन लेने पर इस डायरेक्टरी को कमीशन मिल सकता है, आपको कोई अतिरिक्त खर्च नहीं होगा। स्पॉन्सर्ड प्लेसमेंट पर हमेशा “विज्ञापन” लेबल रहता है।",authTitle:"स्वागत है",authSub:"अपने पसंदीदा टूल्स और रेटिंग एक जगह रखने के लिए अकाउंट बनाएँ।",authScope:"डेमो साइन-इन — आपका अकाउंट सिर्फ़ इस टैब में रहता है और पासवर्ड कहीं नहीं भेजा जाता।",tabLogin:"लॉगिन",tabSignup:"साइन अप",yourName:"आपका नाम",email:"ईमेल",password:"पासवर्ड",yourRating:"आपकी रेटिंग",writeReview:"छोटा रिव्यू लिखें",postReview:"रिव्यू पोस्ट करें",compareNow:"अभी तुलना करें →",clear:"हटाएँ",cmpTitle:"टूल तुलना",cmpSub:"आमने-सामने: कैटेगरी, कीमत, आपकी रेटिंग और हर टूल किस काम में सबसे अच्छा है।",visit:"वेबसाइट खोलें ↗",saveFav:"सेव",savedFav:"सेव है",addCmp:"तुलना",inCmp:"तुलना में ✓",reviews:"रिव्यू",rateIt:"इस टूल को रेट करें",yourRated:"आपकी रेटिंग",noRating:"अभी रेट नहीं हुआ",newTag:"नया",trendTag:"🔥 ट्रेंडिंग",toolsWord:"टूल्स",showing:"दिख रहे हैं",ofWord:"/",inWord:"में",forWord:"के लिए",freeNote:"<b>मुफ़्त टूल्स व्यू:</b> सिर्फ़ वे टूल्स दिख रहे हैं जो पूरी तरह मुफ़्त हैं या जिनका फ्री प्लान है (Freemium)। सिर्फ़ 100% मुफ़्त टूल्स देखने के लिए कीमत फ़िल्टर में <b>Free</b> चुनें।",newNote:"<b>नए टूल्स व्यू:</b> डायरेक्टरी में सबसे हाल में जुड़े टूल्स, सबसे नए पहले — हरा NEW बैज देखें।",favNote:"<b>मेरे पसंदीदा:</b> ♥ बटन से सेव किए टूल्स। किसी भी कार्ड पर ♥ दबाकर यहाँ जोड़ें।",favEmptyT:"अभी कोई पसंदीदा नहीं",favEmptyP:"किसी भी टूल पर ♥ बटन दबाएँ — वह यहाँ तेज़ पहुँच के लिए सेव हो जाएगा।",freeEmptyT:"कोई मुफ़्त टूल नहीं मिला",guest:"मेहमान",welcomeBack:"स्वागत है",signedIn:"साइन इन हो गया",loggedOut:"लॉग आउट हो गया",toolAdded:"टूल डायरेक्टरी में जुड़ गया",toolRemoved:"टूल हटा दिया गया",reviewPosted:"रिव्यू पोस्ट हो गया — धन्यवाद!",ratedMsg:"रेटिंग सेव हो गई",cmpFull:"आप अधिकतम 3 टूल्स की तुलना कर सकते हैं",needTwo:"तुलना के लिए कम से कम 2 टूल जोड़ें",cmpSelected:"तुलना के लिए चुने गए",catWord:"कैटेगरी",priceWord:"कीमत",descWord:"यह क्या करता है",tagsWord:"सबसे अच्छा",ratingWord:"आपकी रेटिंग",visitWord:"वेबसाइट",remove:"हटाएँ",reviewBy:"द्वारा"}
+};
+function t(k){ return (I18N[state.lang] && I18N[state.lang][k]) || I18N.en[k] || k; }
+
+/* ── State (this session only, in-memory) ── */
+var state = { lang:"en", user:null, favs:{}, cmp:[], ratings:{}, reviews:{}, view:"all", reviewTool:null, authMode:"login" };
+var NEW_MIN = 9;
+function isNew(tool){ return tool.added >= NEW_MIN; }
+function findTool(name){ for(var i=0;i<TOOLS.length;i++){ if(TOOLS[i].n===name) return TOOLS[i]; } return null; }
+
+var COLORS = ["#0f766e","#b45309","#1d4ed8","#be185d","#6d28d9","#0369a1","#15803d","#c2410c","#0e7490","#a16207"];
+function colorFor(name){ var h=0; for(var i=0;i<name.length;i++){ h=(h*31+name.charCodeAt(i))%997; } return COLORS[h%COLORS.length]; }
+function initials(name){ var p=name.replace("·"," ").split(" ").filter(Boolean); return (p[0][0]+(p[1]?p[1][0]:"")).toUpperCase(); }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+var toastTimer=null;
+function toast(msg){
+  var el=document.getElementById("toast");
+  el.textContent=msg; el.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(function(){ el.classList.remove("show"); },2600);
+}
+
+/* ── Cards ── */
+function starsHTML(tool){
+  var r = state.ratings[tool.n] || 0;
+  var out='<span class="stars" role="group" aria-label="'+esc(t("rateIt"))+'">';
+  for(var i=1;i<=5;i++){
+    out+='<button type="button" data-rate="'+i+'" data-tool="'+esc(tool.n)+'" class="'+(i<=r?"lit":"")+'" aria-label="'+i+' star">★</button>';
+  }
+  out+='</span><span class="rate-meta">'+(r? t("yourRated")+": "+r+"★" : t("noRating"))+'</span>';
+  return out;
+}
+function cardHTML(tool){
+  var priceClass = tool.p==="Free" ? "free" : "paid";
+  var faved = !!state.favs[tool.n];
+  var inCmp = state.cmp.indexOf(tool.n)>-1;
+  var revCount = (state.reviews[tool.n]||[]).length;
+  return '<article class="card">'
+    + '<div class="card-top"><div class="tile" style="background:'+colorFor(tool.n)+'">'+esc(initials(tool.n))+'</div>'
+    + '<div><h3><a href="'+esc(tool.url)+'" target="_blank" rel="noopener">'+esc(tool.n)+'</a></h3><div class="cat-label">'+esc(tool.c)+'</div></div>'
+    + '<div class="badges">'
+    + (tool.hot ? '<span class="trend">'+t("trendTag")+'</span>' : '')
+    + (isNew(tool) ? '<span class="newbadge">'+t("newTag")+'</span>' : '')
+    + '</div></div>'
+    + '<p class="desc">'+esc(tool.d)+'</p>'
+    + '<div class="tags">'+ tool.tags.map(function(x){return '<span class="tag">'+esc(x)+'</span>';}).join("") +'</div>'
+    + '<div class="stars-row">'+starsHTML(tool)+'</div>'
+    + '<div class="card-actions">'
+    + '<button type="button" class="abtn'+(faved?" faved":"")+'" data-fav="'+esc(tool.n)+'">'+(faved?"♥ "+t("savedFav"):"♡ "+t("saveFav"))+'</button>'
+    + '<button type="button" class="abtn'+(inCmp?" incmp":"")+'" data-cmp="'+esc(tool.n)+'">⚖ '+(inCmp?t("inCmp"):t("addCmp"))+'</button>'
+    + '<button type="button" class="abtn" data-rev="'+esc(tool.n)+'">✎ '+t("reviews")+(revCount?" ("+revCount+")":"")+'</button>'
+    + '</div>'
+    + '<div class="card-foot"><span class="price '+priceClass+'">'+esc(tool.p)+'</span>'
+    + '<a class="visit" href="'+esc(tool.url)+'" target="_blank" rel="noopener">'+t("visit")+'</a></div>'
+    + '</article>';
+}
+
+/* ── Category grid ── */
+var catGrid = document.getElementById("catGrid");
+function renderCats(){
+  catGrid.innerHTML="";
+  CATEGORIES.forEach(function(cat){
+    var count = TOOLS.filter(function(x){return x.c===cat.name;}).length;
+    var b = document.createElement("button");
+    b.className = "cat"; b.type="button";
+    b.innerHTML = '<span class="ic">'+cat.icon+'</span><span><b>'+esc(cat.name)+'</b><small>'+count+' '+t("toolsWord")+' · '+esc(cat.blurb)+'</small></span>';
+    b.addEventListener("click", function(){ setView("all"); setCategory(cat.name); document.getElementById("all-tools").scrollIntoView({behavior:"smooth"}); });
+    catGrid.appendChild(b);
+  });
+}
+
+/* ── Filtering & rendering ── */
+var activeCat = "all";
+var grid = document.getElementById("toolsGrid");
+var empty = document.getElementById("emptyState");
+var countLine = document.getElementById("countLine");
+var searchInput = document.getElementById("searchInput");
+var priceFilter = document.getElementById("priceFilter");
+var sortSel = document.getElementById("sortSel");
+
+function setCategory(cat){
+  activeCat = cat;
+  document.querySelectorAll("#filterRow .pill").forEach(function(p){ p.classList.toggle("active", p.getAttribute("data-cat")===cat); });
+  render();
+}
+document.querySelectorAll("#filterRow .pill").forEach(function(p){
+  p.addEventListener("click", function(){ setCategory(p.getAttribute("data-cat")); });
+});
+
+function setView(v){
+  state.view = v;
+  document.querySelectorAll(".vtab").forEach(function(b){ b.classList.toggle("active", b.getAttribute("data-view")===v); });
+  var note = document.getElementById("viewNote");
+  if(v==="free"){ note.innerHTML=t("freeNote"); note.classList.add("show"); }
+  else if(v==="new"){ note.innerHTML=t("newNote"); note.classList.add("show"); }
+  else if(v==="favs"){ note.innerHTML=t("favNote"); note.classList.add("show"); }
+  else { note.classList.remove("show"); note.innerHTML=""; }
+  render();
+}
+document.querySelectorAll(".vtab").forEach(function(b){
+  b.addEventListener("click", function(){ setView(b.getAttribute("data-view")); });
+});
+document.querySelectorAll("[data-view-link]").forEach(function(a){
+  a.addEventListener("click", function(){ setView(a.getAttribute("data-view-link")); });
+});
+
+function render(){
+  var q = (searchInput.value || "").toLowerCase().trim();
+  var price = priceFilter.value;
+  var list = TOOLS.filter(function(tool){
+    if(state.view==="free" && tool.p==="Paid") return false;
+    if(state.view==="new" && !isNew(tool)) return false;
+    if(state.view==="favs" && !state.favs[tool.n]) return false;
+    if(activeCat!=="all" && tool.c!==activeCat) return false;
+    if(price!=="all" && tool.p!==price) return false;
+    if(q){
+      var hay = (tool.n+" "+tool.c+" "+tool.d+" "+tool.tags.join(" ")).toLowerCase();
+      if(hay.indexOf(q)===-1) return false;
+    }
+    return true;
+  });
+  if(sortSel.value==="az") list.sort(function(a,b){return a.n.localeCompare(b.n);});
+  else if(sortSel.value==="new") list.sort(function(a,b){return b.added-a.added;});
+  else if(sortSel.value==="rating") list.sort(function(a,b){return (state.ratings[b.n]||0)-(state.ratings[a.n]||0);});
+  else if(state.view==="free") list.sort(function(a,b){return (a.p==="Free"?0:1)-(b.p==="Free"?0:1) || (b.hot-a.hot);});
+  else if(state.view==="new") list.sort(function(a,b){return b.added-a.added;});
+  else list.sort(function(a,b){return (b.hot-a.hot) || (b.added-a.added);});
+
+  grid.innerHTML = list.map(cardHTML).join("");
+  var et=document.getElementById("emptyTitle"), ep=document.getElementById("emptyText");
+  if(!list.length && state.view==="favs"){ et.textContent=t("favEmptyT"); ep.textContent=t("favEmptyP"); }
+  else if(!list.length && state.view==="free"){ et.textContent=t("freeEmptyT"); ep.textContent=t("emptyText"); }
+  else { et.textContent=t("emptyTitle"); ep.textContent=t("emptyText"); }
+  empty.style.display = list.length ? "none" : "block";
+  countLine.textContent = t("showing")+" " + list.length + " " + t("ofWord") + " " + TOOLS.length + " " + t("toolsWord") + (activeCat!=="all" ? " "+t("inWord")+" " + activeCat : "") + (q ? ' '+t("forWord")+' “'+searchInput.value+'”' : "");
+  document.getElementById("trendGrid").innerHTML = TOOLS.filter(function(x){return x.hot;}).slice(0,6).map(cardHTML).join("");
+  document.getElementById("statTools").textContent = TOOLS.length;
+  document.getElementById("statFree").textContent = TOOLS.filter(function(x){return x.p!=="Paid";}).length;
+  updateCounts();
+}
+function updateCounts(){
+  document.getElementById("favCount").textContent = Object.keys(state.favs).length;
+  document.getElementById("cmpCount").textContent = state.cmp.length;
+  var tray=document.getElementById("cmpTray");
+  if(state.cmp.length){
+    tray.classList.add("show");
+    document.getElementById("cmpTrayText").textContent = state.cmp.join(" · ") + " — " + state.cmp.length + "/3 " + t("cmpSelected");
+  } else tray.classList.remove("show");
+}
+
+searchInput.addEventListener("input", render);
+priceFilter.addEventListener("change", render);
+sortSel.addEventListener("change", render);
+document.getElementById("heroSearch").addEventListener("submit", function(e){
+  e.preventDefault(); render();
+  document.getElementById("all-tools").scrollIntoView({behavior:"smooth"});
+});
+document.querySelectorAll(".quick button").forEach(function(b){
+  b.addEventListener("click", function(){
+    searchInput.value = b.getAttribute("data-q"); render();
+    document.getElementById("all-tools").scrollIntoView({behavior:"smooth"});
+  });
+});
+
+/* ── Card actions (event delegation) ── */
+document.addEventListener("click", function(e){
+  var favBtn = e.target.closest("[data-fav]");
+  if(favBtn){
+    var n1=favBtn.getAttribute("data-fav");
+    if(state.favs[n1]) delete state.favs[n1]; else state.favs[n1]=1;
+    render(); return;
+  }
+  var cmpBtnEl = e.target.closest("[data-cmp]");
+  if(cmpBtnEl){
+    var n2=cmpBtnEl.getAttribute("data-cmp");
+    var idx=state.cmp.indexOf(n2);
+    if(idx>-1) state.cmp.splice(idx,1);
+    else if(state.cmp.length>=3){ toast(t("cmpFull")); return; }
+    else state.cmp.push(n2);
+    render(); return;
+  }
+  var revBtn = e.target.closest("[data-rev]");
+  if(revBtn){ openReviews(revBtn.getAttribute("data-rev")); return; }
+  var rateBtn = e.target.closest("[data-rate]");
+  if(rateBtn){
+    var tn=rateBtn.getAttribute("data-tool");
+    state.ratings[tn]=parseInt(rateBtn.getAttribute("data-rate"),10);
+    toast(tn+": "+state.ratings[tn]+"★ — "+t("ratedMsg"));
+    render(); return;
+  }
+  var closer = e.target.closest("[data-close]");
+  if(closer){ document.getElementById(closer.getAttribute("data-close")).classList.remove("open"); return; }
+  if(e.target.classList && e.target.classList.contains("modal-back")){ e.target.classList.remove("open"); }
+});
+
+/* ── Header buttons ── */
+document.getElementById("favBtn").addEventListener("click", function(){
+  setView("favs");
+  document.getElementById("all-tools").scrollIntoView({behavior:"smooth"});
+});
+document.getElementById("cmpBtn").addEventListener("click", openCompare);
+document.getElementById("adminBtn").addEventListener("click", function(){
+  var p=document.getElementById("adminPanel");
+  p.classList.toggle("open");
+  if(p.classList.contains("open")){ renderAdminList(); p.scrollIntoView({behavior:"smooth"}); }
+});
+
+/* ── Compare ── */
+document.getElementById("cmpGo").addEventListener("click", openCompare);
+document.getElementById("cmpClear").addEventListener("click", function(){ state.cmp=[]; render(); });
+function openCompare(){
+  if(state.cmp.length<2){ toast(t("needTwo")); document.getElementById("all-tools").scrollIntoView({behavior:"smooth"}); return; }
+  var cols = state.cmp.map(function(name){
+    var tool=findTool(name); if(!tool) return "";
+    var r=state.ratings[name]||0;
+    var stars = r ? "★".repeat(r)+"☆".repeat(5-r)+" ("+r+"/5)" : t("noRating");
+    return '<div class="cmp-col"><div class="card-top"><div class="tile" style="background:'+colorFor(tool.n)+'">'+esc(initials(tool.n))+'</div>'
+      + '<div><h3>'+esc(tool.n)+'</h3><div class="cat-label">'+esc(tool.c)+'</div></div></div>'
+      + '<dl>'
+      + '<div><dt>'+t("priceWord")+'</dt><dd><b>'+esc(tool.p)+'</b></dd></div>'
+      + '<div><dt>'+t("ratingWord")+'</dt><dd>'+stars+'</dd></div>'
+      + '<div><dt>'+t("descWord")+'</dt><dd>'+esc(tool.d)+'</dd></div>'
+      + '<div><dt>'+t("tagsWord")+'</dt><dd>'+tool.tags.map(esc).join(", ")+'</dd></div>'
+      + '<div><dt>'+t("visitWord")+'</dt><dd><a class="visit" href="'+esc(tool.url)+'" target="_blank" rel="noopener">'+t("visit")+'</a></dd></div>'
+      + '</dl></div>';
+  }).join("");
+  var g=document.getElementById("cmpGrid");
+  g.className="cmp-grid c"+state.cmp.length;
+  g.innerHTML=cols;
+  document.getElementById("cmpModal").classList.add("open");
+}
+
+/* ── Reviews ── */
+function openReviews(name){
+  var tool=findTool(name); if(!tool) return;
+  state.reviewTool=name;
+  document.getElementById("reviewTitle").textContent=tool.n;
+  document.getElementById("reviewSub").textContent=tool.c+" · "+tool.p+" — "+tool.d;
+  renderReviewModal();
+  document.getElementById("reviewModal").classList.add("open");
+}
+function renderReviewModal(){
+  var name=state.reviewTool; if(!name) return;
+  var r=state.ratings[name]||0;
+  var bs=document.getElementById("bigStars"); bs.innerHTML="";
+  for(var i=1;i<=5;i++){
+    var b=document.createElement("button");
+    b.type="button"; b.textContent="★"; b.className=(i<=r?"lit":"");
+    (function(v){ b.addEventListener("click", function(){ state.ratings[name]=v; renderReviewModal(); render(); }); })(i);
+    bs.appendChild(b);
+  }
+  var list=state.reviews[name]||[];
+  document.getElementById("reviewList").innerHTML = list.length
+    ? list.map(function(rv){ return '<div class="review-item"><b>'+esc(rv.by)+'</b>'+(rv.stars?'<span class="rmeta">'+"★".repeat(rv.stars)+'</span>':'')+'<p>'+esc(rv.text)+'</p></div>'; }).join("")
+    : '<p class="sub" style="margin-top:8px">'+t("noRating")+' — '+(state.lang==="hi"?"पहला रिव्यू आप लिखें।":"be the first to review this tool.")+'</p>';
+}
+document.getElementById("reviewForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var txt=document.getElementById("reviewText").value.trim();
+  if(!txt || !state.reviewTool) return;
+  if(!state.reviews[state.reviewTool]) state.reviews[state.reviewTool]=[];
+  state.reviews[state.reviewTool].unshift({ by: state.user? state.user.name : t("guest"), stars: state.ratings[state.reviewTool]||0, text: txt });
+  document.getElementById("reviewText").value="";
+  renderReviewModal(); render();
+  toast(t("reviewPosted"));
+});
+
+/* ── Auth (demo, in-memory session) ── */
+var loginBtn=document.getElementById("loginBtn");
+loginBtn.addEventListener("click", function(){ document.getElementById("authModal").classList.add("open"); });
+function setAuthMode(mode){
+  state.authMode=mode;
+  document.getElementById("tabLogin").classList.toggle("on", mode==="login");
+  document.getElementById("tabSignup").classList.toggle("on", mode==="signup");
+  document.getElementById("nameField").style.display = mode==="signup" ? "grid" : "none";
+  document.getElementById("authSubmit").textContent = mode==="signup" ? t("tabSignup") : t("tabLogin");
+}
+document.getElementById("tabLogin").addEventListener("click", function(){ setAuthMode("login"); });
+document.getElementById("tabSignup").addEventListener("click", function(){ setAuthMode("signup"); });
+document.getElementById("authForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var email=document.getElementById("authEmail").value.trim();
+  var name=document.getElementById("authName").value.trim();
+  if(!name) name = email.split("@")[0] || t("guest");
+  state.user={ name:name, email:email };
+  document.getElementById("authModal").classList.remove("open");
+  syncUserUI();
+  toast(t("welcomeBack")+", "+name+" — "+t("signedIn"));
+});
+document.getElementById("logoutBtn").addEventListener("click", function(){
+  state.user=null; syncUserUI(); toast(t("loggedOut"));
+});
+function syncUserUI(){
+  var chip=document.getElementById("userChip");
+  if(state.user){
+    chip.style.display="inline-flex";
+    document.getElementById("userAvatar").textContent=(state.user.name[0]||"?").toUpperCase();
+    document.getElementById("userName").textContent=state.user.name;
+    loginBtn.style.display="none";
+  } else {
+    chip.style.display="none";
+    loginBtn.style.display="";
+  }
+}
+
+/* ── Admin ── */
+function renderAdminList(){
+  var el=document.getElementById("adminList");
+  el.innerHTML = TOOLS.map(function(tool){
+    return '<div class="admin-row"><b>'+esc(tool.n)+'</b><small>'+esc(tool.c)+' · '+esc(tool.p)+(isNew(tool)?' · NEW':'')+'</small>'
+      + '<button type="button" class="del" data-del="'+esc(tool.n)+'">'+t("remove")+'</button></div>';
+  }).join("");
+}
+document.getElementById("adminList").addEventListener("click", function(e){
+  var b=e.target.closest("[data-del]"); if(!b) return;
+  var name=b.getAttribute("data-del");
+  TOOLS = TOOLS.filter(function(x){ return x.n!==name; });
+  delete state.favs[name];
+  state.cmp = state.cmp.filter(function(x){ return x!==name; });
+  renderAdminList(); renderCats(); render();
+  toast(t("toolRemoved")+": "+name);
+});
+document.getElementById("adminForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var name=document.getElementById("aName").value.trim();
+  var url=document.getElementById("aUrl").value.trim();
+  var desc=document.getElementById("aDesc").value.trim();
+  if(!name || !url || !desc) return;
+  var tags=document.getElementById("aTags").value.split(",").map(function(s){return s.trim();}).filter(Boolean);
+  if(!tags.length) tags=["New"];
+  TOOLS.unshift({ n:name, c:document.getElementById("aCat").value, p:document.getElementById("aPrice").value, d:desc, tags:tags, url:url, hot:0, added:11 });
+  e.target.reset();
+  document.getElementById("aPrice").value="Freemium";
+  renderAdminList(); renderCats(); render();
+  toast(t("toolAdded")+": "+name);
+});
+
+/* ── Language ── */
+function setLang(lang){
+  state.lang=lang;
+  document.body.className = lang==="hi" ? "hi" : "en";
+  document.documentElement.lang = lang==="hi" ? "hi" : "en";
+  document.getElementById("langEn").classList.toggle("on", lang==="en");
+  document.getElementById("langHi").classList.toggle("on", lang==="hi");
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var v=t(el.getAttribute("data-i18n"));
+    if(v && v.indexOf("<")===-1) el.textContent=v;
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function(el){ el.placeholder=t(el.getAttribute("data-i18n-ph")); });
+  setAuthMode(state.authMode);
+  setView(state.view);
+  renderCats(); render();
+  if(document.getElementById("adminPanel").classList.contains("open")) renderAdminList();
+}
+document.getElementById("langEn").addEventListener("click", function(){ setLang("en"); });
+document.getElementById("langHi").addEventListener("click", function(){ setLang("hi"); });
+
+/* ── Init ── */
+renderCats();
+render();
+syncUserUI();
+</script>
+</body>
+</html>
