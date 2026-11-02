@@ -2,10 +2,10 @@
 > An unofficial student information guide for Magadh University, Bodh Gaya, Bihar, India. It helps students check results, explore courses and colleges, understand admissions, and find Bihar Post Matric Scholarship (PMS) status links. This is NOT the official university website.
 
 ## Main pages
-- Home: https://virandra3388mehtaa-collab.github.io/magadh-university-website/ — courses, colleges, admissions guide, results and scholarship links
-- Student Help: https://virandra3388mehtaa-collab.github.io/magadh-university-website/student-help.html
-- Sarkari Result: https://virandra3388mehtaa-collab.github.io/magadh-university-website/sarkari-result.html
-- All Links: https://virandra3388mehtaa-collab.github.io/magadh-university-website/links.html
+- Home: https://magadhuniversityinfo.in/ — courses, colleges, admissions guide, results and scholarship links
+- Student Help: https://magadhuniversityinfo.in/student-help.html
+- Sarkari Result: https://magadhuniversityinfo.in/sarkari-result.html
+- All Links: https://magadhuniversityinfo.in/links.html
 
 ## Key facts
 - Magadh University is in Bodh Gaya, Bihar. It has 19 constituent colleges, 39 affiliated colleges and 22 postgraduate departments across 5 districts: Arwal, Aurangabad, Gaya, Jehanabad and Nawada.
