@@ -534,6 +534,30 @@
         .brand-text .name { font-size: 1.12rem; }
         body { font-size: 16px; }
       }
+    
+      /* ---------- student portal 2.0 (added 2026-11-02) ---------- */
+      .portal { padding: 62px 0 4px; }
+      .portal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 30px; }
+      .pcard { display: block; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: 0 1px 2px rgba(64,34,8,.05); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+      .pcard:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--gold-bright); }
+      .pcard:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+      .pcard .pic { font-size: 1.45rem; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--gold-soft); border-radius: 12px; margin-bottom: 14px; }
+      .pcard h3 { font-size: 1.13rem; margin-bottom: 4px; }
+      .pcard p { color: var(--muted); font-size: .95rem; }
+      .pcard .parr { display: inline-block; margin-top: 12px; color: #8a6508; font-weight: 700; font-size: .92rem; }
+      .infoband { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 54px 0; margin-top: 58px; }
+      .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+      .info-col h3 { font-size: 1.16rem; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid var(--gold-soft); }
+      .info-col ul { list-style: none; margin: 0; padding: 0; }
+      .info-col li { padding: 9px 0; border-bottom: 1px dashed var(--line); }
+      .info-col li:last-child { border-bottom: none; }
+      .info-col a { color: var(--ink); text-decoration: none; font-weight: 600; }
+      .info-col a:hover { color: var(--gold); text-decoration: underline; }
+      .info-col li span { display: block; color: var(--muted); font-size: .85rem; }
+      .info-more { display: inline-block; margin-top: 14px; color: #8a6508; font-weight: 700; text-decoration: none; }
+      .info-more:hover { text-decoration: underline; }
+      @media (max-width: 920px) { .portal-grid { grid-template-columns: repeat(2, 1fr); } .info-grid { grid-template-columns: 1fr; gap: 34px; } }
+      @media (max-width: 560px) { .portal-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
   <body>
@@ -620,6 +644,90 @@
     </div>
 
     <!-- ======= results ======= -->
+    <!-- ======= student portal 2.0 ======= -->
+    <section class="portal" id="portal">
+      <div class="wrap">
+        <div class="kicker">Student Portal</div>
+        <h2 class="title">Sab kaam, ek hi jagah</h2>
+        <p class="section-lede">Result, notices, courses aur scholarship — students ke sabse zyada kaam ke links ek dashboard me. Har card aapko seedha sahi page ya official portal par le jata hai.</p>
+        <div class="portal-grid">
+          <a class="pcard" href="https://www.magadhonline.in" target="_blank" rel="noopener">
+            <span class="pic">🎓</span>
+            <h3>Result &amp; Marksheet</h3>
+            <p>रिजल्ट और मार्कशीट देखें — official result portal</p>
+            <span class="parr">Official Portal ↗</span>
+          </a>
+          <a class="pcard" href="#updates">
+            <span class="pic">🔔</span>
+            <h3>Latest Notices</h3>
+            <p>नोटिस और ताज़ा अपडेट — results, exam, scholarship</p>
+            <span class="parr">Updates Dekhein →</span>
+          </a>
+          <a class="pcard" href="#colleges">
+            <span class="pic">📚</span>
+            <h3>Courses &amp; Colleges</h3>
+            <p>कॉलेज और कोर्स की जानकारी — 19 constituent + affiliated colleges</p>
+            <span class="parr">Colleges Dekhein →</span>
+          </a>
+          <a class="pcard" href="#scholarship">
+            <span class="pic">💰</span>
+            <h3>PMS Scholarship</h3>
+            <p>स्कॉलरशिप स्टेटस चेक करें — BC/EBC aur SC/ST portals</p>
+            <span class="parr">Status Check →</span>
+          </a>
+          <a class="pcard" href="student-help.html">
+            <span class="pic">🆘</span>
+            <h3>Student Help (Hindi)</h3>
+            <p>हिंदी में पूरी मदद — result, admit card, exam form</p>
+            <span class="parr">Hindi Me Padhein →</span>
+          </a>
+          <a class="pcard" href="sarkari-result.html">
+            <span class="pic">🏛️</span>
+            <h3>Sarkari Result</h3>
+            <p>सरकारी नौकरी, रिजल्ट और एडमिट कार्ड की जानकारी</p>
+            <span class="parr">Portal Kholein →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= info band: notifications / results / important links ======= -->
+    <section class="infoband">
+      <div class="wrap info-grid">
+        <div class="info-col">
+          <h3>🔔 Notifications</h3>
+          <ul>
+            <li><a href="https://www.magadhonline.in" target="_blank" rel="noopener">UG Semester-II result declared — Session 2025–29</a><span>7 Oct 2026 · Official portal par check karein</span></li>
+            <li><a href="#scholarship">Bihar PMS Scholarship — apna status check karein</a><span>BC/EBC aur SC/ST official portals par</span></li>
+            <li><a href="https://www.magadhonline.in" target="_blank" rel="noopener">UG Semester-IV result declared — Session 2023–27</a><span>Sep 2025 · Official portal par uplabdh</span></li>
+          </ul>
+          <a class="info-more" href="#updates">View All Updates →</a>
+        </div>
+        <div class="info-col">
+          <h3>📋 Results</h3>
+          <ul>
+            <li><a href="https://www.magadhonline.in" target="_blank" rel="noopener">UG Semester-II Result — Session 2025–29 ↗</a><span>Declared 7 Oct 2026</span></li>
+            <li><a href="https://www.magadhonline.in" target="_blank" rel="noopener">UG Semester-IV Result — Session 2023–27 ↗</a><span>Declared Sep 2025</span></li>
+            <li><a href="https://www.magadhonline.in" target="_blank" rel="noopener">UG Semester-II Result — Session 2024–28 ↗</a><span>Declared 20 Aug 2025</span></li>
+            <li><a href="https://www.magadhonline.in" target="_blank" rel="noopener">All Results — Official Portal ↗</a><span>magadhonline.in</span></li>
+          </ul>
+          <a class="info-more" href="#results">Result Kaise Check Karein →</a>
+        </div>
+        <div class="info-col">
+          <h3>🔗 Important Links</h3>
+          <ul>
+            <li><a href="https://www.magadhuniversity.ac.in" target="_blank" rel="noopener">Magadh University — Official Website ↗</a></li>
+            <li><a href="https://www.magadhonline.in" target="_blank" rel="noopener">Magadh Online — Result Portal ↗</a></li>
+            <li><a href="https://pmsonline.bihar.gov.in" target="_blank" rel="noopener">PMS Online — BC / EBC ↗</a></li>
+            <li><a href="https://scstpmsonline.bihar.gov.in" target="_blank" rel="noopener">PMS Online — SC / ST ↗</a></li>
+            <li><a href="https://pfms.nic.in" target="_blank" rel="noopener">PFMS — Payment Status ↗</a></li>
+            <li><a href="sarkari-result.html">Sarkari Result Portal →</a></li>
+          </ul>
+          <a class="info-more" href="links.html">All Links Page →</a>
+        </div>
+      </div>
+    </section>
+
     <section class="results-band" id="results">
       <div class="wrap results-inner">
         <div class="results-copy">
