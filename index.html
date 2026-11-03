@@ -1566,5 +1566,19 @@
       })();
     </script>
     <a class="wa-follow" href="https://whatsapp.com/channel/0029VbCkTnO5q08eAwl72j3l" target="_blank" rel="noopener" aria-label="Follow Magadh University updates on WhatsApp">Follow on WhatsApp</a>
+  
+<!-- GA4 custom event (2026-11-03): amazon_book_click -->
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a') : null;
+  if (!a || typeof gtag !== 'function') return;
+  var href = a.href || '';
+  if (href.indexOf('amazon.in') === -1 || href.indexOf('tag=magadhbooks-21') === -1) return;
+  var card = a.closest ? a.closest('article') : null;
+  var nameEl = card ? card.querySelector('h3') : null;
+  var bookName = (nameEl ? nameEl.textContent : (a.textContent || '')).trim().replace(/\s+/g, ' ').slice(0, 100) || href;
+  gtag('event', 'amazon_book_click', { book_name: bookName, book_url: href, page_path: location.pathname });
+}, true);
+</script>
   </body>
 </html>

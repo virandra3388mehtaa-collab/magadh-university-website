@@ -319,6 +319,7 @@
     var sem = document.getElementById('fSem').value;
     document.getElementById('fHead').textContent = 'U.G. Session ' + ses + ' · Semester-' + sem + ' — result steps:';
     document.getElementById('fTab').textContent = '“U.G. ' + ses + '”';
+    if (typeof gtag === 'function') { gtag('event', 'result_finder_use', { session: ses, semester: sem, page_path: location.pathname }); }
     var box = document.getElementById('fResult');
     box.style.display = 'block';
     box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -359,6 +360,7 @@
       return;
     }
     var sgpa = totPts / totCr;
+    if (typeof gtag === 'function') { gtag('event', 'sgpa_calculate', { subjects_used: used, total_credits: totCr, page_path: location.pathname }); }
     document.getElementById('sgpaNum').textContent = sgpa.toFixed(2);
     document.getElementById('sgpaFacts').innerHTML = '<b>' + used + '</b> subjects · Kul credits: <b>' + totCr + '</b><br>Aapka SGPA: <b>' + sgpa.toFixed(2) + '</b> / 10<br><span style="color:var(--muted);font-size:.9rem">Har semester ka SGPA aise hi nikaalkar, sab semesters ka average (credits ke hisaab se) CGPA banta hai.</span>';
     var c = 2 * Math.PI * 54;
