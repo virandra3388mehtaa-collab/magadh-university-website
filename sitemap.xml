@@ -30,4 +30,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://magadhuniversityinfo.in/articles/magadh-university-result-kaise-check-karein.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://magadhuniversityinfo.in/articles/sgpa-kya-hota-hai-kaise-samjhein.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
