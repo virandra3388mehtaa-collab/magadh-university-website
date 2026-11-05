@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-5170140450848111">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5170140450848111" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KYYYZ43D"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-5KYYYZ43D');</script>
+<title>Percentage Calculator — Marks se Percentage Nikalein | Magadh University Info</title>
+<meta name="description" content="Percentage Calculator — apne marks se percentage nikaalein, percentage se marks jaanein, ya kisi sankhya ka pratishat ginein. Exam form, result aur division check ke liye free tool.">
+<link rel="canonical" href="https://magadhuniversityinfo.in/percentage-calculator.html" />
+<meta property="og:title" content="Percentage Calculator — Marks se Percentage Nikalein" />
+<meta property="og:description" content="Marks daalein, percentage paayein — division aur grade ke saath. Exam form aur result ke liye free tool." />
+<meta property="og:url" content="https://magadhuniversityinfo.in/percentage-calculator.html" />
+<link rel="icon" href="logo.png" type="image/png">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #241a12; --ink-soft: #4d4136; --muted: #7a6c5c;
+    --line: #e6e0d5; --bg-soft: #f8f6f2; --surface: #ffffff;
+    --gold: #b8860b; --gold-bright: #d9a514; --gold-soft: #f3e3bb; --gold-dark: #8a6508;
+    --radius: 14px; --shadow: 0 12px 32px rgba(64,34,8,.13);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  ::selection { background: var(--gold-soft); }
+  body { font-family: "Source Sans 3", "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif; background: #ffffff; color: var(--ink); font-size: 16.5px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .serif { font-family: "Spectral", Georgia, serif; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 20px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.94); position: sticky; top: 0; z-index: 20; backdrop-filter: blur(8px); }
+  .tb-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--ink); font-family: "Spectral", Georgia, serif; font-weight: 700; font-size: 1.02rem; }
+  .tb-brand img { width: 26px; height: 32px; object-fit: contain; }
+  .tb-links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tb-links a { text-decoration: none; color: var(--gold-dark); font-weight: 700; font-size: .88rem; border: 1px solid var(--gold-soft); background: #fffdf4; padding: 5px 12px; border-radius: 999px; }
+  .tb-links a:hover { background: var(--gold-soft); }
+  .phero { background: linear-gradient(180deg, #fffdf4 0%, #ffffff 100%); border-bottom: 3px solid var(--gold-soft); padding: 42px 0 30px; }
+  .phero .kicker { color: var(--gold-dark); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; }
+  .phero h1 { font-size: 2.3rem; line-height: 1.15; margin: 8px 0 6px; }
+  .phero .sub { color: var(--ink-soft); font-size: 1.08rem; max-width: 760px; }
+  section.block { padding: 40px 0 6px; }
+  .kicker { color: var(--gold-dark); font-weight: 700; letter-spacing: .13em; text-transform: uppercase; font-size: .78rem; }
+  h2.title { font-size: 1.6rem; margin: 6px 0 6px; }
+  .lede { color: var(--ink-soft); max-width: 780px; }
+  .tool { margin-top: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 1px 2px rgba(64,34,8,.05); padding: 24px; max-width: 860px; }
+  .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .field label { display: block; font-weight: 700; font-size: .92rem; margin-bottom: 6px; }
+  .field input, .field select { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font: inherit; font-size: 1rem; background: #fff; color: var(--ink); }
+  .field input:focus, .field select:focus { outline: 2px solid var(--gold-bright); outline-offset: 1px; border-color: var(--gold-bright); }
+  .field .hint { color: var(--muted); font-size: .85rem; margin-top: 5px; }
+  .btn { display: inline-block; border: none; cursor: pointer; text-decoration: none; font-weight: 700; border-radius: 999px; padding: 11px 22px; font-size: 1rem; }
+  .btn-gold { background: var(--gold); color: #fff; }
+  .btn-gold:hover { background: var(--gold-dark); }
+  .aresult { display: none; margin-top: 22px; background: var(--bg-soft); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 10px; padding: 20px 22px; }
+  .aresult .big { font-family: "Spectral", Georgia, serif; font-size: 1.9rem; color: var(--gold-dark); line-height: 1.25; }
+  .aresult .facts { margin-top: 8px; color: var(--ink-soft); }
+  .aresult .facts b { color: var(--ink); }
+  .aerror { display: none; margin-top: 18px; background: #fdf0ef; border: 1px solid #ecc9c5; border-left: 4px solid #b03a2e; border-radius: 10px; padding: 14px 18px; color: #7c2d24; }
+  .note { margin-top: 16px; color: var(--muted); font-size: .9rem; max-width: 860px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 24px; }
+  .colbox { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; }
+  .colbox h3 { font-size: 1.2rem; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid var(--gold-soft); }
+  .colbox p, .colbox li { color: var(--ink-soft); }
+  .colbox ul { margin-left: 18px; }
+  .colbox li { padding: 4px 0; }
+  .formula { background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; margin-top: 24px; max-width: 860px; }
+  .formula .f { font-family: "Spectral", Georgia, serif; font-size: 1.25rem; color: var(--gold-dark); margin: 6px 0; }
+  .formula p { color: var(--ink-soft); }
+  table.divtab { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: .98rem; }
+  table.divtab th, table.divtab td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; }
+  table.divtab th { background: var(--bg-soft); }
+  .faq { max-width: 860px; margin-top: 10px; }
+  .faq .q { font-weight: 700; margin-top: 18px; }
+  .faq .a { color: var(--ink-soft); margin-top: 3px; }
+  .pgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+  .pcard { display: block; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: 0 1px 2px rgba(64,34,8,.05); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+  .pcard:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--gold-bright); }
+  .pcard .pic { font-size: 1.45rem; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--gold-soft); border-radius: 12px; margin-bottom: 14px; }
+  .pcard h3 { font-size: 1.13rem; margin-bottom: 4px; font-family: "Source Sans 3", "Noto Sans Devanagari", sans-serif; font-weight: 700; }
+  .pcard p { color: var(--muted); font-size: .95rem; }
+  .pcard .parr { display: inline-block; margin-top: 12px; color: var(--gold-dark); font-weight: 700; font-size: .92rem; }
+  .newbadge { display: inline-block; background: var(--gold); color: #fff; font-size: .68rem; font-weight: 700; border-radius: 999px; padding: 1px 8px; margin-left: 7px; vertical-align: 2px; letter-spacing: .05em; }
+  .disclaimer { margin: 46px 0 0; background: #fffdf4; border: 1px solid var(--gold-soft); border-radius: var(--radius); padding: 18px 22px; color: var(--ink-soft); font-size: .95rem; }
+  footer { margin-top: 40px; border-top: 1px solid var(--line); padding: 26px 0 36px; text-align: center; color: var(--muted); font-size: .92rem; }
+  footer a { color: var(--gold-dark); }
+  .signature { display: block; margin-top: 6px; font-family: "Spectral", Georgia, serif; font-style: italic; color: var(--ink-soft); }
+  @media (max-width: 920px) {
+    .fgrid, .cols { grid-template-columns: 1fr; }
+    .pgrid { grid-template-columns: repeat(2, 1fr); }
+    .phero h1 { font-size: 1.8rem; }
+  }
+  @media (max-width: 560px) {
+    .pgrid { grid-template-columns: 1fr; }
+    .tb-links a { font-size: .8rem; padding: 4px 9px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="tb-brand" href="https://magadhuniversityinfo.in/"><img src="logo.png" alt="Magadh University logo" />Magadh University Info</a>
+  <div class="tb-links">
+    <a href="https://magadhuniversityinfo.in/">Home</a>
+    <a href="https://magadhuniversityinfo.in/student-portal.html">Student Portal</a>
+    <a href="https://magadhuniversityinfo.in/student-help.html">Student Help</a>
+    <a href="https://magadhuniversityinfo.in/sarkari-result.html">Sarkari Result</a>
+    <a href="https://magadhuniversityinfo.in/links.html">All Links</a>
+  </div>
+</div>
+
+<div class="phero">
+  <div class="wrap">
+    <div class="kicker">Student Tools · Free</div>
+    <h1>Percentage Calculator — अपने marks से % निकालें</h1>
+    <p class="sub">Result aaya aur percentage ginna hai? Ya form me percentage bharni hai aur marks pata hain? Apne <b>prapt ank (obtained marks)</b> aur <b>kul ank (total marks)</b> daalein — percentage, division aur grade ek saath paayein।</p>
+  </div>
+</div>
+
+<section class="block" id="calculator">
+  <div class="wrap">
+    <div class="kicker">Calculator</div>
+    <h2 class="title">Percentage calculate karein</h2>
+    <div class="tool">
+      <div class="fgrid">
+        <div class="field">
+          <label for="mode">Kya calculate karna hai?</label>
+          <select id="mode" onchange="switchMode()">
+            <option value="marks">Marks se Percentage (सबसे आम)</option>
+            <option value="percent">Percentage se Marks</option>
+            <option value="partof">X, Y ka kitna % hai?</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="total">Kul Ank / Total (Y)</label>
+          <input type="number" id="total" min="1" step="any" placeholder="jaise 600" />
+          <div class="hint" id="totalHint">Sabhi subjects ke kul ank jodein — jaise 6 subject × 100 = 600।</div>
+        </div>
+        <div class="field" id="fieldObtained">
+          <label for="obtained">Prapt Ank / Obtained Marks (X)</label>
+          <input type="number" id="obtained" min="0" step="any" placeholder="jaise 432" />
+          <div class="hint">Marksheet par diye gaye kul prapt ank bharein।</div>
+        </div>
+        <div class="field" id="fieldPercent" style="display:none">
+          <label for="percent">Percentage (%)</label>
+          <input type="number" id="percent" min="0" max="100" step="any" placeholder="jaise 72" />
+          <div class="hint">Jis percentage ke marks jaanne hain — jaise 75% ke liye 75 likhein।</div>
+        </div>
+      </div>
+      <div style="margin-top:18px;">
+        <button class="btn btn-gold" type="button" onclick="calcPercent()">Calculate Karein →</button>
+      </div>
+      <div class="aerror" id="aError"></div>
+      <div class="aresult" id="aResult">
+        <div class="big" id="aBig"></div>
+        <div class="facts" id="aFacts"></div>
+      </div>
+    </div>
+    <p class="note">Ye tool sirf aapki jaankari ke liye hai। Form ya official kaam me wahi percentage bharein jo aapki marksheet ya university ke niyamo ke hisaab se banti hai — alag-alag boards aur universities ke division ke niyam alag ho sakte hain।</p>
+  </div>
+</section>
+
+<section class="block" id="kaise">
+  <div class="wrap">
+    <div class="kicker">Samjhein</div>
+    <h2 class="title">Percentage kaise nikalte hain?</h2>
+    <p class="lede">Percentage ka matlab hai — <b>100 me se kitna</b>। Isiliye formula bahut seedha hai: prapt ank ko kul ank se bhaag dein aur 100 se guna kar dein।</p>
+    <div class="formula">
+      <div class="f">Percentage (%) = (Prapt Ank ÷ Kul Ank) × 100</div>
+      <p><b>Udaharan:</b> Kul ank 600 hain aur aapko 432 mile — to (432 ÷ 600) × 100 = <b>72%</b>। Yahi hisaab upar wala calculator ek second me kar deta hai।</p>
+    </div>
+    <div class="cols">
+      <div class="colbox">
+        <h3>📊 Division (श्रेणी) kaise tay hoti hai?</h3>
+        <p>Bharat ki zyadatar universities aur boards me percentage ke hisaab se division is tarah mani jaati hai:</p>
+        <table class="divtab">
+          <tr><th>Percentage</th><th>Division</th></tr>
+          <tr><td>60% ya zyada</td><td><b>First Division</b></td></tr>
+          <tr><td>45% – 60% se kam</td><td><b>Second Division</b></td></tr>
+          <tr><td>33% – 45% se kam</td><td><b>Third Division</b></td></tr>
+          <tr><td>33% se kam</td><td><b>Fail</b></td></tr>
+        </table>
+        <p style="margin-top:10px;">Ye ek <b>aam guide</b> hai — kuch universities me passing marks ya division ke niyam alag ho sakte hain, isliye antim faisla hamesha apni marksheet aur university ke niyamo se karein।</p>
+      </div>
+      <div class="colbox">
+        <h3>🎯 Target percentage ke liye kitne marks chahiye?</h3>
+        <ul>
+          <li>Pehle tay karein kitni percentage chahiye — jaise <b>75%</b>।</li>
+          <li>Phir calculator me <b>"Percentage se Marks"</b> mode chunein, percentage aur kul ank daalein।</li>
+          <li>Udaharan: kul ank 600 aur target 75% ho, to <b>450 marks</b> chahiye — (75 × 600) ÷ 100।</li>
+          <li>Exam se pehle ye hisaab karke apna <b>lakshya (target)</b> saaf rakhna sabse aasan tareeka hai।</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="cgpa">
+  <div class="wrap">
+    <div class="kicker">Percentage ↔ CGPA</div>
+    <h2 class="title">Percentage se CGPA kaise samjhein?</h2>
+    <p class="lede">Percentage aur CGPA/SGPA ek hi baat nahi hain — aur inke beech koi <b>ek universal formula nahi</b> hai। Har board ya university apna alag conversion niyam rakhti hai। Jaise CBSE me CGPA ko 9.5 se guna karke percentage ka andaza lagaya jata hai (CGPA × 9.5), lekin ye niyam sirf CBSE ka hai — university ke liye nahi। Magadh University me SGPA/CGPA wahi mana jayega jo aapki marksheet par chhapa hai। SGPA kya hota hai aur kaise nikalta hai, ye <a href="https://magadhuniversityinfo.in/articles/sgpa-kya-hota-hai-kaise-samjhein.html">is guide me</a> samjhaya gaya hai, aur apna SGPA khud nikalne ke liye <a href="https://magadhuniversityinfo.in/student-portal.html#sgpa">SGPA Calculator</a> istemal karein।</p>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="kicker">Aksar Poochhe Sawaal</div>
+    <h2 class="title">Percentage ko lekar aam sawaal</h2>
+    <div class="faq">
+      <p class="q">Percentage me decimal aaye to kitne point tak likhein?</p>
+      <p class="a">Aam taur par <b>2 decimal</b> tak likhna kaafi hota hai — jaise 72.45%। Form me jo format manga gaya ho, wahi apnayein; agar form sirf poora number (round figure) mange to wahi bharein jo marksheet par hai।</p>
+      <p class="q">Kya percentage nikalte waqt fail hue subject ke marks bhi jodein?</p>
+      <p class="a">Kul percentage ke liye aam taur par <b>sabhi subjects ke kul ank aur prapt ank</b> jode jaate hain। Lekin division ya eligibility ke liye kuch jagah sirf pass hue subjects gine jaate hain — isliye form ke niyam ya marksheet ki ganana hi antim mani jayegi।</p>
+      <p class="q">60% aane par First Division pakki hai?</p>
+      <p class="a">Zyadatar universities me haan — 60% ya usse zyada First Division mani jaati hai। Lekin kuch courses ya universities me niyam alag ho sakte hain, isliye apni marksheet par chhapi division hi official mani jayegi।</p>
+      <p class="q">Percentage se marks nikalna kab kaam aata hai?</p>
+      <p class="a">Jab aapko pata ho ki kitni percentage chahiye (jaise kisi form ki eligibility 50% ho) aur ye jan-na ho ki kul ank me se kitne marks lane honge — tab "Percentage se Marks" mode se turant pata chal jata hai।</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="more-tools">
+  <div class="wrap">
+    <div class="kicker">Aur Tools</div>
+    <h2 class="title">Students ke aur kaam ke tools</h2>
+    <div class="pgrid">
+      <a class="pcard" href="https://magadhuniversityinfo.in/age-calculator.html">
+        <span class="pic">🎂</span>
+        <h3>Age Calculator</h3>
+        <p>सरकारी फॉर्म के लिए उम्र गिनें — DOB से किसी भी date पर सही age</p>
+        <span class="parr">Age Check Karein →</span>
+      </a>
+      <a class="pcard" href="https://magadhuniversityinfo.in/student-portal.html#sgpa">
+        <span class="pic">🧮</span>
+        <h3>SGPA Calculator</h3>
+        <p>अपना SGPA खुद निकालें — credits और grade points डालकर</p>
+        <span class="parr">SGPA Nikalein →</span>
+      </a>
+      <a class="pcard" href="https://magadhuniversityinfo.in/student-portal.html#finder">
+        <span class="pic">🎓</span>
+        <h3>Result Finder</h3>
+        <p>रिजल्ट चेक करने के exact steps — session और semester चुनकर</p>
+        <span class="parr">Steps Dekhein →</span>
+      </a>
+    </div>
+    <div class="disclaimer">
+      <b>Note:</b> Ye ek <b>unofficial student guide</b> hai — Magadh University ki official website nahi। Result, fees, admission aur bharti jaise official kaam ke liye hamesha official portals aur notification ka hi istemal karein। Taaza notices seedha phone par paane ke liye hamara <a href="https://whatsapp.com/channel/0029VbCkTnO5q08eAwl72j3l" target="_blank" rel="noopener">WhatsApp Channel</a> follow karein।
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Magadh University Info — Percentage Calculator · <a href="https://magadhuniversityinfo.in/">magadhuniversityinfo.in</a>
+    <span class="signature">— Rajan Kumar</span>
+  </div>
+</footer>
+
+<script>
+  function switchMode() {
+    var mode = document.getElementById('mode').value;
+    var fObt = document.getElementById('fieldObtained');
+    var fPct = document.getElementById('fieldPercent');
+    var totalLabel = document.querySelector('label[for="total"]');
+    var totalHint = document.getElementById('totalHint');
+    document.getElementById('aResult').style.display = 'none';
+    document.getElementById('aError').style.display = 'none';
+    if (mode === 'percent') {
+      fObt.style.display = 'none';
+      fPct.style.display = 'block';
+      totalLabel.textContent = 'Kul Ank / Total (Y)';
+      totalHint.textContent = 'Sabhi subjects ke kul ank jodein — jaise 6 subject × 100 = 600।';
+    } else if (mode === 'partof') {
+      fObt.style.display = 'block';
+      fPct.style.display = 'none';
+      document.querySelector('label[for="obtained"]').textContent = 'Hissa / Part (X)';
+      totalLabel.textContent = 'Kul / Whole (Y)';
+      totalHint.textContent = 'Jis badi sankhya ka hissa nikalna hai — jaise kul 500 me se 125।';
+    } else {
+      fObt.style.display = 'block';
+      fPct.style.display = 'none';
+      document.querySelector('label[for="obtained"]').textContent = 'Prapt Ank / Obtained Marks (X)';
+      totalLabel.textContent = 'Kul Ank / Total (Y)';
+      totalHint.textContent = 'Sabhi subjects ke kul ank jodein — jaise 6 subject × 100 = 600।';
+    }
+  }
+
+  function divisionFor(p) {
+    if (p >= 60) return 'First Division';
+    if (p >= 45) return 'Second Division';
+    if (p >= 33) return 'Third Division';
+    return 'Fail (33% se kam)';
+  }
+
+  function calcPercent() {
+    var mode = document.getElementById('mode').value;
+    var total = parseFloat(document.getElementById('total').value);
+    var err = document.getElementById('aError');
+    var res = document.getElementById('aResult');
+    err.style.display = 'none';
+    res.style.display = 'none';
+    if (isNaN(total) || total <= 0) {
+      err.textContent = 'Pehle sahi Kul Ank (Total) bharein — ye 0 se bada hona chahiye।';
+      err.style.display = 'block';
+      return;
+    }
+    var big = '', facts = '';
+    if (mode === 'marks') {
+      var obt = parseFloat(document.getElementById('obtained').value);
+      if (isNaN(obt) || obt < 0) {
+        err.textContent = 'Prapt Ank (Obtained Marks) sahi se bharein।';
+        err.style.display = 'block';
+        return;
+      }
+      if (obt > total) {
+        err.textContent = 'Prapt ank kul ank se zyada nahi ho sakte — dono ank check karke phir try karein।';
+        err.style.display = 'block';
+        return;
+      }
+      var pct = (obt / total) * 100;
+      var div = divisionFor(pct);
+      if (typeof gtag === 'function') { gtag('event', 'percentage_calculate', { mode: 'marks', percentage: Math.round(pct * 100) / 100, page_path: location.pathname }); }
+      big = '📊 ' + pct.toFixed(2) + '%';
+      facts = 'Prapt ank: <b>' + obt + '</b> / Kul ank: <b>' + total + '</b><br>' +
+        'Division (aam niyam): <b>' + div + '</b><br>' +
+        '<span style="color:var(--muted);font-size:.92rem">Ye division aam university niyam ke hisaab se hai — official division wahi hogi jo aapki marksheet par chhapi hai।</span>';
+    } else if (mode === 'percent') {
+      var pc = parseFloat(document.getElementById('percent').value);
+      if (isNaN(pc) || pc < 0 || pc > 100) {
+        err.textContent = 'Percentage 0 se 100 ke beech bharein।';
+        err.style.display = 'block';
+        return;
+      }
+      var need = (pc * total) / 100;
+      if (typeof gtag === 'function') { gtag('event', 'percentage_calculate', { mode: 'percent_to_marks', percentage: pc, page_path: location.pathname }); }
+      big = '🎯 ' + need.toFixed(2) + ' marks chahiye';
+      facts = pc + '% ke liye kul ' + total + ' ank me se <b>' + need.toFixed(2) + ' marks</b> lane honge।<br>' +
+        '<span style="color:var(--muted);font-size:.92rem">Udaharan: 600 kul ank aur 75% target ho, to 450 marks chahiye।</span>';
+    } else {
+      var part = parseFloat(document.getElementById('obtained').value);
+      if (isNaN(part) || part < 0) {
+        err.textContent = 'Hissa (Part) sahi se bharein।';
+        err.style.display = 'block';
+        return;
+      }
+      var pct2 = (part / total) * 100;
+      if (typeof gtag === 'function') { gtag('event', 'percentage_calculate', { mode: 'part_of', percentage: Math.round(pct2 * 100) / 100, page_path: location.pathname }); }
+      big = '📊 ' + part + ' = ' + pct2.toFixed(2) + '% of ' + total;
+      facts = '<b>' + part + '</b>, kul <b>' + total + '</b> ka <b>' + pct2.toFixed(2) + '%</b> hai।';
+    }
+    document.getElementById('aBig').textContent = big;
+    document.getElementById('aFacts').innerHTML = facts;
+    res.style.display = 'block';
+    res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+</body>
+</html>
