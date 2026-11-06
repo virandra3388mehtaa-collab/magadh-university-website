@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-5170140450848111">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5170140450848111" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KYYYZ43D"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-5KYYYZ43D');</script>
+<title>Attendance Calculator — Class Attendance % Nikalein | Magadh University Info</title>
+<meta name="description" content="Attendance Calculator — apni class attendance percentage nikalein, 75% target ke liye aur kitni classes attend karni hain ya kitni classes chhod sakte hain, ye bhi jaanein. Students ke liye free tool.">
+<link rel="canonical" href="https://magadhuniversityinfo.in/attendance-calculator.html" />
+<meta property="og:title" content="Attendance Calculator — Class Attendance % Nikalein" />
+<meta property="og:description" content="Attended aur total classes daalein — attendance %, 75% target aur chhutti ki gunjaish ek saath paayein." />
+<meta property="og:url" content="https://magadhuniversityinfo.in/attendance-calculator.html" />
+<link rel="icon" href="logo.png" type="image/png">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #241a12; --ink-soft: #4d4136; --muted: #7a6c5c;
+    --line: #e6e0d5; --bg-soft: #f8f6f2; --surface: #ffffff;
+    --gold: #b8860b; --gold-bright: #d9a514; --gold-soft: #f3e3bb; --gold-dark: #8a6508;
+    --radius: 14px; --shadow: 0 12px 32px rgba(64,34,8,.13);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  ::selection { background: var(--gold-soft); }
+  body { font-family: "Source Sans 3", "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif; background: #ffffff; color: var(--ink); font-size: 16.5px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .serif { font-family: "Spectral", Georgia, serif; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 20px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.94); position: sticky; top: 0; z-index: 20; backdrop-filter: blur(8px); }
+  .tb-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--ink); font-family: "Spectral", Georgia, serif; font-weight: 700; font-size: 1.02rem; }
+  .tb-brand img { width: 26px; height: 32px; object-fit: contain; }
+  .tb-links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tb-links a { text-decoration: none; color: var(--gold-dark); font-weight: 700; font-size: .88rem; border: 1px solid var(--gold-soft); background: #fffdf4; padding: 5px 12px; border-radius: 999px; }
+  .tb-links a:hover { background: var(--gold-soft); }
+  .phero { background: linear-gradient(180deg, #fffdf4 0%, #ffffff 100%); border-bottom: 3px solid var(--gold-soft); padding: 42px 0 30px; }
+  .phero .kicker { color: var(--gold-dark); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; }
+  .phero h1 { font-size: 2.3rem; line-height: 1.15; margin: 8px 0 6px; }
+  .phero .sub { color: var(--ink-soft); font-size: 1.08rem; max-width: 760px; }
+  section.block { padding: 40px 0 6px; }
+  .kicker { color: var(--gold-dark); font-weight: 700; letter-spacing: .13em; text-transform: uppercase; font-size: .78rem; }
+  h2.title { font-size: 1.6rem; margin: 6px 0 6px; }
+  .lede { color: var(--ink-soft); max-width: 780px; }
+  .tool { margin-top: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 1px 2px rgba(64,34,8,.05); padding: 24px; max-width: 860px; }
+  .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .field label { display: block; font-weight: 700; font-size: .92rem; margin-bottom: 6px; }
+  .field input, .field select { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font: inherit; font-size: 1rem; background: #fff; color: var(--ink); }
+  .field input:focus, .field select:focus { outline: 2px solid var(--gold-bright); outline-offset: 1px; border-color: var(--gold-bright); }
+  .field .hint { color: var(--muted); font-size: .85rem; margin-top: 5px; }
+  .btn { display: inline-block; border: none; cursor: pointer; text-decoration: none; font-weight: 700; border-radius: 999px; padding: 11px 22px; font-size: 1rem; }
+  .btn-gold { background: var(--gold); color: #fff; }
+  .btn-gold:hover { background: var(--gold-dark); }
+  .aresult { display: none; margin-top: 22px; background: var(--bg-soft); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 10px; padding: 20px 22px; }
+  .aresult .big { font-family: "Spectral", Georgia, serif; font-size: 1.9rem; color: var(--gold-dark); line-height: 1.25; }
+  .aresult .facts { margin-top: 8px; color: var(--ink-soft); }
+  .aresult .facts b { color: var(--ink); }
+  .aerror { display: none; margin-top: 18px; background: #fdf0ef; border: 1px solid #ecc9c5; border-left: 4px solid #b03a2e; border-radius: 10px; padding: 14px 18px; color: #7c2d24; }
+  .note { margin-top: 16px; color: var(--muted); font-size: .9rem; max-width: 860px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 24px; }
+  .colbox { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; }
+  .colbox h3 { font-size: 1.2rem; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid var(--gold-soft); }
+  .colbox p, .colbox li { color: var(--ink-soft); }
+  .colbox ul { margin-left: 18px; }
+  .colbox li { padding: 4px 0; }
+  .formula { background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; margin-top: 24px; max-width: 860px; }
+  .formula .f { font-family: "Spectral", Georgia, serif; font-size: 1.25rem; color: var(--gold-dark); margin: 6px 0; }
+  .formula p { color: var(--ink-soft); }
+  table.divtab { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: .98rem; }
+  table.divtab th, table.divtab td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; }
+  table.divtab th { background: var(--bg-soft); }
+  .faq { max-width: 860px; margin-top: 10px; }
+  .faq .q { font-weight: 700; margin-top: 18px; }
+  .faq .a { color: var(--ink-soft); margin-top: 3px; }
+  .pgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+  .pcard { display: block; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: 0 1px 2px rgba(64,34,8,.05); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+  .pcard:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--gold-bright); }
+  .pcard .pic { font-size: 1.45rem; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--gold-soft); border-radius: 12px; margin-bottom: 14px; }
+  .pcard h3 { font-size: 1.13rem; margin-bottom: 4px; font-family: "Source Sans 3", "Noto Sans Devanagari", sans-serif; font-weight: 700; }
+  .pcard p { color: var(--muted); font-size: .95rem; }
+  .pcard .parr { display: inline-block; margin-top: 12px; color: var(--gold-dark); font-weight: 700; font-size: .92rem; }
+  .newbadge { display: inline-block; background: var(--gold); color: #fff; font-size: .68rem; font-weight: 700; border-radius: 999px; padding: 1px 8px; margin-left: 7px; vertical-align: 2px; letter-spacing: .05em; }
+  .disclaimer { margin: 46px 0 0; background: #fffdf4; border: 1px solid var(--gold-soft); border-radius: var(--radius); padding: 18px 22px; color: var(--ink-soft); font-size: .95rem; }
+  footer { margin-top: 40px; border-top: 1px solid var(--line); padding: 26px 0 36px; text-align: center; color: var(--muted); font-size: .92rem; }
+  footer a { color: var(--gold-dark); }
+  .signature { display: block; margin-top: 6px; font-family: "Spectral", Georgia, serif; font-style: italic; color: var(--ink-soft); }
+  @media (max-width: 920px) {
+    .fgrid, .cols { grid-template-columns: 1fr; }
+    .pgrid { grid-template-columns: repeat(2, 1fr); }
+    .phero h1 { font-size: 1.8rem; }
+  }
+  @media (max-width: 560px) {
+    .pgrid { grid-template-columns: 1fr; }
+    .tb-links a { font-size: .8rem; padding: 4px 9px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="tb-brand" href="https://magadhuniversityinfo.in/"><img src="logo.png" alt="Magadh University logo" />Magadh University Info</a>
+  <div class="tb-links">
+    <a href="https://magadhuniversityinfo.in/">Home</a>
+    <a href="https://magadhuniversityinfo.in/student-portal.html">Student Portal</a>
+    <a href="https://magadhuniversityinfo.in/student-help.html">Student Help</a>
+    <a href="https://magadhuniversityinfo.in/sarkari-result.html">Sarkari Result</a>
+    <a href="https://magadhuniversityinfo.in/links.html">All Links</a>
+  </div>
+</div>
+
+<div class="phero">
+  <div class="wrap">
+    <div class="kicker">Student Tools · Free</div>
+    <h1>Attendance Calculator — अपनी class attendance % निकालें</h1>
+    <p class="sub">Exam se pehle attendance kam pad rahi hai? <b>Attended classes</b> aur <b>kul hui classes</b> daalein — attendance %, 75% target tak pahunchne ke liye kitni aur classes attend karni hain, aur kitni classes chhod sakte hain, sab ek saath paayein।</p>
+  </div>
+</div>
+
+<section class="block" id="calculator">
+  <div class="wrap">
+    <div class="kicker">Calculator</div>
+    <h2 class="title">Attendance calculate karein</h2>
+    <div class="tool">
+      <div class="fgrid">
+        <div class="field">
+          <label for="mode">Kya calculate karna hai?</label>
+          <select id="mode" onchange="switchMode()">
+            <option value="pct">Meri attendance kitni % hai?</option>
+            <option value="need">Target % ke liye aur kitni classes attend karni hain?</option>
+            <option value="miss">Target se neeche gire bina kitni classes chhod sakte hain?</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="total">Kul hui classes (Total)</label>
+          <input type="number" id="total" min="1" step="1" placeholder="jaise 60" />
+          <div class="hint" id="totalHint">Semester me ab tak jitni classes hui hain — apne attendance register ya college app se dekhein।</div>
+        </div>
+        <div class="field">
+          <label for="attended">Attended classes</label>
+          <input type="number" id="attended" min="0" step="1" placeholder="jaise 45" />
+          <div class="hint">Jitni classes me aap maujood the — wahi sankhya bharein।</div>
+        </div>
+        <div class="field" id="fieldTarget" style="display:none">
+          <label for="target">Target attendance (%)</label>
+          <input type="number" id="target" min="1" max="99" step="any" value="75" />
+          <div class="hint">Aam taur par 75% minimum manga jata hai — apne college ke niyam ke hisaab se badal sakte hain।</div>
+        </div>
+      </div>
+      <div style="margin-top:18px;">
+        <button class="btn btn-gold" type="button" onclick="calcAttendance()">Calculate Karein →</button>
+      </div>
+      <div class="aerror" id="aError"></div>
+      <div class="aresult" id="aResult">
+        <div class="big" id="aBig"></div>
+        <div class="facts" id="aFacts"></div>
+      </div>
+    </div>
+    <p class="note">Ye tool sirf aapki jaankari ke liye hai। Exam me baithne ke liye minimum attendance wahi mani jayegi jo aapke college ya university ke niyamo aur notice me likhi hai — alag-alag colleges me niyam alag ho sakte hain।</p>
+  </div>
+</section>
+
+<section class="block" id="kaise">
+  <div class="wrap">
+    <div class="kicker">Samjhein</div>
+    <h2 class="title">Attendance percentage kaise nikalte hain?</h2>
+    <p class="lede">Attendance percentage ka matlab hai — <b>kul hui classes me se aap kitni me maujood the</b>। Formula bahut seedha hai: attended classes ko kul classes se bhaag dein aur 100 se guna kar dein।</p>
+    <div class="formula">
+      <div class="f">Attendance (%) = (Attended Classes ÷ Kul Classes) × 100</div>
+      <p><b>Udaharan:</b> Kul 60 classes hui aur aap 45 me maujood the — to (45 ÷ 60) × 100 = <b>75%</b>। Yahi hisaab upar wala calculator ek second me kar deta hai।</p>
+    </div>
+    <div class="cols">
+      <div class="colbox">
+        <h3>📋 75% ka niyam kya hai?</h3>
+        <p>Bharat ki zyadatar universities aur colleges me exam me baithne ke liye <b>kam se kam 75% attendance</b> manga jata hai। Iska matlab:</p>
+        <table class="divtab">
+          <tr><th>Attendance</th><th>Matlab</th></tr>
+          <tr><td>75% ya zyada</td><td><b>Safe</b> — exam ke liye eligible</td></tr>
+          <tr><td>65% – 75% se kam</td><td><b>Dhyan dein</b> — har class attend karein</td></tr>
+          <tr><td>65% se kam</td><td><b>Khatra</b> — turant college se sampark karein</td></tr>
+        </table>
+        <p style="margin-top:10px;">Kuch colleges me bimari ya khaas wajah se <b>condonation (chhoot)</b> milti hai, lekin uske liye application aur documents (jaise medical certificate) lagte hain। Antim niyam wahi hoga jo aapke college ke notice me likha hai — isliye apne department se zaroor poochhein।</p>
+      </div>
+      <div class="colbox">
+        <h3>🎯 Attendance kam ho to kya karein?</h3>
+        <ul>
+          <li><b>Har class attend karein</b> — aane wali har class percentage badhati hai, chhooti hui har class ghatati hai।</li>
+          <li>Upar calculator me <b>"Target % ke liye aur kitni classes"</b> mode se ginein ki lagatar kitni classes attend karni hain।</li>
+          <li>Udaharan: 60 me se 40 classes attend ki (66.7%) — 75% paane ke liye lagatar <b>20 aur classes</b> attend karni hongi।</li>
+          <li>Agar bimari ya koi majboori thi, to <b>medical certificate aur application</b> ke saath HOD ya principal se baat karein — der na karein।</li>
+          <li>Apni attendance <b>har hafte check</b> karte rahein, exam ke aakhri din ka intezar na karein।</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="kicker">Aksar Poochhe Sawaal</div>
+    <h2 class="title">Attendance ko lekar aam sawaal</h2>
+    <div class="faq">
+      <p class="q">75% se kam attendance ho to kya exam nahi de sakte?</p>
+      <p class="a">Aam taur par haan — zyadatar colleges me 75% se kam attendance par exam form ya admit card rok diya jata hai। Lekin kuch colleges me medical ya khaas wajah se chhoot (condonation) milti hai। Apne college ke niyam aur notice hi antim honge, isliye department se turant baat karein।</p>
+      <p class="q">Attendance percentage me practical aur theory classes alag gini jati hain?</p>
+      <p class="a">Kuch colleges me theory aur practical ki attendance alag-alag gini jati hai, kuch me kul milakar। Apne college ke hisaab se alag-alag ginna ho to dono ke liye calculator alag se chalakar dekhein।</p>
+      <p class="q">Ek class chhodne se kitni % attendance ghat-ti hai?</p>
+      <p class="a">Ye kul classes par depend karta hai — jitni kam kul classes, utna zyada asar। Jaise 20 kul classes me 1 chhooti to 5% ghat-ti hai, lekin 100 kul classes me 1 chhooti to sirf 1%। Isiliye semester ke shuru me har class zyada keemti hoti hai।</p>
+      <p class="q">Attendance badhane ka sabse tez tareeka kya hai?</p>
+      <p class="a">Koi shortcut nahi — aane wali <b>har class attend karna</b> hi ekmatra tareeka hai। Upar wale calculator se ginein ki target tak pahunchne ke liye lagatar kitni classes chahiye, aur use apna daily target bana lein।</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="more-tools">
+  <div class="wrap">
+    <div class="kicker">Aur Tools</div>
+    <h2 class="title">Students ke aur kaam ke tools</h2>
+    <div class="pgrid">
+      <a class="pcard" href="https://magadhuniversityinfo.in/age-calculator.html">
+        <span class="pic">🎂</span>
+        <h3>Age Calculator</h3>
+        <p>सरकारी फॉर्म के लिए उम्र गिनें — DOB से किसी भी date पर सही age</p>
+        <span class="parr">Age Check Karein →</span>
+      </a>
+      <a class="pcard" href="https://magadhuniversityinfo.in/percentage-calculator.html">
+        <span class="pic">📊</span>
+        <h3>Percentage Calculator</h3>
+        <p>मार्क्स से percentage निकालें — division और grade के साथ</p>
+        <span class="parr">Percentage Nikalein →</span>
+      </a>
+      <a class="pcard" href="https://magadhuniversityinfo.in/student-portal.html#sgpa">
+        <span class="pic">🧮</span>
+        <h3>SGPA Calculator</h3>
+        <p>अपना SGPA खुद निकालें — credits और grade points डालकर</p>
+        <span class="parr">SGPA Nikalein →</span>
+      </a>
+    </div>
+    <div class="disclaimer">
+      <b>Note:</b> Ye ek <b>unofficial student guide</b> hai — Magadh University ki official website nahi। Result, fees, admission aur bharti jaise official kaam ke liye hamesha official portals aur notification ka hi istemal karein। Taaza notices seedha phone par paane ke liye hamara <a href="https://whatsapp.com/channel/0029VbCkTnO5q08eAwl72j3l" target="_blank" rel="noopener">WhatsApp Channel</a> follow karein।
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Magadh University Info — Attendance Calculator · <a href="https://magadhuniversityinfo.in/">magadhuniversityinfo.in</a>
+    <span class="signature">— Rajan Kumar</span>
+  </div>
+</footer>
+
+<script>
+  function switchMode() {
+    var mode = document.getElementById('mode').value;
+    var fTarget = document.getElementById('fieldTarget');
+    document.getElementById('aResult').style.display = 'none';
+    document.getElementById('aError').style.display = 'none';
+    if (mode === 'pct') {
+      fTarget.style.display = 'none';
+    } else {
+      fTarget.style.display = 'block';
+    }
+  }
+
+  function statusFor(p) {
+    if (p >= 75) return 'Safe — 75% ya usse zyada (exam ke liye aam taur par eligible)';
+    if (p >= 65) return 'Dhyaan dein — 65% se 75% ke beech, har class attend karein';
+    return 'Khatre me — 65% se kam, turant college/department se sampark karein';
+  }
+
+  function calcAttendance() {
+    var mode = document.getElementById('mode').value;
+    var total = parseFloat(document.getElementById('total').value);
+    var attended = parseFloat(document.getElementById('attended').value);
+    var err = document.getElementById('aError');
+    var res = document.getElementById('aResult');
+    err.style.display = 'none';
+    res.style.display = 'none';
+    if (isNaN(total) || total <= 0 || Math.floor(total) !== total) {
+      err.textContent = 'Kul hui classes (Total) sahi se bharein — ye 0 se badi poori sankhya honi chahiye।';
+      err.style.display = 'block';
+      return;
+    }
+    if (isNaN(attended) || attended < 0 || Math.floor(attended) !== attended) {
+      err.textContent = 'Attended classes sahi se bharein — ye 0 ya usse badi poori sankhya honi chahiye।';
+      err.style.display = 'block';
+      return;
+    }
+    if (attended > total) {
+      err.textContent = 'Attended classes kul classes se zyada nahi ho sakti — dono ank check karke phir try karein।';
+      err.style.display = 'block';
+      return;
+    }
+    var pct = (attended / total) * 100;
+    var big = '', facts = '';
+    if (mode === 'pct') {
+      if (typeof gtag === 'function') { gtag('event', 'attendance_calculate', { mode: 'percentage', percentage: Math.round(pct * 100) / 100, page_path: location.pathname }); }
+      big = '📋 ' + pct.toFixed(2) + '% attendance';
+      facts = 'Attended: <b>' + attended + '</b> / Kul classes: <b>' + total + '</b><br>' +
+        'Status: <b>' + statusFor(pct) + '</b><br>' +
+        '<span style="color:var(--muted);font-size:.92rem">Ye status aam 75% niyam ke hisaab se hai — aapke college ka niyam alag ho sakta hai, isliye department se zaroor poochhein।</span>';
+    } else {
+      var target = parseFloat(document.getElementById('target').value);
+      if (isNaN(target) || target <= 0 || target >= 100) {
+        err.textContent = 'Target attendance 1 se 99 ke beech bharein (aam taur par 75)।';
+        err.style.display = 'block';
+        return;
+      }
+      if (mode === 'need') {
+        if (pct >= target) {
+          if (typeof gtag === 'function') { gtag('event', 'attendance_calculate', { mode: 'need', target: target, page_path: location.pathname }); }
+          big = '✅ Aap pehle se ' + target + '% se upar hain';
+          facts = 'Aapki attendance abhi <b>' + pct.toFixed(2) + '%</b> hai — target ' + target + '% pehle se poora hai। Aage bhi har class attend karte rahein taaki ye bana rahe।';
+        } else {
+          var need = Math.ceil((target * total / 100 - attended) / (1 - target / 100));
+          if (typeof gtag === 'function') { gtag('event', 'attendance_calculate', { mode: 'need', target: target, needed_classes: need, page_path: location.pathname }); }
+          big = '🎯 Lagatar ' + need + ' classes attend karni hongi';
+          facts = 'Abhi: <b>' + attended + ' / ' + total + '</b> = ' + pct.toFixed(2) + '%<br>' +
+            'Lagatar ' + need + ' classes attend karne par attendance <b>' + target + '%</b> ho jayegi (' + (attended + need) + ' / ' + (total + need) + ')<br>' +
+            '<span style="color:var(--muted);font-size:.92rem">Beach me ek bhi class chhooti to gin-ti badh jayegi — isiliye lagatar attendance hi raasta hai।</span>';
+        }
+      } else {
+        if (pct < target) {
+          if (typeof gtag === 'function') { gtag('event', 'attendance_calculate', { mode: 'miss', target: target, page_path: location.pathname }); }
+          big = '⚠️ Abhi aap ' + target + '% se neeche hain';
+          facts = 'Aapki attendance abhi <b>' + pct.toFixed(2) + '%</b> hai — pehle "Target % ke liye aur kitni classes" mode se ginein ki kitni classes lagatar attend karni hain। Tab tak ek bhi class chhodna sahi nahi hoga।';
+        } else {
+          var canMiss = Math.floor(100 * attended / target - total);
+          if (typeof gtag === 'function') { gtag('event', 'attendance_calculate', { mode: 'miss', target: target, can_miss: canMiss, page_path: location.pathname }); }
+          big = '🗓️ ' + canMiss + ' classes tak chhod sakte hain';
+          facts = 'Abhi: <b>' + attended + ' / ' + total + '</b> = ' + pct.toFixed(2) + '%<br>' +
+            'Aap ' + canMiss + ' classes chhodne ke baad bhi <b>' + target + '%</b> se upar rahenge (' + attended + ' / ' + (total + canMiss) + ')<br>' +
+            '<span style="color:var(--muted);font-size:.92rem">Ye sirf ek hisaab hai — zaroori kaam ke liye hi class chhodein, aur college ke niyam hamesha check karein।</span>';
+        }
+      }
+    }
+    document.getElementById('aBig').textContent = big;
+    document.getElementById('aFacts').innerHTML = facts;
+    res.style.display = 'block';
+    res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+</body>
+</html>
