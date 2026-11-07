@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-5170140450848111">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5170140450848111" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KYYYZ43D"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-5KYYYZ43D');</script>
+<title>CGPA to Percentage Calculator — CGPA se Percentage Nikalein | Magadh University Info</title>
+<meta name="description" content="CGPA to Percentage Calculator — apna CGPA daalein aur percentage, division aur grade paayein. 9.5, 10 ya apna formula chunein; Percentage se CGPA bhi nikalein. Students ke liye free tool.">
+<link rel="canonical" href="https://magadhuniversityinfo.in/cgpa-to-percentage-calculator.html" />
+<meta property="og:title" content="CGPA to Percentage Calculator — CGPA se Percentage Nikalein" />
+<meta property="og:description" content="CGPA daalein — percentage, division aur grade ek saath paayein. 9.5, 10 ya apna formula chunein; ulta hisaab bhi karein." />
+<meta property="og:url" content="https://magadhuniversityinfo.in/cgpa-to-percentage-calculator.html" />
+<link rel="icon" href="logo.png" type="image/png">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #241a12; --ink-soft: #4d4136; --muted: #7a6c5c;
+    --line: #e6e0d5; --bg-soft: #f8f6f2; --surface: #ffffff;
+    --gold: #b8860b; --gold-bright: #d9a514; --gold-soft: #f3e3bb; --gold-dark: #7a5500;
+    --radius: 14px; --shadow: 0 12px 32px rgba(64,34,8,.13);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  ::selection { background: var(--gold-soft); }
+  body { font-family: "Source Sans 3", "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif; background: #ffffff; color: var(--ink); font-size: 16.5px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .serif { font-family: "Spectral", Georgia, serif; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 20px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.94); position: sticky; top: 0; z-index: 20; backdrop-filter: blur(8px); }
+  .tb-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--ink); font-family: "Spectral", Georgia, serif; font-weight: 700; font-size: 1.02rem; }
+  .tb-brand img { width: 26px; height: 32px; object-fit: contain; }
+  .tb-links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tb-links a { text-decoration: none; color: var(--gold-dark); font-weight: 700; font-size: .88rem; border: 1px solid var(--gold-soft); background: #fffdf4; padding: 5px 12px; border-radius: 999px; }
+  .tb-links a:hover { background: var(--gold-soft); }
+  .phero { background: linear-gradient(180deg, #fffdf4 0%, #ffffff 100%); border-bottom: 3px solid var(--gold-soft); padding: 42px 0 30px; }
+  .phero .kicker { color: var(--gold-dark); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; }
+  .phero h1 { font-size: 2.3rem; line-height: 1.15; margin: 8px 0 6px; }
+  .phero .sub { color: var(--ink-soft); font-size: 1.08rem; max-width: 760px; }
+  section.block { padding: 40px 0 6px; }
+  .kicker { color: var(--gold-dark); font-weight: 700; letter-spacing: .13em; text-transform: uppercase; font-size: .78rem; }
+  h2.title { font-size: 1.6rem; margin: 6px 0 6px; }
+  .lede { color: var(--ink-soft); max-width: 780px; }
+  .tool { margin-top: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 1px 2px rgba(64,34,8,.05); padding: 24px; max-width: 860px; }
+  .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .field label { display: block; font-weight: 700; font-size: .92rem; margin-bottom: 6px; }
+  .field input, .field select { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font: inherit; font-size: 1rem; background: #fff; color: var(--ink); }
+  .field input:focus, .field select:focus { outline: 2px solid var(--gold-bright); outline-offset: 1px; border-color: var(--gold-bright); }
+  .field .hint { color: var(--muted); font-size: .85rem; margin-top: 5px; }
+  .btn { display: inline-block; border: none; cursor: pointer; text-decoration: none; font-weight: 700; border-radius: 999px; padding: 11px 22px; font-size: 1rem; }
+  .btn-gold { background: var(--gold); color: #fff; }
+  .btn-gold:hover { background: var(--gold-dark); }
+  .aresult { display: none; margin-top: 22px; background: var(--bg-soft); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 10px; padding: 20px 22px; }
+  .aresult .big { font-family: "Spectral", Georgia, serif; font-size: 1.9rem; color: var(--gold-dark); line-height: 1.25; }
+  .aresult .facts { margin-top: 8px; color: var(--ink-soft); }
+  .aresult .facts b { color: var(--ink); }
+  .aerror { display: none; margin-top: 18px; background: #fdf0ef; border: 1px solid #ecc9c5; border-left: 4px solid #b03a2e; border-radius: 10px; padding: 14px 18px; color: #7c2d24; }
+  .note { margin-top: 16px; color: var(--muted); font-size: .9rem; max-width: 860px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 24px; }
+  .colbox { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; }
+  .colbox h3 { font-size: 1.2rem; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid var(--gold-soft); }
+  .colbox p, .colbox li { color: var(--ink-soft); }
+  .colbox ul { margin-left: 18px; }
+  .colbox li { padding: 4px 0; }
+  .formula { background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; margin-top: 24px; max-width: 860px; }
+  .formula .f { font-family: "Spectral", Georgia, serif; font-size: 1.25rem; color: var(--gold-dark); margin: 6px 0; }
+  .formula p { color: var(--ink-soft); }
+  table.divtab { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: .98rem; }
+  table.divtab th, table.divtab td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; }
+  table.divtab th { background: var(--bg-soft); }
+  .faq { max-width: 860px; margin-top: 10px; }
+  .faq .q { font-weight: 700; margin-top: 18px; }
+  .faq .a { color: var(--ink-soft); margin-top: 3px; }
+  .pgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+  .pcard { display: block; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: 0 1px 2px rgba(64,34,8,.05); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+  .pcard:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--gold-bright); }
+  .pcard .pic { font-size: 1.45rem; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--gold-soft); border-radius: 12px; margin-bottom: 14px; }
+  .pcard h3 { font-size: 1.13rem; margin-bottom: 4px; font-family: "Source Sans 3", "Noto Sans Devanagari", sans-serif; font-weight: 700; }
+  .pcard p { color: var(--muted); font-size: .95rem; }
+  .pcard .parr { display: inline-block; margin-top: 12px; color: var(--gold-dark); font-weight: 700; font-size: .92rem; }
+  .newbadge { display: inline-block; background: var(--gold); color: #fff; font-size: .68rem; font-weight: 700; border-radius: 999px; padding: 1px 8px; margin-left: 7px; vertical-align: 2px; letter-spacing: .05em; }
+  .disclaimer { margin: 46px 0 0; background: #fffdf4; border: 1px solid var(--gold-soft); border-radius: var(--radius); padding: 18px 22px; color: var(--ink-soft); font-size: .95rem; }
+  footer { margin-top: 40px; border-top: 1px solid var(--line); padding: 26px 0 36px; text-align: center; color: var(--muted); font-size: .92rem; }
+  footer a { color: var(--gold-dark); }
+  .signature { display: block; margin-top: 6px; font-family: "Spectral", Georgia, serif; font-style: italic; color: var(--ink-soft); }
+  @media (max-width: 920px) {
+    .fgrid, .cols { grid-template-columns: 1fr; }
+    .pgrid { grid-template-columns: repeat(2, 1fr); }
+    .phero h1 { font-size: 1.8rem; }
+  }
+  @media (max-width: 560px) {
+    .pgrid { grid-template-columns: 1fr; }
+    .tb-links a { font-size: .8rem; padding: 4px 9px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="tb-brand" href="https://magadhuniversityinfo.in/"><img src="logo.png" alt="Magadh University logo" />Magadh University Info</a>
+  <div class="tb-links">
+    <a href="https://magadhuniversityinfo.in/">Home</a>
+    <a href="https://magadhuniversityinfo.in/student-portal.html">Student Portal</a>
+    <a href="https://magadhuniversityinfo.in/student-help.html">Student Help</a>
+    <a href="https://magadhuniversityinfo.in/sarkari-result.html">Sarkari Result</a>
+    <a href="https://magadhuniversityinfo.in/links.html">All Links</a>
+  </div>
+</div>
+
+<div class="phero">
+  <div class="wrap">
+    <div class="kicker">Student Tools · Free</div>
+    <h1>CGPA to Percentage Calculator — CGPA से percentage निकालें</h1>
+    <p class="sub">Marksheet par CGPA likha hai aur form me percentage mangi ja rahi hai? <b>Apna CGPA daalein</b> — percentage, division aur grade ek saath paayein। 9.5, 10 ya apna formula chunein; ulta hisaab (percentage se CGPA) bhi yahin karein।</p>
+  </div>
+</div>
+
+<section class="block" id="calculator">
+  <div class="wrap">
+    <div class="kicker">Calculator</div>
+    <h2 class="title">CGPA se percentage nikalein</h2>
+    <div class="tool">
+      <div class="fgrid">
+        <div class="field">
+          <label for="mode">Kya calculate karna hai?</label>
+          <select id="mode" onchange="switchMode()">
+            <option value="c2p">CGPA se Percentage</option>
+            <option value="p2c">Percentage se CGPA</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="mult">Conversion formula (multiplier)</label>
+          <select id="mult" onchange="switchMult()">
+            <option value="9.5">× 9.5 — UGC / CBSE ka aam formula</option>
+            <option value="10">× 10 — seedha 10-point scale</option>
+            <option value="9.25">× 9.25 — kuch universities ka formula</option>
+            <option value="custom">Apna multiplier khud daalein</option>
+          </select>
+          <div class="hint">Aapki university ka apna formula ho sakta hai — marksheet ya university ke niyam me jo likha ho, wahi antim mana jayega।</div>
+        </div>
+        <div class="field" id="fieldCgpa">
+          <label for="cgpa">Aapka CGPA (0 – 10)</label>
+          <input type="number" id="cgpa" min="0" max="10" step="any" placeholder="jaise 8.2" />
+          <div class="hint">Marksheet par chhapa hua CGPA bharein — jaise 7.5, 8.2 ya 9.1।</div>
+        </div>
+        <div class="field" id="fieldPct" style="display:none">
+          <label for="pct">Aapki Percentage (0 – 100)</label>
+          <input type="number" id="pct" min="0" max="100" step="any" placeholder="jaise 77.9" />
+          <div class="hint">Jis percentage se CGPA nikalna hai, use bharein।</div>
+        </div>
+        <div class="field" id="fieldCustom" style="display:none">
+          <label for="customMult">Apna multiplier</label>
+          <input type="number" id="customMult" min="1" max="20" step="any" placeholder="jaise 9.5" />
+          <div class="hint">University ne jo multiplier bataya ho, wahi daalein।</div>
+        </div>
+      </div>
+      <div style="margin-top:18px;">
+        <button class="btn btn-gold" type="button" onclick="calcCgpa()">Calculate Karein →</button>
+      </div>
+      <div class="aerror" id="aError"></div>
+      <div class="aresult" id="aResult">
+        <div class="big" id="aBig"></div>
+        <div class="facts" id="aFacts"></div>
+      </div>
+    </div>
+    <p class="note">Ye tool sirf aapki jaankari ke liye hai। Official kaam (form, scholarship, naukri) ke liye percentage wahi mani jayegi jo aapki university ke niyam ya marksheet par likhi conversion ke hisaab se banti hai — alag-alag universities me formula alag ho sakta hai।</p>
+  </div>
+</section>
+
+<section class="block" id="kaise">
+  <div class="wrap">
+    <div class="kicker">Samjhein</div>
+    <h2 class="title">CGPA se percentage kaise nikalte hain?</h2>
+    <p class="lede">CGPA (Cumulative Grade Point Average) 10-point scale par hota hai — 0 se 10 ke beech। Percentage nikalne ke liye CGPA ko ek <b>multiplier</b> se guna karte hain। Bharat me sabse zyada istemal hone wala formula <b>UGC / CBSE ka × 9.5</b> hai, lekin kuch universities × 10 ya apna khud ka multiplier use karti hain।</p>
+    <div class="formula">
+      <div class="f">Percentage = CGPA × 9.5</div>
+      <p><b>Udaharan:</b> CGPA 8.2 ho to 8.2 × 9.5 = <b>77.9%</b>। Yahi hisaab upar wala calculator ek second me kar deta hai — aur agar aapki university × 10 ka formula use karti hai to upar se multiplier badal kar wahi hisaab paayein (8.2 × 10 = 82%)।</p>
+    </div>
+    <div class="cols">
+      <div class="colbox">
+        <h3>📊 CGPA → Percentage table (× 9.5)</h3>
+        <p>9.5 wale aam formula se kuch mashhoor CGPA ki percentage:</p>
+        <table class="divtab">
+          <tr><th>CGPA</th><th>Percentage</th><th>Division</th></tr>
+          <tr><td>10.0</td><td>95.0%</td><td>Distinction</td></tr>
+          <tr><td>9.5</td><td>90.25%</td><td>Distinction</td></tr>
+          <tr><td>9.0</td><td>85.5%</td><td>Distinction</td></tr>
+          <tr><td>8.5</td><td>80.75%</td><td>Distinction</td></tr>
+          <tr><td>8.0</td><td>76.0%</td><td>Distinction</td></tr>
+          <tr><td>7.5</td><td>71.25%</td><td>First Division</td></tr>
+          <tr><td>7.0</td><td>66.5%</td><td>First Division</td></tr>
+          <tr><td>6.5</td><td>61.75%</td><td>First Division</td></tr>
+          <tr><td>6.0</td><td>57.0%</td><td>Second Division</td></tr>
+          <tr><td>5.5</td><td>52.25%</td><td>Second Division</td></tr>
+          <tr><td>5.0</td><td>47.5%</td><td>Third Division</td></tr>
+          <tr><td>4.0</td><td>38.0%</td><td>Pass (aam taur par)</td></tr>
+        </table>
+        <p style="margin-top:10px;">Division ke ye hisaab <b>aam taur par</b> mane jane wale hain — aapki university ya form ke niyam alag ho sakte hain, isliye form bharne se pehle uske instructions zaroor padhein।</p>
+      </div>
+      <div class="colbox">
+        <h3>🎓 CGPA, SGPA aur percentage — farak kya hai?</h3>
+        <ul>
+          <li><b>SGPA</b> (Semester Grade Point Average) — sirf <b>ek semester</b> ka grade point average hota hai। Har subject ke credits aur grade points se nikalta hai।</li>
+          <li><b>CGPA</b> (Cumulative Grade Point Average) — <b>saare semesters</b> ka kul mila kar average hota hai। Yehi aapki marksheet par chhapta hai।</li>
+          <li><b>Percentage</b> — 100 me se kitne marks, ye batata hai। Sarkari form, scholarship aur naukri me aksar percentage hi mangi jati hai, isiliye CGPA ko percentage me badalna padta hai।</li>
+          <li>Apna SGPA nikalna ho to hamara <a href="https://magadhuniversityinfo.in/student-portal.html#sgpa">SGPA Calculator</a> use karein, aur SGPA kya hota hai ye samajhne ke liye <a href="https://magadhuniversityinfo.in/articles/sgpa-kya-hota-hai-kaise-samjhein.html">ye guide</a> padhein।</li>
+          <li><b>Yaad rakhein:</b> CGPA se percentage nikalne ka koi ek universal formula nahi hai — 9.5 sabse aam hai, lekin antim faisla aapki university ke niyam ya marksheet par likhi conversion ka hota hai।</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="kicker">Aksar Poochhe Sawaal</div>
+    <h2 class="title">CGPA aur percentage ko lekar aam sawaal</h2>
+    <div class="faq">
+      <p class="q">CGPA se percentage nikalne ka sahi formula kya hai?</p>
+      <p class="a">Sabse aam formula hai <b>Percentage = CGPA × 9.5</b> (UGC / CBSE ka formula)। Lekin kuch universities × 10 ya apna alag multiplier use karti hain। Isiliye upar calculator me multiplier chunne ka option diya gaya hai — apni university ke niyam ke hisaab se chunein।</p>
+      <p class="q">7.5 CGPA kitne percentage ke barabar hota hai?</p>
+      <p class="a">9.5 wale formula se 7.5 × 9.5 = <b>71.25%</b> — yani First Division। Agar × 10 ka formula lagayein to 75% banega। Form me jo formula manga gaya ho, wahi lagayein।</p>
+      <p class="q">8 CGPA kitne percentage hota hai?</p>
+      <p class="a">9.5 wale formula se 8 × 9.5 = <b>76%</b> — Distinction ki shreni me aata hai। × 10 ke hisaab se 80% banega।</p>
+      <p class="q">Percentage se CGPA kaise nikalein?</p>
+      <p class="a">Ulta hisaab hai: <b>CGPA = Percentage ÷ 9.5</b>। Jaise 77.9% ho to 77.9 ÷ 9.5 = 8.2 CGPA। Upar calculator me "Percentage se CGPA" mode chunein aur percentage daalein।</p>
+      <p class="q">Magadh University me CGPA se percentage ka kaunsa formula lagta hai?</p>
+      <p class="a">Iska antim jawab aapki marksheet ya university ke examination regulation me likha hota hai — koi ek formula sab universities par lagu nahi hota। Form bharne se pehle marksheet ke peeche likhi conversion ya apne college/department se zaroor poochhein।</p>
+      <p class="q">CGPA 10 me se kitna achha mana jata hai?</p>
+      <p class="a">Aam taur par 9+ outstanding, 8+ bahut achha (Distinction), 7–8 First Division aur 6–7 Second Division mana jata hai। Lekin naukri ya admission me asli matlab percentage aur form ke niyam se banta hai — isiliye sahi conversion use karna zaroori hai।</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="more-tools">
+  <div class="wrap">
+    <div class="kicker">Aur Tools</div>
+    <h2 class="title">Students ke aur kaam ke tools</h2>
+    <div class="pgrid">
+      <a class="pcard" href="https://magadhuniversityinfo.in/age-calculator.html">
+        <span class="pic">🎂</span>
+        <h3>Age Calculator</h3>
+        <p>सरकारी फॉर्म के लिए उम्र गिनें — DOB से किसी भी date पर सही age</p>
+        <span class="parr">Age Check Karein →</span>
+      </a>
+      <a class="pcard" href="https://magadhuniversityinfo.in/percentage-calculator.html">
+        <span class="pic">📊</span>
+        <h3>Percentage Calculator</h3>
+        <p>मार्क्स से percentage निकालें — division और grade के साथ</p>
+        <span class="parr">Percentage Nikalein →</span>
+      </a>
+      <a class="pcard" href="https://magadhuniversityinfo.in/attendance-calculator.html">
+        <span class="pic">📋</span>
+        <h3>Attendance Calculator</h3>
+        <p>क्लास attendance % निकालें — 75% target और छुट्टी की गुंजाइश के साथ</p>
+        <span class="parr">Attendance Nikalein →</span>
+      </a>
+      <a class="pcard" href="https://magadhuniversityinfo.in/student-portal.html#sgpa">
+        <span class="pic">🧮</span>
+        <h3>SGPA Calculator</h3>
+        <p>अपना SGPA खुद निकालें — credits और grade points डालकर</p>
+        <span class="parr">SGPA Nikalein →</span>
+      </a>
+    </div>
+    <div class="disclaimer">
+      <b>Note:</b> Ye ek <b>unofficial student guide</b> hai — Magadh University ki official website nahi। Result, fees, admission aur bharti jaise official kaam ke liye hamesha official portals aur notification ka hi istemal karein। Taaza notices seedha phone par paane ke liye hamara <a href="https://whatsapp.com/channel/0029VbCkTnO5q08eAwl72j3l" target="_blank" rel="noopener">WhatsApp Channel</a> follow karein।
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Magadh University Info — CGPA to Percentage Calculator · <a href="https://magadhuniversityinfo.in/">magadhuniversityinfo.in</a>
+    <span class="signature">— Rajan Kumar</span>
+  </div>
+</footer>
+
+<script>
+  function switchMode() {
+    var mode = document.getElementById('mode').value;
+    document.getElementById('aResult').style.display = 'none';
+    document.getElementById('aError').style.display = 'none';
+    if (mode === 'c2p') {
+      document.getElementById('fieldCgpa').style.display = 'block';
+      document.getElementById('fieldPct').style.display = 'none';
+    } else {
+      document.getElementById('fieldCgpa').style.display = 'none';
+      document.getElementById('fieldPct').style.display = 'block';
+    }
+  }
+
+  function switchMult() {
+    var m = document.getElementById('mult').value;
+    document.getElementById('aResult').style.display = 'none';
+    document.getElementById('aError').style.display = 'none';
+    if (m === 'custom') {
+      document.getElementById('fieldCustom').style.display = 'block';
+    } else {
+      document.getElementById('fieldCustom').style.display = 'none';
+    }
+  }
+
+  function divisionFor(p) {
+    if (p >= 75) return 'Distinction (75% ya usse zyada)';
+    if (p >= 60) return 'First Division (60% – 75% se kam)';
+    if (p >= 50) return 'Second Division (50% – 60% se kam)';
+    if (p >= 40) return 'Third Division (40% – 50% se kam)';
+    return 'Pass se neeche — apne college ke pass niyam check karein';
+  }
+
+  function multLabel(m) {
+    if (m === 9.5) return '× 9.5 (UGC / CBSE formula)';
+    if (m === 10) return '× 10';
+    if (m === 9.25) return '× 9.25';
+    return '× ' + m + ' (apna multiplier)';
+  }
+
+  function calcCgpa() {
+    var mode = document.getElementById('mode').value;
+    var mSel = document.getElementById('mult').value;
+    var err = document.getElementById('aError');
+    var res = document.getElementById('aResult');
+    err.style.display = 'none';
+    res.style.display = 'none';
+    var m;
+    if (mSel === 'custom') {
+      m = parseFloat(document.getElementById('customMult').value);
+      if (isNaN(m) || m <= 0 || m > 20) {
+        err.textContent = 'Apna multiplier sahi se bharein — ye 0 se bada aur 20 se chhota hona chahiye (aam taur par 9.5 ya 10)।';
+        err.style.display = 'block';
+        return;
+      }
+    } else {
+      m = parseFloat(mSel);
+    }
+    var big = '', facts = '';
+    if (mode === 'c2p') {
+      var cgpa = parseFloat(document.getElementById('cgpa').value);
+      if (isNaN(cgpa) || cgpa < 0 || cgpa > 10) {
+        err.textContent = 'CGPA sahi se bharein — ye 0 se 10 ke beech hona chahiye।';
+        err.style.display = 'block';
+        return;
+      }
+      var pct = cgpa * m;
+      if (typeof gtag === 'function') { gtag('event', 'cgpa_calculate', { mode: 'cgpa_to_percentage', cgpa: cgpa, multiplier: m, percentage: Math.round(pct * 100) / 100, page_path: location.pathname }); }
+      big = '🎓 ' + pct.toFixed(2) + '%';
+      facts = 'CGPA: <b>' + cgpa + '</b> × multiplier <b>' + m + '</b> = <b>' + pct.toFixed(2) + '%</b><br>' +
+        'Division: <b>' + divisionFor(pct) + '</b><br>' +
+        '<span style="color:var(--muted);font-size:.92rem">Formula: ' + multLabel(m) + ' — aapki university ka formula alag ho to upar se multiplier badal kar phir ginein। Official kaam ke liye marksheet par likhi conversion hi antim hogi।</span>';
+    } else {
+      var p = parseFloat(document.getElementById('pct').value);
+      if (isNaN(p) || p < 0 || p > 100) {
+        err.textContent = 'Percentage sahi se bharein — ye 0 se 100 ke beech honi chahiye।';
+        err.style.display = 'block';
+        return;
+      }
+      var cg = p / m;
+      if (typeof gtag === 'function') { gtag('event', 'cgpa_calculate', { mode: 'percentage_to_cgpa', percentage: p, multiplier: m, cgpa: Math.round(cg * 100) / 100, page_path: location.pathname }); }
+      big = '🎓 ' + cg.toFixed(2) + ' CGPA';
+      facts = 'Percentage: <b>' + p + '%</b> ÷ multiplier <b>' + m + '</b> = <b>' + cg.toFixed(2) + ' CGPA</b><br>' +
+        'Division: <b>' + divisionFor(p) + '</b><br>' +
+        '<span style="color:var(--muted);font-size:.92rem">Formula: ' + multLabel(m) + ' — aapki university ka formula alag ho to upar se multiplier badal kar phir ginein। Official kaam ke liye marksheet par likhi conversion hi antim hogi।</span>';
+    }
+    document.getElementById('aBig').textContent = big;
+    document.getElementById('aFacts').innerHTML = facts;
+    res.style.display = 'block';
+    res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+</body>
+</html>
