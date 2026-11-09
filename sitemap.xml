@@ -180,4 +180,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://magadhuniversityinfo.in/articles/magadh-university-result-ke-baad-kya-karein.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://magadhuniversityinfo.in/articles/magadh-university-pg-admission-samarth-portal.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
+
