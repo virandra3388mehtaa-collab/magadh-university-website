@@ -195,5 +195,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://magadhuniversityinfo.in/articles/magadh-university-sahi-college-kaise-chunein.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://magadhuniversityinfo.in/articles/magadh-university-convocation-degree-certificate-kaise-lein.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 
