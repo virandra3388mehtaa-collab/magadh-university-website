@@ -210,5 +210,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://magadhuniversityinfo.in/articles/magadh-university-exam-form-fees-payment-kaise-karein.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://magadhuniversityinfo.in/articles/magadh-university-back-paper-compartment-exam-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 
