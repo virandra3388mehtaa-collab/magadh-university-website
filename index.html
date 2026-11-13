@@ -562,7 +562,23 @@
       @media (max-width: 920px) { .portal-grid { grid-template-columns: repeat(2, 1fr); } .info-grid { grid-template-columns: 1fr; gap: 34px; } }
       @media (max-width: 560px) { .portal-grid { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <!-- infoband-buttons: info band ke links bade rang-birange clickable button (user order 2026-11-13) -->
+<style>
+.infoband .info-col li{position:relative;border-bottom:none;padding:0;margin:0 0 10px;border-radius:12px;box-shadow:0 3px 8px rgba(15,23,42,.15)}
+.infoband .info-col li a{display:block;padding:13px 16px 3px;color:#fff;font-size:1.05rem;font-weight:700;text-decoration:none}
+.infoband .info-col li a:hover{color:#fff;text-decoration:none}
+.infoband .info-col li a::after{content:"";position:absolute;inset:0;border-radius:12px}
+.infoband .info-col li span{display:block;padding:0 16px 12px;color:rgba(255,255,255,.88);font-size:.85rem}
+.infoband .info-col li:nth-child(1){background:linear-gradient(180deg,#2f7bff,#0b5ed7)}
+.infoband .info-col li:nth-child(2){background:linear-gradient(180deg,#f04438,#d92d20)}
+.infoband .info-col li:nth-child(3){background:linear-gradient(180deg,#22c55e,#15803d)}
+.infoband .info-col li:nth-child(4){background:linear-gradient(180deg,#f59e0b,#d97706)}
+.infoband .info-col li:nth-child(5){background:linear-gradient(180deg,#8b5cf6,#6d28d9)}
+.infoband .info-col li:nth-child(6){background:linear-gradient(180deg,#14b8a6,#0f766e)}
+.infoband .info-col li:nth-child(7){background:linear-gradient(180deg,#f43f5e,#be123c)}
+.infoband .info-more{display:inline-block;margin-top:4px;padding:10px 20px;border:2px solid #b45309;border-radius:999px;color:#92400e;font-weight:800;text-decoration:none;background:#fffbeb}
+</style>
+</head>
   <body>
     <!-- ======= top strip ======= -->
     <div class="topstrip">
