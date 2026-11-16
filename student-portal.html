@@ -18,23 +18,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --ink: #241a12; --ink-soft: #4d4136; --muted: #7a6c5c;
-    --line: #e6e0d5; --bg-soft: #f8f6f2; --surface: #ffffff;
-    --gold: #b8860b; --gold-bright: #d9a514; --gold-soft: #f3e3bb; --gold-dark: #7a5500;
+    --ink: #1c2b33; --ink-soft: #3d5561; --muted: #5b7180;
+    --line: #d7e6ea; --bg-soft: #eef7f8; --surface: #ffffff;
+    --gold: #128194; --gold-bright: #17a2bb; --gold-soft: #d9eef2; --gold-dark: #0d5a6b;
     --radius: 14px; --shadow: 0 12px 32px rgba(64,34,8,.13);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   ::selection { background: var(--gold-soft); }
   body { font-family: "Source Sans 3", "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif; background: #ffffff; color: var(--ink); font-size: 16.5px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-  h1, h2, h3, .serif { font-family: "Spectral", Georgia, serif; }
+  h1, h2, h3, .serif { font-family: "Source Sans 3", "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif; }
   .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
   .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 20px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.94); position: sticky; top: 0; z-index: 20; backdrop-filter: blur(8px); }
-  .tb-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--ink); font-family: "Spectral", Georgia, serif; font-weight: 700; font-size: 1.02rem; }
+  .tb-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--ink); font-family: "Source Sans 3", "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif; font-weight: 700; font-size: 1.02rem; }
   .tb-brand img { width: 26px; height: 32px; object-fit: contain; }
   .tb-links { display: flex; gap: 8px; flex-wrap: wrap; }
-  .tb-links a { text-decoration: none; color: var(--gold-dark); font-weight: 700; font-size: .88rem; border: 1px solid var(--gold-soft); background: #fffdf4; padding: 5px 12px; border-radius: 999px; }
+  .tb-links a { text-decoration: none; color: var(--gold-dark); font-weight: 700; font-size: .88rem; border: 1px solid var(--gold-soft); background: #f4fbfc; padding: 5px 12px; border-radius: 999px; }
   .tb-links a:hover { background: var(--gold-soft); }
-  .phero { background: linear-gradient(180deg, #fffdf4 0%, #ffffff 100%); border-bottom: 3px solid var(--gold-soft); padding: 42px 0 30px; }
+  .phero { background: linear-gradient(180deg, #f4fbfc 0%, #ffffff 100%); border-bottom: 3px solid var(--gold-soft); padding: 42px 0 30px; }
   .phero .kicker { color: var(--gold-dark); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; }
   .phero h1 { font-size: 2.3rem; line-height: 1.15; margin: 8px 0 6px; }
   .phero .sub { color: var(--ink-soft); font-size: 1.08rem; max-width: 720px; }
@@ -43,10 +43,10 @@
   .fontctl { display: flex; gap: 6px; align-items: center; }
   .fontctl span { color: var(--muted); font-size: .85rem; margin-right: 2px; }
   .fontctl button { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 3px 11px; font-weight: 700; cursor: pointer; font-size: .9rem; }
-  .fontctl button:hover { border-color: var(--gold-bright); background: #fffdf4; }
+  .fontctl button:hover { border-color: var(--gold-bright); background: #f4fbfc; }
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 30px 0 6px; }
   .stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; text-align: center; box-shadow: 0 1px 2px rgba(64,34,8,.05); }
-  .stat b { display: block; font-family: "Spectral", Georgia, serif; font-size: 1.7rem; color: var(--gold-dark); }
+  .stat b { display: block; font-family: "Source Sans 3", "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif; font-size: 1.7rem; color: var(--gold-dark); }
   .stat span { color: var(--muted); font-size: .9rem; }
   section.block { padding: 44px 0 6px; }
   .kicker { color: var(--gold-dark); font-weight: 700; letter-spacing: .13em; text-transform: uppercase; font-size: .78rem; }
@@ -60,7 +60,7 @@
   .btn { display: inline-block; border: none; cursor: pointer; text-decoration: none; font-weight: 700; border-radius: 999px; padding: 11px 22px; font-size: 1rem; }
   .btn-gold { background: var(--gold); color: #fff; }
   .btn-gold:hover { background: var(--gold-dark); }
-  .btn-ghost { background: #fffdf4; color: var(--gold-dark); border: 1px solid var(--gold-soft); }
+  .btn-ghost { background: #f4fbfc; color: var(--gold-dark); border: 1px solid var(--gold-soft); }
   .btn-ghost:hover { background: var(--gold-soft); }
   .fresult { display: none; margin-top: 20px; background: var(--bg-soft); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 10px; padding: 18px 20px; }
   .fresult ol { margin: 8px 0 14px 20px; color: var(--ink-soft); }
@@ -77,7 +77,7 @@
   .ring-bg { fill: none; stroke: var(--line); stroke-width: 11; }
   .ring-fg { fill: none; stroke: var(--gold); stroke-width: 11; stroke-linecap: round; transition: stroke-dashoffset .6s ease; }
   .ring-num { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-  .ring-num b { font-family: "Spectral", Georgia, serif; font-size: 1.75rem; line-height: 1; }
+  .ring-num b { font-family: "Source Sans 3", "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif; font-size: 1.75rem; line-height: 1; }
   .ring-num span { color: var(--muted); font-size: .78rem; letter-spacing: .08em; }
   .sgpa-facts { color: var(--ink-soft); }
   .sgpa-facts b { color: var(--ink); }
@@ -99,10 +99,10 @@
   .colbox a:hover { color: var(--gold); text-decoration: underline; }
   .colbox li span { display: block; color: var(--muted); font-size: .85rem; }
   .newbadge { display: inline-block; background: var(--gold); color: #fff; font-size: .68rem; font-weight: 700; border-radius: 999px; padding: 1px 8px; margin-left: 7px; vertical-align: 2px; letter-spacing: .05em; }
-  .disclaimer { margin: 46px 0 0; background: #fffdf4; border: 1px solid var(--gold-soft); border-radius: var(--radius); padding: 18px 22px; color: var(--ink-soft); font-size: .95rem; }
+  .disclaimer { margin: 46px 0 0; background: #f4fbfc; border: 1px solid var(--gold-soft); border-radius: var(--radius); padding: 18px 22px; color: var(--ink-soft); font-size: .95rem; }
   footer { margin-top: 40px; border-top: 1px solid var(--line); padding: 26px 0 36px; text-align: center; color: var(--muted); font-size: .92rem; }
   footer a { color: var(--gold-dark); }
-  .signature { display: block; margin-top: 6px; font-family: "Spectral", Georgia, serif; font-style: italic; color: var(--ink-soft); }
+  .signature { display: block; margin-top: 6px; font-family: "Source Sans 3", "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif; font-style: italic; color: var(--ink-soft); }
   @media (max-width: 920px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
     .fgrid { grid-template-columns: 1fr; }
